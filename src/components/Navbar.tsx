@@ -6,17 +6,24 @@ import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [bgSolid, setBgSolid] = useState(false);
+  const [logoSwapped, setLogoSwapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const aboutSection = document.getElementById("about");
       const divisionsSection = document.getElementById("divisions");
+
+      if (aboutSection) {
+        setBgSolid(window.scrollY > aboutSection.offsetTop - 80);
+      } else {
+        setBgSolid(window.scrollY > 50);
+      }
+
       if (divisionsSection) {
         const sectionBottom = divisionsSection.offsetTop + divisionsSection.offsetHeight;
-        setScrolled(window.scrollY > sectionBottom);
-      } else {
-        setScrolled(window.scrollY > 50);
+        setLogoSwapped(window.scrollY > sectionBottom);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -30,7 +37,7 @@ const Navbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+          bgSolid
             ? "bg-card/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
@@ -42,15 +49,15 @@ const Navbar = () => {
               <img
                 src={logoIcon}
                 alt="AL-JADRIYA Engineering"
-                className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${scrolled ? "opacity-0" : "opacity-100"}`}
+                className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-0" : "opacity-100"}`}
               />
               <img
                 src={logoDark}
                 alt="AL-JADRIYA Engineering"
-                className={`absolute inset-[8%] h-[84%] w-[84%] object-contain transition-opacity duration-500 ${scrolled ? "opacity-100" : "opacity-0"}`}
+                className={`absolute inset-[8%] h-[84%] w-[84%] object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-100" : "opacity-0"}`}
               />
             </div>
-            <div className={`hidden md:block -ml-4 transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
+            <div className={`hidden md:block -ml-4 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
               <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
               <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
             </div>
@@ -61,7 +68,7 @@ const Navbar = () => {
             <a
               href="#contact"
               className={`nav-link hidden md:block transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               Client Hub
@@ -69,14 +76,14 @@ const Navbar = () => {
             <a
               href="#contact"
               className={`nav-link hidden md:block transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               Contact Us
             </a>
             <button
               className={`transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               <Search className="h-5 w-5" />
@@ -84,7 +91,7 @@ const Navbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className={`transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
