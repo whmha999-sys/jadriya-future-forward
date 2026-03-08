@@ -10,7 +10,15 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const divisionsSection = document.getElementById("divisions");
+      if (divisionsSection) {
+        const sectionBottom = divisionsSection.offsetTop + divisionsSection.offsetHeight;
+        setScrolled(window.scrollY > sectionBottom);
+      } else {
+        setScrolled(window.scrollY > 50);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
