@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-6 md:px-12 py-4">
           {/* Logo */}
           <a href="#" className="flex items-center gap-0">
-            <img src={logoIcon} alt="AL-JADRIYA Engineering" className="h-24 w-24 mt-2 ml-10" />
+            <img src={scrolled ? logoDark : logoIcon} alt="AL-JADRIYA Engineering" className="h-24 w-24 mt-2 ml-10" />
             <div className={`hidden md:block -ml-4 transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
               <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
