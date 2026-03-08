@@ -8,10 +8,10 @@ import FooterSection from "@/components/FooterSection";
 import logoIcon from "@/assets/logo-icon.png";
 
 const LogoDivider = () => (
-  <div className="flex items-center px-6 md:px-12 py-4 bg-background">
-    <img src={logoIcon} alt="" className="h-12 w-12 shrink-0" />
-    <div className="flex-1 h-px bg-border mx-4" />
-    <img src={logoIcon} alt="" className="h-12 w-12 shrink-0" />
+  <div className="flex items-center px-6 md:px-12 py-6 bg-background">
+    <img src={logoIcon} alt="" className="h-24 w-24 shrink-0" />
+    <div className="flex-1 h-0.5 bg-accent mx-4" />
+    <img src={logoIcon} alt="" className="h-24 w-24 shrink-0" />
   </div>
 );
 
