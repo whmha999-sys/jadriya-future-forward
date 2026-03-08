@@ -54,7 +54,7 @@ const Navbar = () => {
               <img
                 src={logoDark}
                 alt="AL-JADRIYA Engineering"
-                className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-100" : "opacity-0"}`}
+                className={`absolute inset-[8%] h-[84%] w-[84%] object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-100" : "opacity-0"}`}
               />
             </div>
             <div className={`hidden md:block -ml-4 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
