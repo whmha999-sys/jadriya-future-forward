@@ -4,7 +4,7 @@ import { ArrowRight, Linkedin, Instagram, Facebook, Twitter, Mail, MapPin } from
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import logoYellow from "@/assets/logo-yellow-pattern.png";
-import logoWhite from "@/assets/logo-white-pattern.png";
+import logoWhite from "@/assets/logo-white-pattern.png?v=2";
 
 const subjectOptions = [
   "Engineering Consultancy",
