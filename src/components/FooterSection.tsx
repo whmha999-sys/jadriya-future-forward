@@ -2,14 +2,14 @@ import { ArrowRight } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 
 const navLinks = [
-  "Engineering Consultancy",
-  "Educational Technology",
-  "Equipment Supply",
-  "About Us",
-  "Sustainability",
-  "Careers",
-  "Newsroom",
-  "Contact",
+  { label: "Engineering Consultancy", href: "#divisions" },
+  { label: "Educational Technology", href: "#divisions" },
+  { label: "Equipment Supply", href: "#divisions" },
+  { label: "About Us", href: "#about" },
+  { label: "Sustainability", href: "#vision" },
+  { label: "Careers", href: "#contact" },
+  { label: "Newsroom", href: "#contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const FooterSection = () => {
