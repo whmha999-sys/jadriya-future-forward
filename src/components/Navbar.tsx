@@ -83,7 +83,7 @@ const Navbar = () => {
             </a>
             <button
               className={`transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               <Search className="h-5 w-5" />
