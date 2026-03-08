@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-6 md:px-12 py-4">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <img src={logoIcon} alt="AL-JADRIYA Engineering" className="h-12 w-12 ml-6 mt-1" />
+            <img src={logoIcon} alt="AL-JADRIYA Engineering" className="h-24 w-24 ml-6 mt-1" />
             <div className={`hidden md:block transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
               <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
