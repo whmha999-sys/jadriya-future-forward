@@ -41,7 +41,6 @@ const Navbar = () => {
                 alt="AL-JADRIYA Engineering"
                 className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${scrolled ? "opacity-100" : "opacity-0"}`}
               />
-              />
             </div>
             <div className={`hidden md:block -ml-4 transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
