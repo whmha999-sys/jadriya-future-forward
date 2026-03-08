@@ -41,7 +41,7 @@ const Contact = () => {
         <img
           src={logoWhite}
           alt=""
-          className="absolute top-8 left-8 w-24 h-24 opacity-10 pointer-events-none"
+          className="absolute top-8 left-8 w-24 h-24 opacity-20 pointer-events-none"
         />
         <img
           src={logoWhite}
