@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const menuData: Record<string, string[]> = {
-  "Engineering Consultancy": ["Project Planning", "Feasibility Studies", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"],
+  "Engineering Consultancy": ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"],
   "Educational Technology": ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"],
   "About Us": ["Our Story", "Leadership", "Careers", "Newsroom"],
   "Sustainability": ["Our Vision", "Community Impact", "Green Initiatives"],

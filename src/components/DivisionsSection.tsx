@@ -9,12 +9,12 @@ import divPartnerships from "@/assets/div-partnerships.jpg";
 const divisions = [
   {
     title: "Engineering Consultancy Division",
-    description: "Comprehensive engineering consultancy across medical facilities, industrial pipelines, infrastructure, and turnkey projects — serving public and private sector clients across Jordan and Iraq.",
+    description: "Comprehensive engineering consultancy across medical facilities, industrial pipelines, infrastructure, and turnkey projects, serving public and private sector clients across Jordan and Iraq.",
     image: divEngineering,
   },
   {
     title: "Educational Technology Division",
-    description: "World-class robotics, programming, and AI training programs delivered to schools, professionals, and career-shifters — in-person and online.",
+    description: "World-class robotics, programming, and AI training programs delivered to schools, professionals, and career-shifters, in-person and online.",
     image: divEducation,
   },
   {

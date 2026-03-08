@@ -5,7 +5,7 @@ import aboutImage from "@/assets/about-image.jpg";
 
 const stats = [
   { number: "2", label: "Specialized Divisions" },
-  { number: "2", label: "Countries — Jordan & Iraq" },
+  { number: "2", label: "Countries: Jordan & Iraq" },
   { number: "6", label: "Regional Markets" },
   { number: "101+", label: "Projects & Programs Delivered" },
 ];
@@ -30,7 +30,7 @@ const AboutSection = () => {
             <p className="body-text">
               We are an integrated engineering and educational technology company, serving Jordan,
               Iraq, and the wider region. From complex engineering consultancy to world-class AI
-              and robotics training programs — we build the future on two fronts.
+              and robotics training programs, we build the future on two fronts.
             </p>
           </motion.div>
 

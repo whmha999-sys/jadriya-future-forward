@@ -29,7 +29,7 @@ const VisionSection = () => {
           <div className="w-10 h-0.5 bg-accent mb-6" />
           <p className="body-text mb-8">
             Since its founding, AL-JADRIYA Engineering has been guided by a firm philosophy: a
-            company's greatest asset is the trust it builds — with its clients, partners, trainees,
+            company's greatest asset is the trust it builds with its clients, partners, trainees,
             and community. We aim to be the most trusted engineering and education provider in the
             Middle East.
           </p>
