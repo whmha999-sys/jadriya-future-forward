@@ -49,7 +49,7 @@ const Navbar = () => {
               <img
                 src={logoIcon}
                 alt="AL-JADRIYA Engineering"
-                className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${scrolled ? "opacity-0" : "opacity-100"}`}
+                className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-0" : "opacity-100"}`}
               />
               <img
                 src={logoDark}
