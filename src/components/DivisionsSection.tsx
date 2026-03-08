@@ -9,7 +9,7 @@ import divPartnerships from "@/assets/div-partnerships.jpg";
 const divisions = [
   {
     title: "Engineering Consultancy Division",
-    description: "Comprehensive engineering consultancy across medical facilities, industrial pipelines, infrastructure, and turnkey projects — serving public and private sector clients across Jordan and Iraq.",
+    description: "Comprehensive engineering consultancy across medical facilities, industrial pipelines, infrastructure, and turnkey projects, serving public and private sector clients across Jordan and Iraq.",
     image: divEngineering,
   },
   {
