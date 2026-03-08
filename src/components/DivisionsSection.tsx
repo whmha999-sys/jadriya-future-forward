@@ -14,7 +14,7 @@ const divisions = [
   },
   {
     title: "Educational Technology Division",
-    description: "World-class robotics, programming, and AI training programs delivered to schools, professionals, and career-shifters — in-person and online.",
+    description: "World-class robotics, programming, and AI training programs delivered to schools, professionals, and career-shifters, in-person and online.",
     image: divEducation,
   },
   {

@@ -30,7 +30,7 @@ const AboutSection = () => {
             <p className="body-text">
               We are an integrated engineering and educational technology company, serving Jordan,
               Iraq, and the wider region. From complex engineering consultancy to world-class AI
-              and robotics training programs — we build the future on two fronts.
+              and robotics training programs, we build the future on two fronts.
             </p>
           </motion.div>
 
