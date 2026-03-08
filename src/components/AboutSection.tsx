@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-image.jpg";
+import logoWatermark from "@/assets/logo-watermark.png";
 
 const stats = [
   { number: "2", label: "Specialized Divisions" },
