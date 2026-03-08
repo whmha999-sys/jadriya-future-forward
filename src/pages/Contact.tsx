@@ -41,17 +41,17 @@ const Contact = () => {
         <img
           src={logoWhite}
           alt=""
-          className="absolute top-8 left-8 w-24 h-24 opacity-10 pointer-events-none"
+          className="absolute top-8 left-8 w-24 h-24 opacity-20 pointer-events-none"
         />
         <img
           src={logoWhite}
           alt=""
-          className="absolute bottom-6 right-12 w-32 h-32 opacity-[0.07] pointer-events-none"
+          className="absolute bottom-6 right-12 w-32 h-32 opacity-[0.15] pointer-events-none"
         />
         <img
           src={logoWhite}
           alt=""
-          className="absolute top-1/2 right-1/4 w-20 h-20 opacity-[0.05] pointer-events-none -translate-y-1/2"
+          className="absolute top-1/2 right-1/4 w-20 h-20 opacity-[0.12] pointer-events-none -translate-y-1/2"
         />
 
         <div className="max-w-7xl mx-auto px-8 md:px-16 pt-36 pb-20 text-center relative z-10">
