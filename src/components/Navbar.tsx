@@ -6,17 +6,24 @@ import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [bgSolid, setBgSolid] = useState(false);
+  const [logoSwapped, setLogoSwapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const aboutSection = document.getElementById("about");
       const divisionsSection = document.getElementById("divisions");
+
+      if (aboutSection) {
+        setBgSolid(window.scrollY > aboutSection.offsetTop - 80);
+      } else {
+        setBgSolid(window.scrollY > 50);
+      }
+
       if (divisionsSection) {
         const sectionBottom = divisionsSection.offsetTop + divisionsSection.offsetHeight;
-        setScrolled(window.scrollY > sectionBottom);
-      } else {
-        setScrolled(window.scrollY > 50);
+        setLogoSwapped(window.scrollY > sectionBottom);
       }
     };
     window.addEventListener("scroll", handleScroll);
