@@ -91,7 +91,7 @@ const Navbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className={`transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
