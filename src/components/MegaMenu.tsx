@@ -2,12 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const menuData: Record<string, string[]> = {
-  "Engineering Consultancy": ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"],
-  "Educational Technology": ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"],
-  "About Us": ["Our Story", "Leadership", "Careers", "Newsroom"],
-  "Sustainability": ["Our Vision", "Community Impact", "Green Initiatives"],
-  "Contact Us": ["Amman Office", "Baghdad Office", "General Inquiries"],
+const menuData: Record<string, { items: string[]; href: string }> = {
+  "Engineering Consultancy": { items: ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"], href: "#divisions" },
+  "Educational Technology": { items: ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"], href: "#divisions" },
+  "About Us": { items: ["Our Story", "Leadership", "Careers", "Newsroom"], href: "#about" },
+  "Sustainability": { items: ["Our Vision", "Community Impact", "Green Initiatives"], href: "#vision" },
+  "Contact Us": { items: ["Amman Office", "Baghdad Office", "General Inquiries"], href: "#contact" },
 };
 
 const MegaMenu = ({ onClose }: { onClose: () => void }) => {
