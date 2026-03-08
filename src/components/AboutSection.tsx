@@ -5,7 +5,7 @@ import aboutImage from "@/assets/about-image.jpg";
 
 const stats = [
   { number: "2", label: "Specialized Divisions" },
-  { number: "2", label: "Countries — Jordan & Iraq" },
+  { number: "2", label: "Countries: Jordan & Iraq" },
   { number: "6", label: "Regional Markets" },
   { number: "101+", label: "Projects & Programs Delivered" },
 ];
