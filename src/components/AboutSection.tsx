@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import aboutImage from "@/assets/about-image.jpg";
-import logoWatermark from "@/assets/logo-watermark.png";
+import { ArrowRight } from "lucide-react";
+import logoIconWhite from "@/assets/logo-icon-white.png";
 
 const stats = [
   { number: "2", label: "Specialized Divisions" },
@@ -16,59 +15,65 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 px-8 md:px-16 bg-card overflow-hidden">
+    <section ref={ref} className="relative py-24 md:py-32 px-8 md:px-16 overflow-hidden" style={{ backgroundColor: "#2D3A4A" }}>
       {/* Watermark logo background */}
       <img
-        src={logoWatermark}
+        src={logoIconWhite}
         alt=""
-        className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[500px] md:w-[700px] opacity-[0.04] pointer-events-none select-none"
+        className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[400px] md:w-[550px] opacity-40 pointer-events-none select-none"
       />
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          {/* Left side text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <p className="section-label mb-4">Welcome to AL-JADRIYA Engineering</p>
-            <h2 className="section-heading mb-6">
-              Leading in engineering, education, and innovation
-            </h2>
-            <p className="body-text">
-              We are an integrated engineering and educational technology company, serving Jordan,
-              Iraq, and the wider region. From complex engineering consultancy to world-class AI
-              and robotics training programs, we build the future on two fronts.
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/70 mb-4">
+              WHO WE ARE
             </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              An Integrated Engineering & Educational Technology Company
+            </h2>
+            <p className="text-white/80 leading-relaxed mb-8">
+              AL-JADRIYA Engineering operates across two specialized divisions — Engineering
+              Consultancy and Educational Technology — serving Jordan, Iraq, and the wider region.
+              Headquartered in Amman with an office in Baghdad, we combine deep technical expertise
+              with world-class training programs to build the future on two fronts.
+            </p>
+            <button
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 text-sm font-semibold tracking-wider uppercase transition-colors hover:bg-[#2DB84B] hover:text-white"
+              style={{ borderColor: "#2DB84B", color: "#2DB84B" }}
+            >
+              Learn More <ArrowRight className="h-4 w-4" />
+            </button>
           </motion.div>
 
+          {/* Right side stats */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="overflow-hidden"
+            className="grid grid-cols-2 gap-4"
           >
-            <img
-              src={aboutImage}
-              alt="Engineers reviewing project plans"
-              className="w-full h-[400px] md:h-[500px] object-cover"
-            />
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+                className="p-6 rounded-sm"
+                style={{ backgroundColor: "#364657" }}
+              >
+                <span className="text-4xl md:text-5xl font-bold" style={{ color: "#2DB84B" }}>
+                  {stat.number}
+                </span>
+                <p className="mt-2 text-sm text-white/70 font-medium">{stat.label}</p>
+              </motion.div>
+            ))}
           </motion.div>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
-              className="border-t-2 border-accent pt-6"
-            >
-              <span className="stat-number">{stat.number}</span>
-              <p className="mt-2 text-sm text-muted-foreground font-medium">{stat.label}</p>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
