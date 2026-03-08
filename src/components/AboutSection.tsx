@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-image.jpg";
+import logoWatermark from "@/assets/logo-watermark.png";
 
 const stats = [
   { number: "2", label: "Specialized Divisions" },
@@ -15,8 +16,14 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 md:py-32 px-8 md:px-16 bg-card">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="relative py-24 md:py-32 px-8 md:px-16 bg-card overflow-hidden">
+      {/* Watermark logo background */}
+      <img
+        src={logoWatermark}
+        alt=""
+        className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[500px] md:w-[700px] opacity-[0.04] pointer-events-none select-none"
+      />
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
