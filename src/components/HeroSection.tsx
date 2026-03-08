@@ -2,17 +2,29 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
+import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.jpg";
 
 const slides = [
   {
     image: hero1,
     label: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION",
-    heading: ["Building Jordan's", "Future, Together"],
+    heading: ["This is", "AL-JADRIYA"],
   },
   {
     image: hero2,
     label: "INNOVATION THROUGH EDUCATION AND TECHNOLOGY",
     heading: ["This is", "AL-JADRIYA"],
+  },
+  {
+    image: hero3,
+    label: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION",
+    heading: ["Engineering", "Every Sector"],
+  },
+  {
+    image: hero4,
+    label: "COMPREHENSIVE ENGINEERING CONSULTANCY",
+    heading: ["From Pipelines", "to Healthcare"],
   },
 ];
 
