@@ -41,7 +41,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden bg-navy-deep">
       <AnimatePresence mode="sync">
         <motion.div
           key={current}
@@ -49,9 +49,6 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2 }}
-          className="absolute inset-0"
-          style={{ zIndex: 1 }}
-        >
           className="absolute inset-0"
         >
           <img
