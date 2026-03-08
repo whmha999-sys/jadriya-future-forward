@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Search, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
+import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
 
 const Navbar = () => {
