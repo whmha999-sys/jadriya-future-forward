@@ -76,7 +76,7 @@ const Navbar = () => {
             <a
               href="#contact"
               className={`nav-link hidden md:block transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               Contact Us
