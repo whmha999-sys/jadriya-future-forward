@@ -2,14 +2,14 @@ import { ArrowRight } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 
 const navLinks = [
-  "Engineering Consultancy",
-  "Educational Technology",
-  "Equipment Supply",
-  "About Us",
-  "Sustainability",
-  "Careers",
-  "Newsroom",
-  "Contact",
+  { label: "Engineering Consultancy", href: "#divisions" },
+  { label: "Educational Technology", href: "#divisions" },
+  { label: "Equipment Supply", href: "#divisions" },
+  { label: "About Us", href: "#about" },
+  { label: "Sustainability", href: "#vision" },
+  { label: "Careers", href: "#contact" },
+  { label: "Newsroom", href: "#contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const FooterSection = () => {
@@ -43,11 +43,11 @@ const FooterSection = () => {
           <div className="grid grid-cols-2 gap-3">
             {navLinks.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors duration-200 text-sm py-2"
               >
-                {link} <ArrowRight className="h-3 w-3" />
+                {link.label} <ArrowRight className="h-3 w-3" />
               </a>
             ))}
           </div>

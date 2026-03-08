@@ -2,12 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const menuData: Record<string, string[]> = {
-  "Engineering Consultancy": ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"],
-  "Educational Technology": ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"],
-  "About Us": ["Our Story", "Leadership", "Careers", "Newsroom"],
-  "Sustainability": ["Our Vision", "Community Impact", "Green Initiatives"],
-  "Contact Us": ["Amman Office", "Baghdad Office", "General Inquiries"],
+const menuData: Record<string, { items: string[]; href: string }> = {
+  "Engineering Consultancy": { items: ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"], href: "#divisions" },
+  "Educational Technology": { items: ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"], href: "#divisions" },
+  "About Us": { items: ["Our Story", "Leadership", "Careers", "Newsroom"], href: "#about" },
+  "Sustainability": { items: ["Our Vision", "Community Impact", "Green Initiatives"], href: "#vision" },
+  "Contact Us": { items: ["Amman Office", "Baghdad Office", "General Inquiries"], href: "#contact" },
 };
 
 const MegaMenu = ({ onClose }: { onClose: () => void }) => {
@@ -25,10 +25,11 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
-            <button
+            <a
               key={item}
+              href={menuData[item].href}
               onMouseEnter={() => setActive(item)}
-              onClick={() => setActive(item)}
+              onClick={onClose}
               className={`block w-full text-left text-xl md:text-2xl font-semibold py-3 transition-all duration-300 ${
                 active === item
                   ? "text-accent"
@@ -36,7 +37,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
               }`}
             >
               {item}
-            </button>
+            </a>
           ))}
         </div>
 
@@ -50,10 +51,11 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
             className="space-y-4"
           >
             <p className="section-label text-primary-foreground/40 mb-6">{active}</p>
-            {menuData[active]?.map((sub) => (
+            {menuData[active]?.items.map((sub) => (
               <a
                 key={sub}
-                href="#"
+                href={menuData[active].href}
+                onClick={onClose}
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors duration-200 text-base"
               >
                 <ArrowRight className="h-4 w-4" />
