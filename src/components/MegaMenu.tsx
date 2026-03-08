@@ -50,10 +50,11 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
             className="space-y-4"
           >
             <p className="section-label text-primary-foreground/40 mb-6">{active}</p>
-            {menuData[active]?.map((sub) => (
+            {menuData[active]?.items.map((sub) => (
               <a
                 key={sub}
-                href="#"
+                href={menuData[active].href}
+                onClick={onClose}
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors duration-200 text-base"
               >
                 <ArrowRight className="h-4 w-4" />
