@@ -74,7 +74,7 @@ const Navbar = () => {
               Client Hub
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className={`nav-link hidden md:block transition-colors duration-300 ${
                 bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
