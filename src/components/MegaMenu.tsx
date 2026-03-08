@@ -7,7 +7,7 @@ const menuData: Record<string, { items: string[]; href: string }> = {
   "Educational Technology": { items: ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"], href: "#divisions" },
   "About Us": { items: ["Our Story", "Leadership", "Careers", "Newsroom"], href: "#about" },
   "Sustainability": { items: ["Our Vision", "Community Impact", "Green Initiatives"], href: "#vision" },
-  "Contact Us": { items: ["Amman Office", "Baghdad Office", "General Inquiries"], href: "#contact" },
+  "Contact Us": { items: ["Amman Office", "Baghdad Office", "General Inquiries"], href: "/contact" },
 };
 
 const MegaMenu = ({ onClose }: { onClose: () => void }) => {
