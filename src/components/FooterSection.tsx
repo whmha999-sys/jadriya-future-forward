@@ -14,6 +14,8 @@ const navLinks = [
 ];
 
 const FooterSection = () => {
+  const { navigateWithTransition } = usePageTransition();
+
   return (
     <footer id="contact" className="dark-section">
       <div className="max-w-7xl mx-auto px-8 md:px-16 py-20">
