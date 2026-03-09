@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
       </section>
 
       {/* Torn paper divider */}
-      <div className="w-full -mt-1">
+      <div className="w-full -mt-16 relative z-10">
         <img src={tornPaper} alt="" className="w-full block" />
       </div>
 
