@@ -61,7 +61,7 @@ const FooterSection = () => {
           <div className="flex items-center gap-4 text-primary-foreground/40 text-xs">
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms & Conditions</a>
             <span>|</span>
-            <a href="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
+            <button onClick={() => navigateWithTransition("/privacy-policy")} className="hover:text-primary-foreground transition-colors">Privacy Policy</button>
             <span>|</span>
             <a href="#" className="hover:text-primary-foreground transition-colors">FAQ</a>
           </div>
