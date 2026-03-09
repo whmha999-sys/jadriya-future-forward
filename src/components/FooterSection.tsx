@@ -4,7 +4,7 @@ import { usePageTransition } from "./PageTransition";
 
 const navLinks = [
   { label: "Engineering Consultancy", href: "/engineering-consultancy" },
-  { label: "Educational Technology", href: "#divisions" },
+  { label: "Educational Technology", href: "/educational-technology" },
   { label: "Equipment Supply", href: "#divisions" },
   { label: "About Us", href: "#about" },
   { label: "Sustainability", href: "#vision" },
