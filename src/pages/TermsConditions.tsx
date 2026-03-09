@@ -4,11 +4,11 @@ import FooterSection from "@/components/FooterSection";
 
 const sections = [
   {
-    title: "Section 1 -tance of Terms",
+    title: "Section 1 -nce of Terms",
     body: "By accessing and using the AL-JADRIYA Engineering website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use this website.",
   },
   {
-    title: "Section 2 â€-s-f-bsite",
+    title: "Section 2 â€-s-f-b-e",
     body: "This website is intended for informational purposes about AL-JADRIYA Engineering's services. You agree not to misuse the website, attempt unauthorized access, or use its content for commercial purposes without written permission.",
   },
   {
