@@ -14,6 +14,16 @@ const menuData: Record<string, { items: string[]; href: string }> = {
 
 const MegaMenu = ({ onClose }: { onClose: () => void }) => {
   const [active, setActive] = useState("Engineering Consultancy");
+  const { navigateWithTransition } = usePageTransition();
+
+  const handleLink = (href: string) => {
+    onClose();
+    if (href.startsWith("/")) {
+      navigateWithTransition(href);
+    } else {
+      window.location.hash = href.replace("#", "");
+    }
+  };
 
   return (
     <motion.div
