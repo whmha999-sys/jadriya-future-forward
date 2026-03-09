@@ -58,6 +58,11 @@ const PrivacyPolicy = () => {
         </motion.div>
       </section>
 
+      {/* Torn paper divider */}
+      <div className="w-full -mt-1">
+        <img src={tornPaper} alt="" className="w-full block" />
+      </div>
+
       {/* Content */}
       <section className="py-20 px-8 md:px-16 bg-card">
         <div className="max-w-3xl mx-auto space-y-12">
