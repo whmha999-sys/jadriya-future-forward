@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
+import { usePageTransition } from "./PageTransition";
 
 const navLinks = [
   { label: "Engineering Consultancy", href: "#divisions" },
