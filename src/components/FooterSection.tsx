@@ -36,7 +36,7 @@ const FooterSection = () => {
               <p className="text-primary-foreground/60 text-sm mb-4">
                 Any questions? We'd love to hear from you.
               </p>
-              <button className="cta-button-outline">
+              <button onClick={() => navigateWithTransition("/contact")} className="cta-button-outline">
                 Contact Us <ArrowRight className="h-4 w-4" />
               </button>
             </div>
