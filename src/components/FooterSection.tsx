@@ -58,7 +58,7 @@ const FooterSection = () => {
           <div className="flex items-center gap-4 text-primary-foreground/40 text-xs">
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms & Conditions</a>
             <span>|</span>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
+            <a href="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
             <span>|</span>
             <a href="#" className="hover:text-primary-foreground transition-colors">FAQ</a>
           </div>
