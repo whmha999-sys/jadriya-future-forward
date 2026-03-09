@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import logoMenu from "@/assets/logo-menu.png";
 
 const menuData: Record<string, { items: string[]; href: string }> = {
   "Engineering Consultancy": { items: ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"], href: "#divisions" },
@@ -19,9 +20,15 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-40 bg-navy-deep/98 backdrop-blur-sm"
+      className="fixed inset-0 z-40"
+      style={{ backgroundColor: "#2d3a4a" }}
     >
-      <div className="h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto">
+      {/* Centered logo watermark */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src={logoMenu} alt="" className="w-64 h-64 opacity-10" />
+      </div>
+
+      <div className="relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto">
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
