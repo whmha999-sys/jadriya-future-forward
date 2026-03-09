@@ -39,10 +39,10 @@ const ValuesSection = () => {
               key={value}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 + i * 0.12, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 0.5 + i * 0.18, ease: "easeOut" }}
               className="flex items-center gap-4"
             >
-              <ArrowRight className="h-4 w-4 text-accent shrink-0" />
+              <ArrowRight className="h-4 w-4 shrink-0" style={{ color: "#d4a039" }} />
               <span className="text-primary-foreground text-base md:text-lg font-medium">
                 {value}
               </span>
