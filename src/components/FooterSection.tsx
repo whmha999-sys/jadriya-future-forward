@@ -7,9 +7,6 @@ const navLinks = [
   { label: "Educational Technology", href: "/educational-technology" },
   { label: "Equipment Supply", href: "#divisions" },
   { label: "About Us", href: "#about" },
-  { label: "Sustainability", href: "#vision" },
-  { label: "Careers", href: "#contact" },
-  { label: "Newsroom", href: "#contact" },
   { label: "Contact", href: "/contact" },
 ];
 
