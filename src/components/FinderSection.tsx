@@ -13,6 +13,7 @@ const solutions = [
 
 const FinderSection = () => {
   const [current, setCurrent] = useState(0);
+  const { navigateWithTransition } = usePageTransition();
 
   useEffect(() => {
     const interval = setInterval(() => {
