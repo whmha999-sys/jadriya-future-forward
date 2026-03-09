@@ -26,7 +26,7 @@ const ValuesSection = () => {
         <motion.h2
           initial={{ opacity: 0, x: -120 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
           className="text-6xl md:text-8xl lg:text-9xl font-bold text-primary-foreground tracking-tight shrink-0"
         >
           VALUES
