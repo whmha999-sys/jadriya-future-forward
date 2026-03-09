@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { motion } from "framer-motion";
+import tornPaper from "@/assets/torn-paper-divider.png";
 
 const sections = [
   {
@@ -56,6 +57,11 @@ const PrivacyPolicy = () => {
           </p>
         </motion.div>
       </section>
+
+      {/* Torn paper divider */}
+      <div className="w-full -mt-1">
+        <img src={tornPaper} alt="" className="w-full block" />
+      </div>
 
       {/* Content */}
       <section className="py-20 px-8 md:px-16 bg-card">
