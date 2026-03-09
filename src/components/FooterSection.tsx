@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, Mail } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import { usePageTransition } from "./PageTransition";
 
@@ -19,30 +19,51 @@ const FooterSection = () => {
   return (
     <footer id="contact" className="dark-section">
       <div className="max-w-7xl mx-auto px-8 md:px-16 py-20">
-        <div className="grid md:grid-cols-2 gap-16 mb-16">
-          {/* Left */}
+        <div className="grid md:grid-cols-3 gap-16 mb-16">
+          {/* Contact Info & Address */}
           <div className="space-y-10">
             <div>
-              <h3 className="text-lg font-bold text-primary-foreground mb-2">Compliance Line</h3>
-              <p className="text-primary-foreground/60 text-sm mb-4">
-                Report any conduct contrary to AL-JADRIYA's Code of Conduct
-              </p>
-              <button className="cta-button-outline">
-                Report <ArrowRight className="h-4 w-4" />
-              </button>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-primary-foreground mb-2">Here to help you</h3>
-              <p className="text-primary-foreground/60 text-sm mb-4">
-                Any questions? We'd love to hear from you.
-              </p>
-              <button onClick={() => navigateWithTransition("/contact")} className="cta-button-outline">
-                Contact Us <ArrowRight className="h-4 w-4" />
-              </button>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/40 mb-6">Our Offices</p>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-primary-foreground font-bold text-base">Amman, Jordan</p>
+                    <p className="text-primary-foreground/60 text-sm">Headquarters</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-primary-foreground font-bold text-base">Baghdad, Iraq</p>
+                    <p className="text-primary-foreground/60 text-sm">Branch Office</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Mail className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-primary-foreground/60 text-sm">Email</p>
+                    <a href="mailto:contact@aljadriya.com" className="text-accent hover:text-accent/80 transition-colors text-base">
+                      contact@aljadriya.com
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right */}
+          {/* Here to help */}
+          <div>
+            <h3 className="text-lg font-bold text-primary-foreground mb-2">Here to help you</h3>
+            <p className="text-primary-foreground/60 text-sm mb-4">
+              Any questions? We'd love to hear from you.
+            </p>
+            <button onClick={() => navigateWithTransition("/contact")} className="cta-button-outline">
+              Contact Us <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+
+          {/* Nav Links */}
           <div className="grid grid-cols-2 gap-3">
             {navLinks.map((link) => (
               link.href.startsWith("/") ? (
