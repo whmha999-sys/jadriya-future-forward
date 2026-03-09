@@ -10,6 +10,7 @@ const Navbar = () => {
   const [bgSolid, setBgSolid] = useState(false);
   const [logoSwapped, setLogoSwapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { navigateWithTransition } = usePageTransition();
 
   useEffect(() => {
     const handleScroll = () => {
