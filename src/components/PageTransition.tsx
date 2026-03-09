@@ -23,11 +23,11 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
     setTimeout(() => {
       navigate(to);
       window.scrollTo(0, 0);
-    }, 1200);
+    }, 2200);
 
     setTimeout(() => {
       setShow(false);
-    }, 2800);
+    }, 2700);
   }, [navigate]);
 
   return (
