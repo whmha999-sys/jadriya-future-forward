@@ -20,16 +20,14 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
     setTarget(to);
     setShow(true);
 
-    // After slide-up completes (0.5s), navigate and hold logo for 0.8s
     setTimeout(() => {
       navigate(to);
       window.scrollTo(0, 0);
-    }, 600);
+    }, 1200);
 
-    // Then fade out
     setTimeout(() => {
       setShow(false);
-    }, 1400);
+    }, 2800);
   }, [navigate]);
 
   return (
@@ -41,7 +39,7 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 z-[100] flex items-center justify-center"
             style={{ backgroundColor: "#2d3a4a" }}
           >
