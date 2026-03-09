@@ -7,9 +7,6 @@ const navLinks = [
   { label: "Educational Technology", href: "/educational-technology" },
   { label: "Equipment Supply", href: "#divisions" },
   { label: "About Us", href: "#about" },
-  { label: "Sustainability", href: "#vision" },
-  { label: "Careers", href: "#contact" },
-  { label: "Newsroom", href: "#contact" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -93,8 +90,6 @@ const FooterSection = () => {
             <button onClick={() => navigateWithTransition("/terms-conditions")} className="hover:text-primary-foreground transition-colors">Terms & Conditions</button>
             <span>|</span>
             <button onClick={() => navigateWithTransition("/privacy-policy")} className="hover:text-primary-foreground transition-colors">Privacy Policy</button>
-            <span>|</span>
-            <a href="#" className="hover:text-primary-foreground transition-colors">FAQ</a>
           </div>
 
           <div className="flex items-center gap-3">
