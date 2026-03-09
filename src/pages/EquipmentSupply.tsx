@@ -71,7 +71,7 @@ const EquipmentSupply = () => {
               <p className="section-label mb-4">What We Do</p>
               <h2 className="section-heading mb-6">End-to-End Equipment Supply Solutions</h2>
               <p className="body-text">
-                AL-JADRIYA Engineering provides comprehensive equipment supply services for engineering, industrial, medical, and educational technology projects. We manage the full procurement cycle — from sourcing and tendering to delivery and after-sales support — ensuring our clients receive the right equipment at the right time.
+                AL-JADRIYA Engineering provides comprehensive equipment supply services for engineering, industrial, medical, and educational technology projects. We manage the full procurement cycle, from sourcing and tendering to delivery and after-sales support,ing our clients receive the right equipment at the right time.
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 40 }} animate={whatWeDoInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -129,7 +129,7 @@ const EquipmentSupply = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">Quality You Can Trust</h2>
             <div className="w-10 h-0.5 bg-accent mb-6" />
             <p className="body-text mb-8">
-              Every piece of equipment we supply meets strict quality and safety standards. We work exclusively with certified international partners and manufacturers to ensure our clients receive only the best — backed by full after-sales support and technical expertise.
+              Every piece of equipment we supply meets strict quality and safety standards. We work exclusively with certified international partners and manufacturers to ensure our clients receive only the best — b,d by full after-sales support and technical expertise.
             </p>
             <button onClick={() => navigateWithTransition("/contact")} className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
               Contact Us <ArrowRight className="h-4 w-4" />
