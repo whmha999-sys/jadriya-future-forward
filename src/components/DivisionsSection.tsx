@@ -33,6 +33,7 @@ const divisions = [
 const DivisionsSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <section ref={ref} className="py-24 md:py-32 px-8 md:px-16 bg-background">
