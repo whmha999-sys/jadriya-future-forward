@@ -20,8 +20,9 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[60] overflow-hidden"
+      className="fixed inset-0 z-[60] overflow-hidden cursor-pointer"
       style={{ backgroundColor: "#2d3a4a" }}
+      onClick={onClose}
     >
       {/* Centered logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -29,7 +30,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       </div>
 
       <style>{`.mega-scroll::-webkit-scrollbar { display: none; }`}</style>
-      <div className="mega-scroll relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      <div className="mega-scroll relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} onClick={(e) => e.stopPropagation()}>
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
