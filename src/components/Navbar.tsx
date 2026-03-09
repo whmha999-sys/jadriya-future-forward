@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
 import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
+import { usePageTransition } from "./PageTransition";
 
 const Navbar = () => {
   const [bgSolid, setBgSolid] = useState(false);
