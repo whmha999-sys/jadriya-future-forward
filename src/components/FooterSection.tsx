@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
+import { usePageTransition } from "./PageTransition";
 
 const navLinks = [
   { label: "Engineering Consultancy", href: "#divisions" },
@@ -13,6 +14,8 @@ const navLinks = [
 ];
 
 const FooterSection = () => {
+  const { navigateWithTransition } = usePageTransition();
+
   return (
     <footer id="contact" className="dark-section">
       <div className="max-w-7xl mx-auto px-8 md:px-16 py-20">
@@ -58,7 +61,7 @@ const FooterSection = () => {
           <div className="flex items-center gap-4 text-primary-foreground/40 text-xs">
             <a href="#" className="hover:text-primary-foreground transition-colors">Terms & Conditions</a>
             <span>|</span>
-            <a href="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
+            <button onClick={() => navigateWithTransition("/privacy-policy")} className="hover:text-primary-foreground transition-colors">Privacy Policy</button>
             <span>|</span>
             <a href="#" className="hover:text-primary-foreground transition-colors">FAQ</a>
           </div>
