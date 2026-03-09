@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { motion } from "framer-motion";
+import tornPaper from "@/assets/torn-paper-divider.png";
 
 const sections = [
   {
