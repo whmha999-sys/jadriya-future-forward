@@ -25,7 +25,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
     >
       {/* Centered logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src={logoMenu} alt="" className="w-64 h-64 opacity-10" />
+        <img src={logoMenu} alt="" className="w-[48rem] h-[48rem] opacity-10" />
       </div>
 
       <div className="relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto">
