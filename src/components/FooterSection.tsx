@@ -3,7 +3,7 @@ import logoIcon from "@/assets/logo-icon.png";
 import { usePageTransition } from "./PageTransition";
 
 const navLinks = [
-  { label: "Engineering Consultancy", href: "#divisions" },
+  { label: "Engineering Consultancy", href: "/engineering-consultancy" },
   { label: "Educational Technology", href: "#divisions" },
   { label: "Equipment Supply", href: "#divisions" },
   { label: "About Us", href: "#about" },
