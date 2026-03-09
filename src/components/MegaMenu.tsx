@@ -20,8 +20,9 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[60] overflow-hidden"
+      className="fixed inset-0 z-[60] overflow-hidden cursor-pointer"
       style={{ backgroundColor: "#2d3a4a" }}
+      onClick={onClose}
     >
       {/* Centered logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
