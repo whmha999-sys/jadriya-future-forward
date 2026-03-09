@@ -203,7 +203,7 @@ const EngineeringConsultancy = () => {
             <div className="w-10 h-0.5 bg-accent mb-6" />
             <p className="body-text mb-8">
               We combine deep regional knowledge with international engineering standards to deliver
-              projects that stand the test of time. Every client, every project, every sector — we
+              projects that stand the test of time. Every client, every project, every sector, we
               bring the same level of dedication and precision.
             </p>
             <button
