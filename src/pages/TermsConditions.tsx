@@ -4,7 +4,7 @@ import FooterSection from "@/components/FooterSection";
 
 const sections = [
   {
-    title: "Section 1 — Acceptance of Terms",
+    title: "Section 1 - Acceptance of Terms",
     body: "By accessing and using the AL-JADRIYA Engineering website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use this website.",
   },
   {
