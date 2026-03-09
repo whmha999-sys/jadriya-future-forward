@@ -67,14 +67,6 @@ const Navbar = () => {
 
           {/* Right side */}
           <div className="flex items-center gap-6">
-            <a
-              href="#contact"
-              className={`nav-link hidden md:block transition-colors duration-300 ${
-                bgSolid ? "text-primary" : "text-primary-foreground"
-              }`}
-            >
-              Client Hub
-            </a>
             <button
               onClick={() => navigateWithTransition("/contact")}
               className={`nav-link hidden md:block transition-colors duration-300 ${
@@ -82,13 +74,6 @@ const Navbar = () => {
               }`}
             >
               Contact Us
-            </button>
-            <button
-              className={`transition-colors duration-300 ${
-                bgSolid ? "text-primary" : "text-primary-foreground"
-              }`}
-            >
-              <Search className="h-5 w-5" />
             </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
