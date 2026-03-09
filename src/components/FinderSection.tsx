@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { usePageTransition } from "./PageTransition";
 
 const solutions = [
   "engineering consultancy",
@@ -12,6 +13,7 @@ const solutions = [
 
 const FinderSection = () => {
   const [current, setCurrent] = useState(0);
+  const { navigateWithTransition } = usePageTransition();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,7 +45,7 @@ const FinderSection = () => {
         </div>
 
         <div className="mt-12 flex items-center gap-6">
-          <button className="cta-button">
+          <button onClick={() => navigateWithTransition("/contact")} className="cta-button">
             Explore Solutions <ArrowRight className="h-5 w-5" />
           </button>
         </div>

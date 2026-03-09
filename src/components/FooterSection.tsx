@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Sustainability", href: "#vision" },
   { label: "Careers", href: "#contact" },
   { label: "Newsroom", href: "#contact" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const FooterSection = () => {
@@ -36,7 +36,7 @@ const FooterSection = () => {
               <p className="text-primary-foreground/60 text-sm mb-4">
                 Any questions? We'd love to hear from you.
               </p>
-              <button className="cta-button-outline">
+              <button onClick={() => navigateWithTransition("/contact")} className="cta-button-outline">
                 Contact Us <ArrowRight className="h-4 w-4" />
               </button>
             </div>
@@ -45,13 +45,23 @@ const FooterSection = () => {
           {/* Right */}
           <div className="grid grid-cols-2 gap-3">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors duration-200 text-sm py-2"
-              >
-                {link.label} <ArrowRight className="h-3 w-3" />
-              </a>
+              link.href.startsWith("/") ? (
+                <button
+                  key={link.label}
+                  onClick={() => navigateWithTransition(link.href)}
+                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors duration-200 text-sm py-2"
+                >
+                  {link.label} <ArrowRight className="h-3 w-3" />
+                </button>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors duration-200 text-sm py-2"
+                >
+                  {link.label} <ArrowRight className="h-3 w-3" />
+                </a>
+              )
             ))}
           </div>
         </div>

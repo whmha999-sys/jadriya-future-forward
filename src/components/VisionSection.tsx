@@ -1,11 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { usePageTransition } from "./PageTransition";
 import visionBg from "@/assets/vision-bg.jpg";
 
 const VisionSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <section ref={ref} className="relative h-[80vh] min-h-[600px] overflow-hidden">
@@ -33,7 +35,7 @@ const VisionSection = () => {
             and community. We aim to be the most trusted engineering and education provider in the
             Middle East.
           </p>
-          <button className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
+          <button onClick={() => navigateWithTransition("/contact")} className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
             Learn More <ArrowRight className="h-4 w-4" />
           </button>
         </motion.div>

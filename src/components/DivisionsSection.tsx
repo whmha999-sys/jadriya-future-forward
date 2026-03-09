@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { usePageTransition } from "./PageTransition";
 import divEngineering from "@/assets/div-engineering.jpg";
 import divEducation from "@/assets/div-education.jpg";
 import divEquipment from "@/assets/div-equipment.jpg";
@@ -32,6 +33,7 @@ const divisions = [
 const DivisionsSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <section ref={ref} className="py-24 md:py-32 px-8 md:px-16 bg-background">
@@ -54,6 +56,7 @@ const DivisionsSection = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
               className="group relative overflow-hidden h-[380px] cursor-pointer"
+              onClick={() => navigateWithTransition("/contact")}
             >
               <img
                 src={div.image}
