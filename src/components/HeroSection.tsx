@@ -14,17 +14,17 @@ const slides = [
   {
     image: hero2,
     label: "INNOVATION THROUGH EDUCATION AND TECHNOLOGY",
-    heading: ["This is", "AL-JADRIYA"],
+    heading: ["Innovation Through", "Education and Technology"],
   },
   {
     image: hero3,
     label: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION",
-    heading: ["Engineering", "Every Sector"],
+    heading: ["No Project Too Complex.", "No Sector Too Demanding."],
   },
   {
     image: hero4,
     label: "COMPREHENSIVE ENGINEERING CONSULTANCY",
-    heading: ["From Pipelines", "to Healthcare"],
+    heading: ["Comprehensive", "Engineering Consultancy"],
   },
 ];
 
