@@ -20,16 +20,14 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
     setTarget(to);
     setShow(true);
 
-    // After slide-up completes (0.5s), navigate and hold logo for 0.8s
     setTimeout(() => {
       navigate(to);
       window.scrollTo(0, 0);
-    }, 600);
+    }, 1200);
 
-    // Then fade out
     setTimeout(() => {
       setShow(false);
-    }, 1400);
+    }, 2800);
   }, [navigate]);
 
   return (
