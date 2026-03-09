@@ -23,11 +23,11 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
     setTimeout(() => {
       navigate(to);
       window.scrollTo(0, 0);
-    }, 1200);
+    }, 2200);
 
     setTimeout(() => {
       setShow(false);
-    }, 2800);
+    }, 2700);
   }, [navigate]);
 
   return (
@@ -39,7 +39,7 @@ export const PageTransitionProvider = ({ children }: { children: ReactNode }) =>
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 2, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 z-[100] flex items-center justify-center"
             style={{ backgroundColor: "#2d3a4a" }}
           >
