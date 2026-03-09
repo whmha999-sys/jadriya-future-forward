@@ -10,6 +10,7 @@ import EngineeringConsultancy from "./pages/EngineeringConsultancy";
 import EducationalTechnology from "./pages/EducationalTechnology";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import EquipmentSupply from "./pages/EquipmentSupply";
 import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
