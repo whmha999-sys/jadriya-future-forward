@@ -63,7 +63,7 @@ const Navbar = () => {
               <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
               <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
             </div>
-          </a>
+          </button>
 
           {/* Right side */}
           <div className="flex items-center gap-6">
