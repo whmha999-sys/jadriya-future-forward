@@ -20,15 +20,15 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[60]"
+      className="fixed inset-0 z-[60] overflow-hidden"
       style={{ backgroundColor: "#2d3a4a" }}
     >
       {/* Centered logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src={logoMenu} alt="" className="w-[48rem] h-[48rem] opacity-10" />
+        <img src={logoMenu} alt="" className="w-[80vw] h-[80vw] md:w-[48rem] md:h-[48rem] max-w-none opacity-10" />
       </div>
 
-      <div className="relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto">
+      <div className="relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
