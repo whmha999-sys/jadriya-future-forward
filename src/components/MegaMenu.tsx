@@ -45,11 +45,10 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
-            <a
+            <button
               key={item}
-              href={menuData[item].href}
               onMouseEnter={() => setActive(item)}
-              onClick={onClose}
+              onClick={() => handleLink(menuData[item].href)}
               className={`block w-full text-left text-xl md:text-2xl font-semibold py-3 transition-all duration-300 ${
                 active === item
                   ? "text-accent"
@@ -57,7 +56,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
               }`}
             >
               {item}
-            </a>
+            </button>
           ))}
         </div>
 
