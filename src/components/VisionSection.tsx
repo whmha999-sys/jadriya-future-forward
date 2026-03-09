@@ -35,7 +35,7 @@ const VisionSection = () => {
             and community. We aim to be the most trusted engineering and education provider in the
             Middle East.
           </p>
-          <button className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
+          <button onClick={() => navigateWithTransition("/contact")} className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
             Learn More <ArrowRight className="h-4 w-4" />
           </button>
         </motion.div>

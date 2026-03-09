@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Sustainability", href: "#vision" },
   { label: "Careers", href: "#contact" },
   { label: "Newsroom", href: "#contact" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const FooterSection = () => {

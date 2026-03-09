@@ -56,6 +56,7 @@ const DivisionsSection = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
               className="group relative overflow-hidden h-[380px] cursor-pointer"
+              onClick={() => navigateWithTransition("/contact")}
             >
               <img
                 src={div.image}
