@@ -7,6 +7,7 @@ import visionBg from "@/assets/vision-bg.jpg";
 const VisionSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <section ref={ref} className="relative h-[80vh] min-h-[600px] overflow-hidden">
