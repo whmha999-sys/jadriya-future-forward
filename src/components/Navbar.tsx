@@ -75,14 +75,14 @@ const Navbar = () => {
             >
               Client Hub
             </a>
-            <a
-              href="/contact"
+            <button
+              onClick={() => navigateWithTransition("/contact")}
               className={`nav-link hidden md:block transition-colors duration-300 ${
                 bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               Contact Us
-            </a>
+            </button>
             <button
               className={`transition-colors duration-300 ${
                 bgSolid ? "text-primary" : "text-primary-foreground"
