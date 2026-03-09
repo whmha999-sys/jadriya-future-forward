@@ -28,7 +28,8 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
         <img src={logoMenu} alt="" className="w-[80vw] h-[80vw] md:w-[48rem] md:h-[48rem] max-w-none opacity-10" />
       </div>
 
-      <div className="relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+      <style>{`.mega-scroll::-webkit-scrollbar { display: none; }`}</style>
+      <div className="mega-scroll relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
