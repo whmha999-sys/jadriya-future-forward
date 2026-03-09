@@ -30,7 +30,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       </div>
 
       <style>{`.mega-scroll::-webkit-scrollbar { display: none; }`}</style>
-      <div className="mega-scroll relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} onClick={(e) => e.stopPropagation()}>
+      <div className="mega-scroll relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
