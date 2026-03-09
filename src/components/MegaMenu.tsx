@@ -7,8 +7,8 @@ import { usePageTransition } from "./PageTransition";
 const menuData: Record<string, { items: string[]; href: string }> = {
   "Engineering Consultancy": { items: ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"], href: "/engineering-consultancy" },
   "Educational Technology": { items: ["Robotics Programs", "AI Training", "School Partnerships", "Online Courses", "Corporate Training"], href: "/educational-technology" },
+  "Equipment Supply": { items: ["Industrial Equipment", "Medical Equipment", "Educational Technology", "Construction Materials", "Tender Management", "After-Sales Support"], href: "/equipment-supply" },
   "About Us": { items: ["Our Story", "Leadership", "Careers", "Newsroom"], href: "#about" },
-  "Sustainability": { items: ["Our Vision", "Community Impact", "Green Initiatives"], href: "#vision" },
   "Contact Us": { items: ["Amman Office", "Baghdad Office", "General Inquiries"], href: "/contact" },
 };
 
