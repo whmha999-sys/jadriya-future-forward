@@ -4,11 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
 import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
+import { usePageTransition } from "./PageTransition";
 
 const Navbar = () => {
   const [bgSolid, setBgSolid] = useState(false);
   const [logoSwapped, setLogoSwapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { navigateWithTransition } = usePageTransition();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +46,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between px-6 md:px-12 py-4">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-0">
+          <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
             <div className="relative h-24 w-24 mt-2 ml-10 shrink-0">
               <img
                 src={logoIcon}
@@ -61,7 +63,7 @@ const Navbar = () => {
               <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
               <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
             </div>
-          </a>
+          </button>
 
           {/* Right side */}
           <div className="flex items-center gap-6">
@@ -73,14 +75,14 @@ const Navbar = () => {
             >
               Client Hub
             </a>
-            <a
-              href="/contact"
+            <button
+              onClick={() => navigateWithTransition("/contact")}
               className={`nav-link hidden md:block transition-colors duration-300 ${
                 bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
               Contact Us
-            </a>
+            </button>
             <button
               className={`transition-colors duration-300 ${
                 bgSolid ? "text-primary" : "text-primary-foreground"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logoMenu from "@/assets/logo-menu.png";
+import { usePageTransition } from "./PageTransition";
 
 const menuData: Record<string, { items: string[]; href: string }> = {
   "Engineering Consultancy": { items: ["Project Planning", "Feasibility Studies", "Medical Engineering Consultancy", "Technical Design", "Procurement", "Turnkey Projects", "Site Surveys"], href: "#divisions" },
@@ -13,6 +14,16 @@ const menuData: Record<string, { items: string[]; href: string }> = {
 
 const MegaMenu = ({ onClose }: { onClose: () => void }) => {
   const [active, setActive] = useState("Engineering Consultancy");
+  const { navigateWithTransition } = usePageTransition();
+
+  const handleLink = (href: string) => {
+    onClose();
+    if (href.startsWith("/")) {
+      navigateWithTransition(href);
+    } else {
+      window.location.hash = href.replace("#", "");
+    }
+  };
 
   return (
     <motion.div
@@ -34,11 +45,10 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
         {/* Main categories */}
         <div className="md:w-1/3 space-y-1">
           {Object.keys(menuData).map((item) => (
-            <a
+            <button
               key={item}
-              href={menuData[item].href}
               onMouseEnter={() => setActive(item)}
-              onClick={onClose}
+              onClick={() => handleLink(menuData[item].href)}
               className={`block w-full text-left text-xl md:text-2xl font-semibold py-3 transition-all duration-300 ${
                 active === item
                   ? "text-accent"
@@ -46,7 +56,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
               }`}
             >
               {item}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -61,15 +71,14 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
           >
             <p className="section-label text-primary-foreground/40 mb-6">{active}</p>
             {menuData[active]?.items.map((sub) => (
-              <a
+              <button
                 key={sub}
-                href={menuData[active].href}
-                onClick={onClose}
+                onClick={() => handleLink(menuData[active].href)}
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors duration-200 text-base"
               >
                 <ArrowRight className="h-4 w-4" />
                 {sub}
-              </a>
+              </button>
             ))}
           </motion.div>
         </div>
