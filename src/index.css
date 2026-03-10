@@ -118,7 +118,7 @@ html {
   }
 
   .hero-heading {
-    @apply text-3xl md:text-4xl lg:text-[56px] font-bold leading-[1.05] text-primary-foreground;
+    @apply text-5xl md:text-6xl lg:text-[80px] font-bold leading-[1.05] text-primary-foreground;
   }
 
   .body-text {
