@@ -4,7 +4,7 @@ import { ArrowRight, Bot, Code, TrendingUp, Heart, Building, Globe, GraduationCa
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
-import heroImg from "@/assets/edu-tech-hero.jpg";
+import heroImg from "@/assets/hero-2.jpg";
 import classroomImg from "@/assets/edu-tech-classroom.jpg";
 import trainingCenterImg from "@/assets/edu-tech-training-center.jpg";
 
