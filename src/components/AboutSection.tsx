@@ -3,21 +3,22 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-image.jpg";
 import logoWatermark from "@/assets/logo-watermark.png";
-
-const stats = [
-  { number: "2", label: "Specialized Divisions" },
-  { number: "2", label: "Countries: Jordan & Iraq" },
-  { number: "6", label: "Regional Markets" },
-  { number: "101+", label: "Projects & Programs Delivered" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+
+  const stats = [
+    { number: t("about.stat1.number"), label: t("about.stat1.label") },
+    { number: t("about.stat2.number"), label: t("about.stat2.label") },
+    { number: t("about.stat3.number"), label: t("about.stat3.label") },
+    { number: t("about.stat4.number"), label: t("about.stat4.label") },
+  ];
 
   return (
     <section ref={ref} className="relative py-24 md:py-32 px-8 md:px-16 bg-card overflow-hidden">
-      {/* Watermark logo background */}
       <img
         src={logoWatermark}
         alt=""
@@ -30,15 +31,9 @@ const AboutSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <p className="section-label mb-4">Welcome to AL-JADRIYA Engineering</p>
-            <h2 className="section-heading mb-6">
-              Leading in engineering, education, and innovation
-            </h2>
-            <p className="body-text">
-              We are an integrated engineering and educational technology company, serving Jordan,
-              Iraq, and the wider region. From complex engineering consultancy to world-class AI
-              and robotics training programs, we build the future on two fronts.
-            </p>
+            <p className="section-label mb-4">{t("about.label")}</p>
+            <h2 className="section-heading mb-6">{t("about.heading")}</h2>
+            <p className="body-text">{t("about.text")}</p>
           </motion.div>
 
           <motion.div
@@ -55,7 +50,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <motion.div

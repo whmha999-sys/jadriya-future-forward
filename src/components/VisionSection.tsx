@@ -2,12 +2,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
+import { useLanguage } from "@/contexts/LanguageContext";
 import visionBg from "@/assets/vision-bg.jpg";
 
 const VisionSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const { navigateWithTransition } = usePageTransition();
+  const { t } = useLanguage();
 
   return (
     <section ref={ref} className="relative h-[80vh] min-h-[600px] overflow-hidden">
@@ -26,17 +28,12 @@ const VisionSection = () => {
           className="bg-card p-10 md:p-14 max-w-xl shadow-2xl"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
-            Our Vision for the Region
+            {t("vision.heading")}
           </h2>
           <div className="w-10 h-0.5 bg-accent mb-6" />
-          <p className="body-text mb-8">
-            Since its founding, AL-JADRIYA Engineering has been guided by a firm philosophy: a
-            company's greatest asset is the trust it builds with its clients, partners, trainees,
-            and community. We aim to be the most trusted engineering and education provider in the
-            Middle East.
-          </p>
+          <p className="body-text mb-8">{t("vision.text")}</p>
           <button onClick={() => navigateWithTransition("/contact")} className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
-            Learn More <ArrowRight className="h-4 w-4" />
+            {t("vision.cta")} <ArrowRight className="h-4 w-4" />
           </button>
         </motion.div>
       </div>

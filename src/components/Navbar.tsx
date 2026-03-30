@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
-import { Search, Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
 import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
 import { usePageTransition } from "./PageTransition";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [bgSolid, setBgSolid] = useState(false);
   const [logoSwapped, setLogoSwapped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { navigateWithTransition } = usePageTransition();
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +34,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "ar" : "en");
+  };
+
   return (
     <>
       <motion.nav
@@ -45,9 +51,9 @@ const Navbar = () => {
         }`}
       >
         <div className="flex items-center justify-between px-6 md:px-12 py-4">
-          {/* Logo */}
+          {/* Logo - 150% bigger: h-24 -> h-36, w-24 -> w-36 */}
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
-            <div className="relative h-24 w-24 mt-2 ml-10 shrink-0">
+            <div className="relative h-36 w-36 mt-2 ml-10 shrink-0">
               <img
                 src={logoIcon}
                 alt="AL-JADRIYA Engineering"
@@ -60,20 +66,31 @@ const Navbar = () => {
               />
             </div>
             <div className={`hidden md:block -ml-4 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
-              <span className="text-sm font-bold tracking-wider uppercase">AL-JADRIYA</span>
-              <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
+              <span className="text-sm font-bold tracking-wider uppercase">{t("nav.aljadriya")}</span>
+              <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">{t("nav.engineering")}</span>
             </div>
           </button>
 
           {/* Right side */}
           <div className="flex items-center gap-6">
+            {/* Language toggle */}
+            <button
+              onClick={toggleLanguage}
+              className={`flex items-center gap-1.5 text-sm font-semibold transition-colors duration-300 ${
+                bgSolid ? "text-primary" : "text-primary-foreground"
+              }`}
+            >
+              <Globe className="h-4 w-4" />
+              {language === "en" ? "عربي" : "EN"}
+            </button>
+
             <button
               onClick={() => navigateWithTransition("/contact")}
               className={`nav-link hidden md:block transition-colors duration-300 ${
                 bgSolid ? "text-primary" : "text-primary-foreground"
               }`}
             >
-              Contact Us
+              {t("nav.contact")}
             </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}

@@ -2,18 +2,17 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
-
-const solutions = [
-  "engineering consultancy",
-  "robotics training programs",
-  "AI workforce solutions",
-  "project management",
-  "equipment supply",
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FinderSection = () => {
   const [current, setCurrent] = useState(0);
   const { navigateWithTransition } = usePageTransition();
+  const { t } = useLanguage();
+
+  const solutions = [
+    t("finder.sol1"), t("finder.sol2"), t("finder.sol3"),
+    t("finder.sol4"), t("finder.sol5"),
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,9 +24,9 @@ const FinderSection = () => {
   return (
     <section className="py-24 md:py-32 px-8 md:px-16 bg-card">
       <div className="max-w-5xl mx-auto">
-        <p className="section-label mb-6">Find the right solution for your needs</p>
+        <p className="section-label mb-6">{t("finder.label")}</p>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
-          I'm looking for
+          {t("finder.heading")}
         </h2>
         <div className="h-20 md:h-24 flex items-center">
           <AnimatePresence mode="wait">
@@ -46,11 +45,10 @@ const FinderSection = () => {
 
         <div className="mt-12 flex items-center gap-6">
           <button onClick={() => navigateWithTransition("/contact")} className="cta-button">
-            Explore Solutions <ArrowRight className="h-5 w-5" />
+            {t("finder.cta")} <ArrowRight className="h-5 w-5" />
           </button>
         </div>
 
-        {/* Dots */}
         <div className="flex gap-2 mt-12">
           {solutions.map((_, i) => (
             <button
