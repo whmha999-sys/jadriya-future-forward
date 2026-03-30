@@ -2,38 +2,24 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
+import { useLanguage } from "@/contexts/LanguageContext";
 import divEngineering from "@/assets/div-engineering.jpg";
 import divEducation from "@/assets/div-education.jpg";
 import divEquipment from "@/assets/div-equipment.jpg";
 import divPartnerships from "@/assets/div-partnerships.jpg";
 
-const divisions = [
-  {
-    title: "Engineering Consultancy Division",
-    description: "Comprehensive engineering consultancy across medical facilities, industrial pipelines, infrastructure, and turnkey projects, serving public and private sector clients across Jordan and Iraq.",
-    image: divEngineering,
-  },
-  {
-    title: "Educational Technology Division",
-    description: "World-class robotics, programming, and AI training programs delivered to schools, professionals, and career-shifters, in-person and online.",
-    image: divEducation,
-  },
-  {
-    title: "Equipment Supply & Tenders",
-    description: "Full capability to supply technical equipment, manage government tenders, and place trained graduates into the workforce.",
-    image: divEquipment,
-  },
-  {
-    title: "International Partnerships",
-    description: "Backed by established relationships with leading international partners, operating across Jordan, Iraq, UAE, KSA, Egypt, and Libya.",
-    image: divPartnerships,
-  },
-];
-
 const DivisionsSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const { navigateWithTransition } = usePageTransition();
+  const { t } = useLanguage();
+
+  const divisions = [
+    { title: t("divisions.1.title"), description: t("divisions.1.desc"), image: divEngineering },
+    { title: t("divisions.2.title"), description: t("divisions.2.desc"), image: divEducation },
+    { title: t("divisions.3.title"), description: t("divisions.3.desc"), image: divEquipment },
+    { title: t("divisions.4.title"), description: t("divisions.4.desc"), image: divPartnerships },
+  ];
 
   return (
     <section ref={ref} className="py-24 md:py-32 px-8 md:px-16 bg-background">
@@ -44,7 +30,7 @@ const DivisionsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="section-heading">Our Divisions & Services</h2>
+          <h2 className="section-heading">{t("divisions.heading")}</h2>
           <div className="w-12 h-0.5 bg-accent mt-4" />
         </motion.div>
 
@@ -72,7 +58,7 @@ const DivisionsSection = () => {
                   {div.description}
                 </p>
                 <div className="flex items-center gap-2 text-accent text-sm font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Learn More <ArrowRight className="h-4 w-4" />
+                  {t("divisions.learnMore")} <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
             </motion.div>

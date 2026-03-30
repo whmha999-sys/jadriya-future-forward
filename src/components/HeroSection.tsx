@@ -4,32 +4,18 @@ import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/edu-tech-hero.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 import hero4 from "@/assets/hero-4.jpg";
-
-const slides = [
-  {
-    image: hero1,
-    label: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION",
-    heading: ["This is", "AL-JADRIYA"],
-  },
-  {
-    image: hero2,
-    label: "INNOVATION THROUGH EDUCATION AND TECHNOLOGY",
-    heading: ["Innovation Through", "Education and Technology"],
-  },
-  {
-    image: hero3,
-    label: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION",
-    heading: ["No Project Too Complex.", "No Sector Too Demanding."],
-  },
-  {
-    image: hero4,
-    label: "COMPREHENSIVE ENGINEERING CONSULTANCY",
-    heading: ["Comprehensive", "Engineering Consultancy"],
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const { t } = useLanguage();
+
+  const slides = [
+    { image: hero1, label: t("hero.slide1.label"), heading: [t("hero.slide1.h1"), t("hero.slide1.h2")] },
+    { image: hero2, label: t("hero.slide2.label"), heading: [t("hero.slide2.h1"), t("hero.slide2.h2")] },
+    { image: hero3, label: t("hero.slide3.label"), heading: [t("hero.slide3.h1"), t("hero.slide3.h2")] },
+    { image: hero4, label: t("hero.slide4.label"), heading: [t("hero.slide4.h1"), t("hero.slide4.h2")] },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -92,7 +78,7 @@ const HeroSection = () => {
           />
         </div>
         <span className="text-primary-foreground/40 text-[10px] uppercase tracking-widest [writing-mode:vertical-lr]">
-          Scroll Down
+          {t("hero.scrollDown")}
         </span>
       </div>
 
