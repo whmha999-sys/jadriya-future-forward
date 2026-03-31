@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Mail } from "lucide-react";
+import { ArrowRight, MapPin, Mail, Phone } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -7,90 +7,122 @@ const FooterSection = () => {
   const { navigateWithTransition } = usePageTransition();
   const { t } = useLanguage();
 
-  const navLinks = [
-    { label: t("footer.engConsultancy"), href: "/engineering-consultancy" },
-    { label: t("footer.eduTech"), href: "/educational-technology" },
-    { label: t("footer.equipSupply"), href: "/equipment-supply" },
-    { label: t("footer.aboutUs"), href: "#about" },
-    { label: t("footer.contact"), href: "/contact" },
-  ];
-
   return (
-    <footer id="contact" className="dark-section">
-      <div className="max-w-7xl mx-auto px-8 md:px-16 py-20">
-        <div className="grid md:grid-cols-3 gap-16 mb-16">
-          <div className="space-y-10">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/40 mb-6">{t("footer.offices")}</p>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-primary-foreground font-bold text-base">{t("footer.amman")}</p>
-                    <p className="text-primary-foreground/60 text-sm">{t("footer.hq")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-primary-foreground font-bold text-base">{t("footer.baghdad")}</p>
-                    <p className="text-primary-foreground/60 text-sm">{t("footer.branch")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <Mail className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="text-primary-foreground/60 text-sm">{t("footer.email")}</p>
-                    <a href="mailto:contact@aljadriya.com" className="text-accent hover:text-accent/80 transition-colors text-base">
-                      contact@aljadriya.com
-                    </a>
-                  </div>
-                </div>
+    <footer className="bg-[hsl(var(--slate-dark))]">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Column 1: Brand */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <img src={logoIcon} alt="AL-JADRIYA" className="h-10 w-10 brightness-0 invert" />
+              <span className="text-primary-foreground font-bold text-sm uppercase tracking-wider">
+                {t("footer.brand")}
+              </span>
+            </div>
+            <p className="text-primary-foreground/60 text-sm">{t("footer.tagline")}</p>
+            <div className="space-y-2 text-sm text-primary-foreground/60">
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-accent flex-shrink-0" />
+                <a href="mailto:info@hy-med.net" className="hover:text-accent transition-colors">info@hy-med.net</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-accent flex-shrink-0" />
+                <span>+962 788310769</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-accent flex-shrink-0" />
+                <span>+964 7717323273</span>
               </div>
             </div>
           </div>
 
+          {/* Column 2: Our Companies */}
           <div>
-            <h3 className="text-lg font-bold text-primary-foreground mb-2">{t("footer.helpTitle")}</h3>
-            <p className="text-primary-foreground/60 text-sm mb-4">{t("footer.helpText")}</p>
-            <button onClick={() => navigateWithTransition("/contact")} className="cta-button-outline">
-              {t("footer.contact")} <ArrowRight className="h-4 w-4" />
-            </button>
+            <h4 className="text-primary-foreground font-bold text-sm uppercase tracking-wider mb-6">
+              {t("footer.companies")}
+            </h4>
+            <div className="space-y-3">
+              {[
+                { label: t("footer.oilgas"), href: "/oil-gas" },
+                { label: t("footer.medical"), href: "/medical" },
+                { label: t("footer.robotics"), href: "/robotics" },
+                { label: t("footer.energy"), href: "/energy" },
+              ].map((link) => (
+                <button
+                  key={link.href}
+                  onClick={() => navigateWithTransition(link.href)}
+                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+                >
+                  <ArrowRight className="h-3 w-3" /> {link.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            {navLinks.map((link) => (
-              link.href.startsWith("/") ? (
-                <button
-                  key={link.label}
-                  onClick={() => navigateWithTransition(link.href)}
-                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors duration-200 text-sm py-2"
-                >
-                  {link.label} <ArrowRight className="h-3 w-3" />
-                </button>
-              ) : (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors duration-200 text-sm py-2"
-                >
-                  {link.label} <ArrowRight className="h-3 w-3" />
-                </a>
-              )
-            ))}
+          {/* Column 3: Quick Links */}
+          <div>
+            <h4 className="text-primary-foreground font-bold text-sm uppercase tracking-wider mb-6">
+              {t("footer.quickLinks")}
+            </h4>
+            <div className="space-y-3">
+              <button
+                onClick={() => navigateWithTransition("/contact")}
+                className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+              >
+                <ArrowRight className="h-3 w-3" /> {t("footer.contact")}
+              </button>
+              <a
+                href="#about"
+                className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+              >
+                <ArrowRight className="h-3 w-3" /> {t("footer.aboutUs")}
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-2 text-primary-foreground/60 hover:text-accent transition-colors text-sm"
+              >
+                <ArrowRight className="h-3 w-3" /> {t("footer.careers")}
+              </a>
+            </div>
+          </div>
+
+          {/* Column 4: Offices */}
+          <div>
+            <h4 className="text-primary-foreground font-bold text-sm uppercase tracking-wider mb-6">
+              {t("footer.offices")}
+            </h4>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-primary-foreground text-sm font-semibold">{t("footer.amman")}</p>
+                  <p className="text-primary-foreground/50 text-xs">{t("footer.ammanAddress")}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-primary-foreground text-sm font-semibold">{t("footer.tikrit")}</p>
+                  <p className="text-primary-foreground/50 text-xs">{t("footer.tikritAddress")}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      {/* Bottom bar */}
+      <div className="border-t border-primary-foreground/10">
+        <div className="max-w-7xl mx-auto px-8 md:px-16 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <span className="text-primary-foreground/40 text-xs">{t("footer.rights")}</span>
           <div className="flex items-center gap-4 text-primary-foreground/40 text-xs">
-            <button onClick={() => navigateWithTransition("/terms-conditions")} className="hover:text-primary-foreground transition-colors">{t("footer.terms")}</button>
+            <button onClick={() => navigateWithTransition("/terms-conditions")} className="hover:text-primary-foreground transition-colors">
+              {t("footer.terms")}
+            </button>
             <span>|</span>
-            <button onClick={() => navigateWithTransition("/privacy-policy")} className="hover:text-primary-foreground transition-colors">{t("footer.privacy")}</button>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <img src={logoIcon} alt="AL-JADRIYA" className="h-8 w-8 brightness-0 invert opacity-60" />
-            <span className="text-primary-foreground/40 text-xs">{t("footer.rights")}</span>
+            <button onClick={() => navigateWithTransition("/privacy-policy")} className="hover:text-primary-foreground transition-colors">
+              {t("footer.privacy")}
+            </button>
           </div>
         </div>
       </div>
