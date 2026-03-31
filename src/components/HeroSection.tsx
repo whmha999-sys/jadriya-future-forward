@@ -8,7 +8,7 @@ import { useLanguage } from "@/contexts/useLanguage";
 
 const slides = [
   {
-    image: hero4,
+    image: hero1,
     labelKey: "hero.slide1.label",
     headingKey: "hero.slide1.heading",
     link: "/about",
