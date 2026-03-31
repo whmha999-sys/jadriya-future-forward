@@ -92,7 +92,7 @@ export const translations: Record<string, Record<Language, string>> = {
   "footer.contact": { en: "Contact Us", ar: "تواصل معنا" },
   "footer.terms": { en: "Terms & Conditions", ar: "الشروط والأحكام" },
   "footer.privacy": { en: "Privacy Policy", ar: "سياسة الخصوصية" },
-  "footer.rights": { en: "© 2024 AL-JADRIYA Engineering. All rights reserved.", ar: "© ٢٠٢٤ الجادرية للهندسة. جميع الحقوق محفوظة." },
+  
   "footer.engConsultancy": { en: "Engineering Consultancy", ar: "الاستشارات الهندسية" },
   "footer.eduTech": { en: "Educational Technology", ar: "التكنولوجيا التعليمية" },
   "footer.equipSupply": { en: "Equipment Supply", ar: "توريد المعدات" },
