@@ -85,12 +85,9 @@ const HeroSection = () => {
           transition={{ duration: 1.2 }}
           className="absolute inset-0"
         >
-          <motion.img
+          <img
             src={slide.image}
             alt="Hero"
-            initial={{ scale: 1 }}
-            animate={{ scale: 1.08 }}
-            transition={{ duration: 6, ease: "linear" }}
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/60" />
