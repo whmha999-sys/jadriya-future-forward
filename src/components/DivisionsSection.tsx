@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 import divEngineering from "@/assets/div-engineering.jpg";
 import divEducation from "@/assets/div-education.jpg";
 import divEquipment from "@/assets/div-equipment.jpg";

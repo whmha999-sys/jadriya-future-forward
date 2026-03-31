@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-image.jpg";
 import logoWatermark from "@/assets/logo-watermark.png";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 
 const AboutSection = () => {
   const ref = useRef(null);
