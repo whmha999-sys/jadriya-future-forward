@@ -120,9 +120,9 @@ const HeroSection = () => {
       {/* Circle arrow button - right side */}
       <button
         onClick={advance}
-        className="absolute right-8 md:right-16 bottom-32 md:bottom-40 z-10 w-14 h-14 rounded-full border border-primary-foreground/40 flex items-center justify-center hover:border-accent hover:text-accent text-primary-foreground transition-colors duration-300"
+        className={`absolute ${isRTL ? 'left-8 md:left-16' : 'right-8 md:right-16'} bottom-32 md:bottom-40 z-10 w-14 h-14 rounded-full border border-primary-foreground/40 flex items-center justify-center hover:border-accent hover:text-accent text-primary-foreground transition-colors duration-300`}
       >
-        <ArrowRight className="h-5 w-5" />
+        <ArrowRight className={`h-5 w-5 ${isRTL ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Bottom tab bar */}

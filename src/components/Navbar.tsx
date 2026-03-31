@@ -67,8 +67,8 @@ const Navbar = () => {
               />
             </div>
             <div className={`hidden md:block ml-2 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
-              <span className="text-xs font-bold tracking-wider uppercase">{t("nav.aljadriya")}</span>
-              <span className="block text-[9px] font-medium tracking-[0.3em] uppercase opacity-70">{t("nav.engineering")}</span>
+              <span className="text-xs font-bold tracking-wider uppercase">AL-JADRIYA</span>
+              <span className="block text-[9px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
             </div>
           </button>
 
