@@ -12,31 +12,31 @@ const HeroSection = () => {
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1920&q=80",
+      image: hero4,
       label: t("hero.slide1.label"),
       heading: t("hero.slide1.heading"),
-      link: "/oil-gas",
+      link: "/about",
       tab: t("hero.slide1.tab"),
     },
     {
-      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1920&q=80",
+      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1920&q=80",
       label: t("hero.slide2.label"),
       heading: t("hero.slide2.heading"),
-      link: "/medical",
+      link: "/robotics",
       tab: t("hero.slide2.tab"),
     },
     {
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1920&q=80",
+      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1920&q=80",
       label: t("hero.slide3.label"),
       heading: t("hero.slide3.heading"),
-      link: "/robotics",
+      link: "/medical",
       tab: t("hero.slide3.tab"),
     },
     {
-      image: hero4,
+      image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1920&q=80",
       label: t("hero.slide4.label"),
       heading: t("hero.slide4.heading"),
-      link: "/energy",
+      link: "/oil-gas",
       tab: t("hero.slide4.tab"),
     },
   ];
@@ -123,33 +123,31 @@ const HeroSection = () => {
         </button>
       </div>
 
-      {/* Bottom tab indicators */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
+      {/* Bottom tab indicators - Aramco style */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 bg-[hsl(var(--navy-deep))]/50 backdrop-blur-sm">
         <div className="flex">
           {slides.map((s, i) => (
             <button
               key={i}
               onClick={() => goToSlide(i)}
-              className={`flex-1 py-4 px-4 text-left border-t-2 transition-all duration-300 ${
-                i === current
-                  ? "border-accent bg-[hsl(var(--navy-deep))]/40"
-                  : "border-primary-foreground/10 hover:border-primary-foreground/30"
-              }`}
+              className="flex-1 py-4 px-4 text-left transition-all duration-300"
             >
-              <span className={`text-xs font-semibold uppercase tracking-wider ${
-                i === current ? "text-accent" : "text-primary-foreground/40"
+              <span className={`text-xs font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                i === current ? "text-primary-foreground" : "text-primary-foreground/40"
               }`}>
                 {s.tab}
               </span>
-              {i === current && (
-                <div className="mt-2 h-0.5 bg-primary-foreground/20 overflow-hidden">
+              <div className="mt-2 h-0.5 bg-primary-foreground/10 overflow-hidden">
+                {i === current ? (
                   <motion.div
-                    className="h-full bg-accent"
-                    style={{ width: `${progress}%` }}
+                    className="h-full"
+                    style={{ width: `${progress}%`, backgroundColor: '#F5A623' }}
                     transition={{ duration: 0.1 }}
                   />
-                </div>
-              )}
+                ) : (
+                  <div className="h-full w-0" />
+                )}
+              </div>
             </button>
           ))}
         </div>
