@@ -15,19 +15,20 @@ export const translations: Record<string, Record<Language, string>> = {
   "nav.aljadriya": { en: "AL-JADRIYA", ar: "الجادرية" },
   "nav.engineering": { en: "Engineering", ar: "للهندسة" },
 
-  // Hero slides
+  // Hero slides (new format)
   "hero.slide1.label": { en: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION", ar: "ملتزمون بمستقبل الهندسة والتعليم" },
-  "hero.slide1.h1": { en: "This is", ar: "هذه هي" },
-  "hero.slide1.h2": { en: "AL-JADRIYA", ar: "الجادرية" },
-  "hero.slide2.label": { en: "INNOVATION THROUGH EDUCATION AND TECHNOLOGY", ar: "الابتكار من خلال التعليم والتكنولوجيا" },
-  "hero.slide2.h1": { en: "Innovation Through", ar: "الابتكار من خلال" },
-  "hero.slide2.h2": { en: "Education and Technology", ar: "التعليم والتكنولوجيا" },
-  "hero.slide3.label": { en: "COMMITTED TO THE FUTURE OF ENGINEERING & EDUCATION", ar: "ملتزمون بمستقبل الهندسة والتعليم" },
-  "hero.slide3.h1": { en: "No Project Too Complex.", ar: "لا مشروع معقد جداً." },
-  "hero.slide3.h2": { en: "No Sector Too Demanding.", ar: "ولا قطاع صعب المنال." },
-  "hero.slide4.label": { en: "COMPREHENSIVE ENGINEERING CONSULTANCY", ar: "استشارات هندسية شاملة" },
-  "hero.slide4.h1": { en: "Comprehensive", ar: "استشارات" },
-  "hero.slide4.h2": { en: "Engineering Consultancy", ar: "هندسية شاملة" },
+  "hero.slide1.heading": { en: "THIS IS\nAL-JADRIYA", ar: "هذه هي\nالجادرية" },
+  "hero.slide1.tab": { en: "Energy", ar: "الطاقة" },
+  "hero.slide2.label": { en: "ROBOTICS & AI", ar: "الروبوتات والذكاء الاصطناعي" },
+  "hero.slide2.heading": { en: "Shaping the\nNext Generation", ar: "نصنع\nالجيل القادم" },
+  "hero.slide2.tab": { en: "Robotics", ar: "الروبوتات" },
+  "hero.slide3.label": { en: "MEDICAL ENGINEERING", ar: "الهندسة الطبية" },
+  "hero.slide3.heading": { en: "Engineering Better\nHealthcare", ar: "هندسة رعاية\nصحية أفضل" },
+  "hero.slide3.tab": { en: "Medical", ar: "الطبية" },
+  "hero.slide4.label": { en: "OIL & GAS INFRASTRUCTURE", ar: "بنية النفط والغاز التحتية" },
+  "hero.slide4.heading": { en: "Built for the Field.\nEngineered to Last.", ar: "بُنيت للميدان.\nصُممت لتدوم." },
+  "hero.slide4.tab": { en: "Oil & Gas", ar: "النفط والغاز" },
+  "hero.learnMore": { en: "Learn More", ar: "اعرف المزيد" },
   "hero.scrollDown": { en: "Scroll Down", ar: "مرر للأسفل" },
 
   // About Section
