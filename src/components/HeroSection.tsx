@@ -41,7 +41,7 @@ const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
   const [paused, setPaused] = useState(false);
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   const advance = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
