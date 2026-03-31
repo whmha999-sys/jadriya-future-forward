@@ -4,7 +4,7 @@ import { ArrowRight, Factory, Hospital, Bot, Blocks, FileCheck, Wrench, MapPin }
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 import heroImg from "@/assets/equip-supply-hero.jpg";
 import warehouseImg from "@/assets/equip-supply-warehouse.jpg";
 import promiseImg from "@/assets/equip-supply-promise.jpg";

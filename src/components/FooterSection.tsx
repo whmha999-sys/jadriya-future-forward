@@ -1,7 +1,7 @@
 import { ArrowRight, MapPin, Mail } from "lucide-react";
 import logoIcon from "@/assets/logo-icon.png";
 import { usePageTransition } from "./PageTransition";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 
 const FooterSection = () => {
   const { navigateWithTransition } = usePageTransition();

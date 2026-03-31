@@ -4,7 +4,7 @@ import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/edu-tech-hero.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 import hero4 from "@/assets/hero-4.jpg";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);

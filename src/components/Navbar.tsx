@@ -5,7 +5,7 @@ import logoIcon from "@/assets/logo-icon.png";
 import logoDark from "@/assets/logo-dark.png";
 import MegaMenu from "./MegaMenu";
 import { usePageTransition } from "./PageTransition";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 
 const Navbar = () => {
   const [bgSolid, setBgSolid] = useState(false);

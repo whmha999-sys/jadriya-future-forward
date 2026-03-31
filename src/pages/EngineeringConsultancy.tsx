@@ -4,7 +4,7 @@ import { ArrowRight, ClipboardCheck, PenTool, Package, Pipette, Hospital, Settin
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 import heroImg from "@/assets/eng-consultancy-hero.jpg";
 import aboutImage from "@/assets/about-image.jpg";
 import visionBg from "@/assets/vision-bg.jpg";

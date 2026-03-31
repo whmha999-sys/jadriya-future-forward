@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Linkedin, Instagram, Facebook, Twitter, Mail, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 import logoYellow from "@/assets/logo-yellow-pattern.png";
 import logoWhite from "@/assets/logo-white-hero.png";
 
