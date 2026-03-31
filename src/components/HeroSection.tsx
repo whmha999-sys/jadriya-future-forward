@@ -56,7 +56,7 @@ const HeroSection = () => {
           advance();
           return 0;
         }
-        return prev + 2;
+        return prev + 1.25;
       });
     }, 100);
     return () => clearInterval(timer);
