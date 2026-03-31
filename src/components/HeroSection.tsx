@@ -72,7 +72,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ height: 890 }}
+      style={{ height: '100vh' }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
