@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logoMenu from "@/assets/logo-menu.png";
 import { usePageTransition } from "./PageTransition";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/useLanguage";
 
 const menuData = [
   {

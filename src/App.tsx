@@ -14,7 +14,7 @@ import EquipmentSupply from "./pages/EquipmentSupply";
 import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
-import { LanguageProvider } from "./contexts/LanguageContext";
+import { LanguageProvider } from "./contexts/LanguageProvider";
 
 const queryClient = new QueryClient();
 
