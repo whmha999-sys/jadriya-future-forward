@@ -31,7 +31,7 @@ const AboutSection = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <p className="section-label mb-4" style={{ color: '#F5A623' }}>{t("about.label")}</p>
+            <p className="section-label mb-4">{t("about.label")}</p>
             <h2 className="section-heading mb-6">{t("about.heading")}</h2>
             <p className="body-text">{t("about.text")}</p>
           </motion.div>

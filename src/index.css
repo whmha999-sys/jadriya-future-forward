@@ -110,30 +110,19 @@ html {
 
 @layer components {
   .section-label {
-    @apply uppercase tracking-[0.2em] text-muted-foreground;
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 400;
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground;
   }
 
   .section-heading {
-    @apply text-4xl md:text-5xl lg:text-6xl text-primary;
-    font-weight: 800;
-    line-height: 1.1;
-    font-family: 'Inter', sans-serif;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary;
   }
 
   .hero-heading {
-    @apply text-5xl md:text-6xl lg:text-[80px] leading-[1.05] text-primary-foreground;
-    font-weight: 800;
-    font-family: 'Inter', sans-serif;
+    @apply text-5xl md:text-6xl lg:text-[80px] font-bold leading-[1.05] text-primary-foreground;
   }
 
   .body-text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #4A5568;
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
   }
 
   .stat-number {
