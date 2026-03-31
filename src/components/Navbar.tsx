@@ -16,11 +16,12 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const aboutSection = document.getElementById("about");
+      const heroSection = document.getElementById("hero");
       const divisionsSection = document.getElementById("divisions");
 
-      if (aboutSection) {
-        setBgSolid(window.scrollY > aboutSection.offsetTop - 80);
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setBgSolid(window.scrollY > heroBottom - 60);
       } else {
         setBgSolid(window.scrollY > 50);
       }
@@ -46,14 +47,14 @@ const Navbar = () => {
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           bgSolid
-            ? "bg-card/95 backdrop-blur-md shadow-lg"
+            ? "bg-card/95 backdrop-blur-md shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             : "bg-transparent"
         }`}
       >
-        <div className="flex items-center justify-between px-6 md:px-12 py-4">
+        <div className="flex items-center justify-between px-6 md:px-12 py-1.5" style={{ maxHeight: '60px' }}>
           {/* Logo - 150% bigger: h-24 -> h-36, w-24 -> w-36 */}
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
-            <div className="relative h-36 w-36 mt-2 ml-10 shrink-0">
+            <div className="relative h-12 w-12 shrink-0">
               <img
                 src={logoIcon}
                 alt="AL-JADRIYA Engineering"
@@ -65,9 +66,9 @@ const Navbar = () => {
                 className={`absolute inset-[8%] h-[84%] w-[84%] object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-100" : "opacity-0"}`}
               />
             </div>
-            <div className={`hidden md:block -ml-4 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
-              <span className="text-sm font-bold tracking-wider uppercase">{t("nav.aljadriya")}</span>
-              <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">{t("nav.engineering")}</span>
+            <div className={`hidden md:block ml-1 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
+              <span className="text-xs font-bold tracking-wider uppercase">{t("nav.aljadriya")}</span>
+              <span className="block text-[9px] font-medium tracking-[0.3em] uppercase opacity-70">{t("nav.engineering")}</span>
             </div>
           </button>
 

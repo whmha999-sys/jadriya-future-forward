@@ -56,7 +56,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <p className="text-primary-foreground/60 text-xs tracking-[0.2em] uppercase mb-2">
+          <p className="text-primary-foreground/60 uppercase mb-2" style={{ fontSize: '12px', letterSpacing: '3px', fontWeight: 400 }}>
             {slide.label}
           </p>
           <div className="w-16 h-px bg-primary-foreground/40 mb-8" />
