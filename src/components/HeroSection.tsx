@@ -19,7 +19,7 @@ const HeroSection = () => {
       tab: t("hero.slide1.tab"),
     },
     {
-      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1920&q=80",
+      image: "https://images.unsplash.com/photo-1530210124550-912dc1381cb8?w=1920&q=80",
       label: t("hero.slide2.label"),
       heading: t("hero.slide2.heading"),
       link: "/robotics",
