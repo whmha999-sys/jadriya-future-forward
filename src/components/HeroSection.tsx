@@ -1,14 +1,14 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import hero4 from "@/assets/hero-4.jpg";
+import hero1 from "@/assets/hero-1.jpg";
 import eduHero from "@/assets/edu-tech-hero.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const slides = [
   {
-    image: hero4,
+    image: hero1,
     labelKey: "hero.slide1.label",
     headingKey: "hero.slide1.heading",
     link: "/about",
