@@ -41,7 +41,7 @@ const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
   const [paused, setPaused] = useState(false);
-  const { t } = useLanguage();
+  const { t, isRTL } = useLanguage();
 
   const advance = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -56,7 +56,7 @@ const HeroSection = () => {
           advance();
           return 0;
         }
-        return prev + 2;
+        return prev + 1.25;
       });
     }, 100);
     return () => clearInterval(timer);
@@ -85,12 +85,9 @@ const HeroSection = () => {
           transition={{ duration: 1.2 }}
           className="absolute inset-0"
         >
-          <motion.img
+          <img
             src={slide.image}
             alt="Hero"
-            initial={{ scale: 1 }}
-            animate={{ scale: 1.08 }}
-            transition={{ duration: 6, ease: "linear" }}
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/60" />
@@ -123,9 +120,9 @@ const HeroSection = () => {
       {/* Circle arrow button - right side */}
       <button
         onClick={advance}
-        className="absolute right-8 md:right-16 bottom-32 md:bottom-40 z-10 w-14 h-14 rounded-full border border-primary-foreground/40 flex items-center justify-center hover:border-accent hover:text-accent text-primary-foreground transition-colors duration-300"
+        className={`absolute ${isRTL ? 'left-8 md:left-16' : 'right-8 md:right-16'} bottom-32 md:bottom-40 z-10 w-14 h-14 rounded-full border border-primary-foreground/40 flex items-center justify-center hover:border-accent hover:text-accent text-primary-foreground transition-colors duration-300`}
       >
-        <ArrowRight className="h-5 w-5" />
+        <ArrowRight className={`h-5 w-5 ${isRTL ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Bottom tab bar */}
