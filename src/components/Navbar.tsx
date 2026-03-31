@@ -47,11 +47,11 @@ const Navbar = () => {
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           bgSolid
-            ? "bg-card/95 backdrop-blur-md shadow-lg"
+            ? "bg-card/95 backdrop-blur-md shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             : "bg-transparent"
         }`}
       >
-        <div className="flex items-center justify-between px-6 md:px-12 py-4">
+        <div className="flex items-center justify-between px-6 md:px-12 py-1.5" style={{ maxHeight: '60px' }}>
           {/* Logo - 150% bigger: h-24 -> h-36, w-24 -> w-36 */}
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
             <div className="relative h-36 w-36 mt-2 ml-10 shrink-0">
