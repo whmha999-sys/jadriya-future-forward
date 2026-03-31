@@ -66,9 +66,9 @@ const Navbar = () => {
                 className={`absolute inset-[8%] h-[84%] w-[84%] object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-100" : "opacity-0"}`}
               />
             </div>
-            <div className={`hidden md:block -ml-4 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
-              <span className="text-sm font-bold tracking-wider uppercase">{t("nav.aljadriya")}</span>
-              <span className="block text-[10px] font-medium tracking-[0.3em] uppercase opacity-70">{t("nav.engineering")}</span>
+            <div className={`hidden md:block ml-1 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
+              <span className="text-xs font-bold tracking-wider uppercase">{t("nav.aljadriya")}</span>
+              <span className="block text-[9px] font-medium tracking-[0.3em] uppercase opacity-70">{t("nav.engineering")}</span>
             </div>
           </button>
 
