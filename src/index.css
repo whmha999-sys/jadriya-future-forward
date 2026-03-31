@@ -110,19 +110,31 @@ html {
 
 @layer components {
   .section-label {
-    @apply text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground;
+    @apply uppercase text-muted-foreground;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 400;
   }
 
   .section-heading {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary;
+    @apply text-4xl md:text-5xl lg:text-6xl text-primary;
+    font-weight: 800;
+    line-height: 1.1;
+    font-family: 'Inter', sans-serif;
   }
 
   .hero-heading {
-    @apply text-5xl md:text-6xl lg:text-[80px] font-bold leading-[1.05] text-primary-foreground;
+    @apply text-5xl md:text-6xl lg:text-[80px] text-primary-foreground;
+    line-height: 1.05;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
   }
 
   .body-text {
-    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4A5568;
   }
 
   .stat-number {
