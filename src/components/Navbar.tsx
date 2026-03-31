@@ -16,11 +16,12 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const aboutSection = document.getElementById("about");
+      const heroSection = document.getElementById("hero");
       const divisionsSection = document.getElementById("divisions");
 
-      if (aboutSection) {
-        setBgSolid(window.scrollY > aboutSection.offsetTop - 80);
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setBgSolid(window.scrollY > heroBottom - 60);
       } else {
         setBgSolid(window.scrollY > 50);
       }
