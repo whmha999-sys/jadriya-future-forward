@@ -33,7 +33,7 @@ const HeroSection = () => {
       tab: t("hero.slide3.tab"),
     },
     {
-      image: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1920&q=80",
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80",
       label: t("hero.slide4.label"),
       heading: t("hero.slide4.heading"),
       link: "/oil-gas",
