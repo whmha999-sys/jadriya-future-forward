@@ -30,11 +30,11 @@ const tabsData: TabData[] = [
   {
     tabKey: "spec.tab.oilgas",
     items: [
-      { nameKey: "spec.oilgas.1", descKey: "spec.oilgas.1.desc", photo: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80", link: "/oil-gas/pipes-supply" },
-      { nameKey: "spec.oilgas.2", descKey: "spec.oilgas.2.desc", photo: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80", link: "/oil-gas/drilling-equipment" },
-      { nameKey: "spec.oilgas.3", descKey: "spec.oilgas.3.desc", photo: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80", link: "/oil-gas/exploration" },
-      { nameKey: "spec.oilgas.4", descKey: "spec.oilgas.4.desc", photo: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80", link: "/oil-gas/tc-equipment" },
-      { nameKey: "spec.oilgas.5", descKey: "spec.oilgas.5.desc", photo: "https://images.unsplash.com/photo-1590846083693-f23fdede3a7e?w=800&q=80", link: "/oil-gas/underground" },
+      { nameKey: "spec.oilgas.1", descKey: "spec.oilgas.1.desc", photo: specOilgas1, link: "/oil-gas/pipes-supply" },
+      { nameKey: "spec.oilgas.2", descKey: "spec.oilgas.2.desc", photo: specOilgas2, link: "/oil-gas/drilling-equipment" },
+      { nameKey: "spec.oilgas.3", descKey: "spec.oilgas.3.desc", photo: specOilgas3, link: "/oil-gas/exploration" },
+      { nameKey: "spec.oilgas.4", descKey: "spec.oilgas.4.desc", photo: specOilgas4, link: "/oil-gas/tc-equipment" },
+      { nameKey: "spec.oilgas.5", descKey: "spec.oilgas.5.desc", photo: specOilgas5, link: "/oil-gas/underground" },
     ],
   },
   {
