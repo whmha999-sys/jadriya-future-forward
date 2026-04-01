@@ -45,6 +45,13 @@ const App = () => {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/equipment-supply" element={<EquipmentSupply />} />
+                <Route path="/oil-gas" element={<OilGas />} />
+                <Route path="/oil-gas/pipes-supply" element={<OilGasPipesSupply />} />
+                <Route path="/oil-gas/drilling-equipment" element={<OilGasDrillingEquipment />} />
+                <Route path="/oil-gas/exploration" element={<OilGasExploration />} />
+                <Route path="/oil-gas/inspection" element={<OilGasInspection />} />
+                <Route path="/oil-gas/underground" element={<OilGasUnderground />} />
+                <Route path="/oil-gas/after-sales" element={<OilGasAfterSales />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
