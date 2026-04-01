@@ -84,8 +84,8 @@ const CompanyCardsSection = () => {
 
               {/* Bottom-right arrow */}
               <div className="absolute bottom-5 right-5 z-10">
-                <div className="w-10 h-10 rounded-full border border-primary-foreground/40 group-hover:border-accent flex items-center justify-center transition-colors duration-300">
-                  <ArrowRight className="h-4 w-4 text-primary-foreground group-hover:translate-x-0.5 transition-transform duration-300" />
+                <div className="w-10 h-10 rounded-full border border-primary-foreground/40 hover:border-accent hover:bg-accent/20 flex items-center justify-center transition-all duration-300">
+                  <ArrowRight className="h-4 w-4 text-primary-foreground transition-transform duration-300 group-hover:translate-x-0 hover:translate-x-1" />
                 </div>
               </div>
             </motion.button>
