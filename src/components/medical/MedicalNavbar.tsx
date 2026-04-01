@@ -43,7 +43,7 @@ const MedicalNavbar = () => {
         }`}
       >
         <div className={`h-8 flex items-center px-6 md:px-12 transition-colors duration-300 ${
-          bgSolid ? "bg-accent/10" : "bg-[hsl(var(--navy-deep))]/30"
+          bgSolid ? "bg-white/10" : "bg-accent/10"
         }`}>
           <button
             onClick={() => navigateWithTransition("/")}
