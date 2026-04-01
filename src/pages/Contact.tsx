@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { ArrowRight, Linkedin, Instagram, Facebook, Twitter, Mail, MapPin } from "lucide-react";
+import { Linkedin, Instagram, Facebook, Twitter, Mail, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
+import ContactForm from "@/components/ContactForm";
 import { useLanguage } from "@/contexts/useLanguage";
 import logoYellow from "@/assets/logo-yellow-pattern.png";
 import logoWhite from "@/assets/logo-white-hero.png";
