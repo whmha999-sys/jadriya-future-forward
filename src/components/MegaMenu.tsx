@@ -66,7 +66,14 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
   const handleLink = (href: string) => {
     onClose();
     if (href.startsWith("/")) {
-      navigateWithTransition(href);
+      // Support query params in href (e.g. /contact?office=amman)
+      const [path, query] = href.split("?");
+      if (query) {
+        // Use window.location for query param navigation
+        navigateWithTransition(href);
+      } else {
+        navigateWithTransition(href);
+      }
     } else {
       window.location.hash = href.replace("#", "");
     }
