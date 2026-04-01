@@ -141,6 +141,8 @@ const SpecializationsSection = () => {
               </AnimatePresence>
             </div>
 
+            {/* Gradient blur into image */}
+            <div className="relative -mt-16 pt-16 bg-gradient-to-t from-[#1A2B4A] from-60% to-transparent"></div>
             {/* Dark overlay panel */}
             <div className="bg-[#1A2B4A] px-8 py-8 min-h-[180px] flex flex-col justify-between">
               <AnimatePresence mode="wait">
