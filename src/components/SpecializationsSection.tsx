@@ -12,7 +12,12 @@ import specMedical1 from "@/assets/spec-medical-1.jpg";
 import specMedical2 from "@/assets/spec-medical-2.jpg";
 import specMedical3 from "@/assets/spec-medical-3.jpg";
 import specMedical4 from "@/assets/spec-medical-4.jpg";
-import specRobotics1 from "@/assets/spec-robotics-1.jpg";
+import specRoboticsSchools from "@/assets/spec-robotics-schools.jpg";
+import specRoboticsAi from "@/assets/spec-robotics-ai.jpg";
+import specRoboticsEquipment from "@/assets/spec-robotics-equipment.jpg";
+import specRoboticsTraining from "@/assets/spec-robotics-training.jpg";
+import specEnergyManufacturing from "@/assets/spec-energy-manufacturing.jpg";
+import specEnergySolar from "@/assets/spec-energy-solar.jpg";
 
 interface SpecItem {
   nameKey: string;
@@ -49,18 +54,18 @@ const tabsData: TabData[] = [
   {
     tabKey: "spec.tab.robotics",
     items: [
-      { nameKey: "spec.robotics.1", descKey: "spec.robotics.1.desc", photo: specRobotics1, link: "/robotics/schools" },
-      { nameKey: "spec.robotics.2", descKey: "spec.robotics.2.desc", photo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80", link: "/robotics/ai-programming" },
-      { nameKey: "spec.robotics.3", descKey: "spec.robotics.3.desc", photo: "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&q=80", link: "/robotics/equipment-supply" },
-      { nameKey: "spec.robotics.4", descKey: "spec.robotics.4.desc", photo: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80", link: "/robotics/corporate-training" },
+      { nameKey: "spec.robotics.1", descKey: "spec.robotics.1.desc", photo: specRoboticsSchools, link: "/robotics/schools" },
+      { nameKey: "spec.robotics.2", descKey: "spec.robotics.2.desc", photo: specRoboticsAi, link: "/robotics/ai-programming" },
+      { nameKey: "spec.robotics.3", descKey: "spec.robotics.3.desc", photo: specRoboticsEquipment, link: "/robotics/equipment-supply" },
+      { nameKey: "spec.robotics.4", descKey: "spec.robotics.4.desc", photo: specRoboticsTraining, link: "/robotics/corporate-training" },
     ],
   },
   {
     tabKey: "spec.tab.energy",
     items: [
-      { nameKey: "spec.energy.1", descKey: "spec.energy.1.desc", photo: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80", link: "/energy/clean-manufacturing" },
+      { nameKey: "spec.energy.1", descKey: "spec.energy.1.desc", photo: specEnergyManufacturing, link: "/energy/clean-manufacturing" },
       { nameKey: "spec.energy.2", descKey: "spec.energy.2.desc", photo: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80", link: "/energy/wind" },
-      { nameKey: "spec.energy.3", descKey: "spec.energy.3.desc", photo: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80", link: "/energy/solar" },
+      { nameKey: "spec.energy.3", descKey: "spec.energy.3.desc", photo: specEnergySolar, link: "/energy/solar" },
     ],
   },
 ];
