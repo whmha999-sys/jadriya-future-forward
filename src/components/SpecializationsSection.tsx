@@ -3,6 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/useLanguage";
+import specOilgas1 from "@/assets/spec-oilgas-1.jpg";
+import specOilgas2 from "@/assets/spec-oilgas-2.jpg";
+import specOilgas3 from "@/assets/spec-oilgas-3.jpg";
+import specOilgas4 from "@/assets/spec-oilgas-4.jpg";
+import specOilgas5 from "@/assets/spec-oilgas-5.jpg";
+import specMedical1 from "@/assets/spec-medical-1.jpg";
+import specMedical2 from "@/assets/spec-medical-2.jpg";
+import specMedical3 from "@/assets/spec-medical-3.jpg";
+import specMedical4 from "@/assets/spec-medical-4.jpg";
+import specRobotics1 from "@/assets/spec-robotics-1.jpg";
 
 interface SpecItem {
   nameKey: string;
@@ -20,27 +30,26 @@ const tabsData: TabData[] = [
   {
     tabKey: "spec.tab.oilgas",
     items: [
-      { nameKey: "spec.oilgas.1", descKey: "spec.oilgas.1.desc", photo: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80", link: "/oil-gas/pipes-supply" },
-      { nameKey: "spec.oilgas.2", descKey: "spec.oilgas.2.desc", photo: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80", link: "/oil-gas/drilling-equipment" },
-      { nameKey: "spec.oilgas.3", descKey: "spec.oilgas.3.desc", photo: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80", link: "/oil-gas/exploration" },
-      { nameKey: "spec.oilgas.4", descKey: "spec.oilgas.4.desc", photo: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80", link: "/oil-gas/tc-equipment" },
-      { nameKey: "spec.oilgas.5", descKey: "spec.oilgas.5.desc", photo: "https://images.unsplash.com/photo-1590846083693-f23fdede3a7e?w=800&q=80", link: "/oil-gas/underground" },
+      { nameKey: "spec.oilgas.1", descKey: "spec.oilgas.1.desc", photo: specOilgas1, link: "/oil-gas/pipes-supply" },
+      { nameKey: "spec.oilgas.2", descKey: "spec.oilgas.2.desc", photo: specOilgas2, link: "/oil-gas/drilling-equipment" },
+      { nameKey: "spec.oilgas.3", descKey: "spec.oilgas.3.desc", photo: specOilgas3, link: "/oil-gas/exploration" },
+      { nameKey: "spec.oilgas.4", descKey: "spec.oilgas.4.desc", photo: specOilgas4, link: "/oil-gas/tc-equipment" },
+      { nameKey: "spec.oilgas.5", descKey: "spec.oilgas.5.desc", photo: specOilgas5, link: "/oil-gas/underground" },
     ],
   },
   {
     tabKey: "spec.tab.medical",
     items: [
-      { nameKey: "spec.medical.1", descKey: "spec.medical.1.desc", photo: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80", link: "/medical/biomedical-engineering" },
-      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80", link: "/medical/hospital-equipment" },
-      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80", link: "/medical/capacity-management" },
-      { nameKey: "spec.medical.4", descKey: "spec.medical.4.desc", photo: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80", link: "/medical/turnkey-projects" },
-      { nameKey: "spec.medical.5", descKey: "spec.medical.5.desc", photo: "https://images.unsplash.com/photo-1582719471384-894fbb16f461?w=800&q=80", link: "/medical/tender-management" },
+      { nameKey: "spec.medical.1", descKey: "spec.medical.1.desc", photo: specMedical1, link: "/medical/hospital-equipment" },
+      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: specMedical2, link: "/medical/capacity-management" },
+      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: specMedical3, link: "/medical/tender-management" },
+      { nameKey: "spec.medical.4", descKey: "spec.medical.4.desc", photo: specMedical4, link: "/medical/turnkey-projects" },
     ],
   },
   {
     tabKey: "spec.tab.robotics",
     items: [
-      { nameKey: "spec.robotics.1", descKey: "spec.robotics.1.desc", photo: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80", link: "/robotics/schools" },
+      { nameKey: "spec.robotics.1", descKey: "spec.robotics.1.desc", photo: specRobotics1, link: "/robotics/schools" },
       { nameKey: "spec.robotics.2", descKey: "spec.robotics.2.desc", photo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80", link: "/robotics/ai-programming" },
       { nameKey: "spec.robotics.3", descKey: "spec.robotics.3.desc", photo: "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&q=80", link: "/robotics/equipment-supply" },
       { nameKey: "spec.robotics.4", descKey: "spec.robotics.4.desc", photo: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80", link: "/robotics/corporate-training" },
