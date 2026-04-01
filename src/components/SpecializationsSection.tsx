@@ -124,7 +124,7 @@ const SpecializationsSection = () => {
           </div>
 
           {/* Right panel 65% — full image with frosted glass overlay */}
-          <div className="w-full md:w-[65%] relative overflow-hidden rounded-lg min-h-[460px]">
+          <div className="w-full md:w-[75%] relative overflow-hidden rounded-lg min-h-[460px]">
             {/* Full-cover image */}
             <AnimatePresence mode="wait">
               <motion.img
