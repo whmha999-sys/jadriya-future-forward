@@ -168,9 +168,9 @@ const SpecializationsSection = () => {
               </AnimatePresence>
               <button
                 onClick={() => navigate(currentItem.link)}
-                className={`mt-4 ${isRTL ? "rotate-180" : ""}`}
+                className={`mt-2 ${isRTL ? "rotate-180" : ""}`}
               >
-                <ArrowRight className="h-6 w-6 text-white hover:text-accent transition-colors" />
+                <ArrowRight className="h-5 w-5 text-white hover:text-accent transition-colors" />
               </button>
             </div>
           </div>
