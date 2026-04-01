@@ -246,7 +246,7 @@ const OilGas = () => {
         </div>
       </section>
 
-      <OilGasFooter />
+      <FooterSection />
     </div>
   );
 };

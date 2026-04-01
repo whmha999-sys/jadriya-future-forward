@@ -246,7 +246,7 @@ const Medical = () => {
         </div>
       </section>
 
-      <MedicalFooter />
+      <FooterSection />
     </div>
   );
 };
