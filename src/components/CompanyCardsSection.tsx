@@ -61,7 +61,7 @@ const CompanyCardsSection = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               onClick={() => navigateWithTransition(card.link)}
-              className="group relative h-[475px] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] transition-shadow duration-500 text-left cursor-pointer"
+              className="group relative h-[380px] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] transition-shadow duration-500 text-left cursor-pointer"
             >
               <div className="absolute inset-0 overflow-hidden">
                 <img
