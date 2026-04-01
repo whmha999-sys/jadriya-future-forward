@@ -49,7 +49,7 @@ const tabsData: TabData[] = [
   {
     tabKey: "spec.tab.robotics",
     items: [
-      { nameKey: "spec.robotics.1", descKey: "spec.robotics.1.desc", photo: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80", link: "/robotics/schools" },
+      { nameKey: "spec.robotics.1", descKey: "spec.robotics.1.desc", photo: specRobotics1, link: "/robotics/schools" },
       { nameKey: "spec.robotics.2", descKey: "spec.robotics.2.desc", photo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80", link: "/robotics/ai-programming" },
       { nameKey: "spec.robotics.3", descKey: "spec.robotics.3.desc", photo: "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&q=80", link: "/robotics/equipment-supply" },
       { nameKey: "spec.robotics.4", descKey: "spec.robotics.4.desc", photo: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80", link: "/robotics/corporate-training" },
