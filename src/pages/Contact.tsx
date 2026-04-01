@@ -64,14 +64,8 @@ const Contact = () => {
     return "";
   };
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: getInitialCompany(),
-    office: getInitialOffice(),
-    message: "",
-  });
+
+
 
   const showAmman = !officeParam || officeParam === "amman";
   const showTikrit = !officeParam || officeParam === "tikrit";
