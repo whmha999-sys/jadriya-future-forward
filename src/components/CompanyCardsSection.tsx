@@ -43,7 +43,7 @@ const CompanyCardsSection = () => {
 
   return (
     <section className="bg-background py-20 px-8 md:px-16">
-      <div className="max-w-7xl mx-auto" ref={ref}>
+      <div className="max-w-[88rem] mx-auto" ref={ref}>
         {/* Label */}
         <div className="mb-12">
           <p className="text-accent text-xs font-semibold tracking-[3px] uppercase mb-3">
