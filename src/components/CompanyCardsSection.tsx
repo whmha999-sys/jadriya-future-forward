@@ -18,7 +18,7 @@ const cards = [
   {
     labelKey: "cards.medical.label",
     headlineKey: "cards.medical.headline",
-    photo: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80",
+    photo: medicalCard,
     link: "/medical",
   },
   {
