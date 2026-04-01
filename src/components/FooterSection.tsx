@@ -8,9 +8,9 @@ const FooterSection = () => {
   const { t } = useLanguage();
 
   const linkClass =
-    "flex items-center gap-1.5 text-primary-foreground/50 hover:text-[#F5A623] transition-colors text-xs leading-relaxed";
+    "flex items-center gap-1.5 text-primary-foreground/50 hover:text-primary-foreground transition-colors text-xs leading-relaxed";
   const headerClass =
-    "flex items-center gap-2 text-[#F5A623] font-bold text-sm uppercase tracking-wider mb-4 hover:text-[#f7b84a] transition-colors cursor-pointer";
+    "flex items-center gap-2 text-primary-foreground font-bold text-sm uppercase tracking-wider mb-4 hover:text-primary-foreground/80 transition-colors cursor-pointer";
 
   return (
     <footer className="bg-[hsl(var(--slate-dark))]">
