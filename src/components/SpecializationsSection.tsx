@@ -104,7 +104,7 @@ const SpecializationsSection = () => {
         {/* Content */}
         <div className="flex flex-col md:flex-row gap-0">
           {/* Left list 35% */}
-          <div className="w-full md:w-[35%] space-y-1 py-4">
+          <div className="w-full md:w-[25%] space-y-1 py-4">
             {currentTab.items.map((item, i) => (
               <button
                 key={item.nameKey}
