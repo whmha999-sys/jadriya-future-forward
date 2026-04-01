@@ -61,7 +61,7 @@ const MedicalNavbar = () => {
                 src={medLogo}
                 alt="AL-JADRIYA Medical"
                 className={`h-full w-full object-contain transition-all duration-500 ${
-                  bgSolid ? "" : "brightness-0 invert"
+                  bgSolid ? "brightness-0 invert" : ""
                 }`}
               />
             </div>
