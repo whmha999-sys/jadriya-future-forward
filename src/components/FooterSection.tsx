@@ -123,7 +123,7 @@ const FooterSection = () => {
             <button onClick={() => navigateWithTransition("/energy")} className={headerClass}>
               {t("footer.energy")} <ArrowRight className="h-3.5 w-3.5" />
             </button>
-            <p className="text-[#F5A623] text-xs mb-6">{t("footer.comingSoon")}</p>
+            <p className="text-primary-foreground text-xs mb-6">{t("footer.comingSoon")}</p>
 
             <div className="border-t border-primary-foreground/10 pt-4 mb-4" />
 
