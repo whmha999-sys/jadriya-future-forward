@@ -50,7 +50,7 @@ const WhoWeServeSection = () => {
       </div>
 
       {/* Markets strip */}
-      <div className="bg-[hsl(var(--navy-deep))] py-5">
+      <div className="bg-[#1A2B4A] py-5">
         <div className="max-w-7xl mx-auto px-8 md:px-16 flex flex-wrap justify-center md:justify-between gap-4 md:gap-0">
           {markets.map((m) => (
             <span key={m.nameKey} className="text-primary-foreground/70 text-sm font-medium flex items-center gap-2">
