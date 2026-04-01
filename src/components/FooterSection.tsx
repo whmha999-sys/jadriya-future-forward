@@ -127,7 +127,7 @@ const FooterSection = () => {
 
             <div className="border-t border-primary-foreground/10 pt-4 mb-4" />
 
-            <h4 className="text-[#F5A623] font-bold text-sm uppercase tracking-wider mb-4">
+            <h4 className="text-primary-foreground font-bold text-sm uppercase tracking-wider mb-4">
               {t("footer.quickLinks")}
             </h4>
             <div className="space-y-2">
