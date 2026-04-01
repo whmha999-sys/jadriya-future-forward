@@ -123,28 +123,24 @@ const SpecializationsSection = () => {
             ))}
           </div>
 
-          {/* Right panel 65% — photo top, dark overlay bottom */}
-          <div className="w-full md:w-[65%] flex flex-col overflow-hidden rounded-lg">
-            {/* Photo area */}
-            <div className="relative h-[280px] overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentItem.photo}
-                  src={currentItem.photo}
-                  alt={t(currentItem.nameKey)}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="w-full h-full object-cover"
-                />
-              </AnimatePresence>
-            </div>
+          {/* Right panel 65% — full image with frosted glass overlay */}
+          <div className="w-full md:w-[65%] relative overflow-hidden rounded-lg min-h-[460px]">
+            {/* Full-cover image */}
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentItem.photo}
+                src={currentItem.photo}
+                alt={t(currentItem.nameKey)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </AnimatePresence>
 
-            {/* Gradient blur into image */}
-            <div className="relative -mt-16 pt-16 bg-gradient-to-t from-[#1A2B4A] from-60% to-transparent"></div>
-            {/* Dark overlay panel */}
-            <div className="bg-[#1A2B4A] px-8 py-8 min-h-[180px] flex flex-col justify-between">
+            {/* Frosted glass overlay at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 backdrop-blur-xl bg-black/40 px-8 py-8">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentItem.nameKey}
@@ -163,7 +159,7 @@ const SpecializationsSection = () => {
               </AnimatePresence>
               <button
                 onClick={() => navigate(currentItem.link)}
-                className={`mt-4 self-start ${isRTL ? "rotate-180" : ""}`}
+                className={`mt-4 ${isRTL ? "rotate-180" : ""}`}
               >
                 <ArrowRight className="h-6 w-6 text-white hover:text-accent transition-colors" />
               </button>
