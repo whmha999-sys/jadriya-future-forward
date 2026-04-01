@@ -104,7 +104,7 @@ const SpecializationsSection = () => {
         {/* Content */}
         <div className="flex flex-col md:flex-row gap-0">
           {/* Left list 35% */}
-          <div className="w-full md:w-[35%] space-y-1 py-4">
+          <div className="w-full md:w-[25%] space-y-1 py-4">
             {currentTab.items.map((item, i) => (
               <button
                 key={item.nameKey}
@@ -124,7 +124,7 @@ const SpecializationsSection = () => {
           </div>
 
           {/* Right panel 65% — full image with frosted glass overlay */}
-          <div className="w-full md:w-[65%] relative overflow-hidden rounded-lg min-h-[460px]">
+          <div className="w-full md:w-[75%] relative overflow-hidden rounded-lg min-h-[460px]">
             {/* Full-cover image */}
             <AnimatePresence mode="wait">
               <motion.img
