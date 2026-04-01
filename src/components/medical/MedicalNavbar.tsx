@@ -75,7 +75,7 @@ const MedicalNavbar = () => {
             <button
               onClick={toggleLanguage}
               className={`flex items-center gap-1.5 text-sm font-semibold transition-colors duration-300 ${
-                bgSolid ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary-foreground" : "text-primary"
               }`}
             >
               <Globe className="h-4 w-4" />
