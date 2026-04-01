@@ -8,9 +8,9 @@ const FooterSection = () => {
   const { t } = useLanguage();
 
   const linkClass =
-    "flex items-center gap-1.5 text-primary-foreground/50 hover:text-[#F5A623] transition-colors text-xs leading-relaxed";
+    "flex items-center gap-1.5 text-primary-foreground/50 hover:text-primary-foreground transition-colors text-xs leading-relaxed";
   const headerClass =
-    "flex items-center gap-2 text-[#F5A623] font-bold text-sm uppercase tracking-wider mb-4 hover:text-[#f7b84a] transition-colors cursor-pointer";
+    "flex items-center gap-2 text-primary-foreground font-bold text-sm uppercase tracking-wider mb-4 hover:text-primary-foreground/80 transition-colors cursor-pointer";
 
   return (
     <footer className="bg-[hsl(var(--slate-dark))]">
@@ -27,28 +27,28 @@ const FooterSection = () => {
             <p className="text-primary-foreground/60 text-xs">{t("footer.tagline")}</p>
             <div className="space-y-2 text-xs text-primary-foreground/60">
               <div className="flex items-center gap-2">
-                <Mail className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0" />
-                <a href="mailto:info@hy-med.net" className="hover:text-[#F5A623] transition-colors">info@hy-med.net</a>
+                <Mail className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
+                <a href="mailto:info@hy-med.net" className="hover:text-primary-foreground transition-colors">info@hy-med.net</a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0" />
+                <Phone className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
                 <span>+962 788310769</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0" />
+                <Phone className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
                 <span>+964 7717323273</span>
               </div>
             </div>
             <div className="space-y-2 text-xs text-primary-foreground/50 pt-2">
               <div className="flex items-start gap-2">
-                <MapPin className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0 mt-0.5" />
+                <MapPin className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-primary-foreground text-xs font-semibold">{t("footer.amman")}</p>
                   <p>{t("footer.ammanAddress")}</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0 mt-0.5" />
+                <MapPin className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-primary-foreground text-xs font-semibold">{t("footer.tikrit")}</p>
                   <p>{t("footer.tikritAddress")}</p>
@@ -123,11 +123,11 @@ const FooterSection = () => {
             <button onClick={() => navigateWithTransition("/energy")} className={headerClass}>
               {t("footer.energy")} <ArrowRight className="h-3.5 w-3.5" />
             </button>
-            <p className="text-[#F5A623] text-xs mb-6">{t("footer.comingSoon")}</p>
+            <p className="text-primary-foreground text-xs mb-6">{t("footer.comingSoon")}</p>
 
             <div className="border-t border-primary-foreground/10 pt-4 mb-4" />
 
-            <h4 className="text-[#F5A623] font-bold text-sm uppercase tracking-wider mb-4">
+            <h4 className="text-primary-foreground font-bold text-sm uppercase tracking-wider mb-4">
               {t("footer.quickLinks")}
             </h4>
             <div className="space-y-2">
