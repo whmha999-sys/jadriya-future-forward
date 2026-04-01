@@ -90,6 +90,14 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
       </div>
 
       <style>{`.mega-scroll::-webkit-scrollbar { display: none; }`}</style>
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        className="absolute top-8 right-8 md:right-16 z-10 text-primary-foreground/60 hover:text-primary-foreground transition-colors cursor-pointer"
+      >
+        <X className="h-8 w-8" />
+      </button>
+
       <div className="mega-scroll relative h-full flex flex-col md:flex-row pt-24 px-8 md:px-16 pb-12 overflow-y-auto" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} onClick={(e) => e.stopPropagation()}>
         {/* Main categories - NOT clickable, only hover to reveal sub-items */}
         <div className="md:w-1/3 space-y-1">
