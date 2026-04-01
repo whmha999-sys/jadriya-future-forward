@@ -47,53 +47,31 @@ const Contact = () => {
   const tikritRef = useRef<HTMLDivElement>(null);
 
   // Determine initial subject from router state or referrer
-  const getInitialSubject = () => {
+  const getInitialCompany = () => {
     if (routerState?.company) return routerState.company;
     return detectCompanyFromReferrer();
+  };
+
+  const getInitialOffice = () => {
+    if (officeParam === "amman") return "amman";
+    if (officeParam === "tikrit") return "tikrit";
+    return "";
+  };
+
+  const getInitialCountry = () => {
+    if (officeParam === "amman") return "Jordan";
+    if (officeParam === "tikrit") return "Iraq";
+    return "";
   };
 
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: getInitialSubject(),
-    office: "",
+    subject: getInitialCompany(),
+    office: getInitialOffice(),
     message: "",
   });
-
-  const [highlightedOffice, setHighlightedOffice] = useState<string | null>(null);
-
-  const showAmman = !officeParam || officeParam === "amman";
-  const showTikrit = !officeParam || officeParam === "tikrit";
-  const showOfficePicker = !officeParam; // both visible
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleOfficeSelect = (office: string) => {
-    setForm({ ...form, office });
-    setHighlightedOffice(office);
-    const ref = office === "amman" ? ammanRef : tikritRef;
-    ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-    setTimeout(() => setHighlightedOffice(null), 2000);
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", form);
-  };
-
-  const subjectOptions = [
-    { value: "Oil & Gas", label: t("contact.subjectOilGas") },
-    { value: "Medical", label: t("contact.subjectMedical") },
-    { value: "Robotics", label: t("contact.subjectRobotics") },
-    { value: "Energy", label: t("contact.subjectEnergy") },
-    { value: "Engineering Consultancy", label: t("contact.subjectEngConsultancy") },
-    { value: "Educational Technology", label: t("contact.subjectEduTech") },
-    { value: "Equipment Supply", label: t("contact.subjectEquipSupply") },
-    { value: "General Inquiry", label: t("contact.subjectGeneral") },
-  ];
 
   return (
     <div className="min-h-screen bg-card">
