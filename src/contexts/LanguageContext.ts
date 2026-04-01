@@ -384,6 +384,9 @@ export const translations: Record<string, Record<Language, string>> = {
   "footer.tikrit": { en: "Tikrit, Iraq", ar: "تكريت، العراق" },
   "footer.tikritAddress": { en: "Main Street opposite Governorate Building, Salah al-Din", ar: "الشارع الرئيسي مقابل مبنى المحافظة، صلاح الدين" },
   "footer.rights": { en: "© 2026 AL-JADRIYA GROUP. All rights reserved.", ar: "© ٢٠٢٦ مجموعة الجادرية. جميع الحقوق محفوظة." },
+  "footer.comingSoon": { en: "Coming Soon", ar: "قريباً" },
+  "footer.ammanOffice": { en: "Amman Office", ar: "مكتب عمّان" },
+  "footer.tikritOffice": { en: "Tikrit Office", ar: "مكتب تكريت" },
 
   // Contact Form
   "form.contactInfo": { en: "Contact Information", ar: "معلومات الاتصال" },
