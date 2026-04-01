@@ -83,8 +83,6 @@ const Medical = () => {
         id="med-hero"
         className="relative w-full overflow-hidden"
         style={{ height: "100vh" }}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
       >
         <AnimatePresence mode="sync">
           <motion.div
