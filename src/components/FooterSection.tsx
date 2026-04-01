@@ -48,7 +48,7 @@ const FooterSection = () => {
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0 mt-0.5" />
+                <MapPin className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-primary-foreground text-xs font-semibold">{t("footer.tikrit")}</p>
                   <p>{t("footer.tikritAddress")}</p>
