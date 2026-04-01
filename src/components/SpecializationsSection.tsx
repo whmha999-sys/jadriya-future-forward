@@ -12,7 +12,12 @@ import specMedical1 from "@/assets/spec-medical-1.jpg";
 import specMedical2 from "@/assets/spec-medical-2.jpg";
 import specMedical3 from "@/assets/spec-medical-3.jpg";
 import specMedical4 from "@/assets/spec-medical-4.jpg";
-import specRobotics1 from "@/assets/spec-robotics-1.jpg";
+import specRoboticsSchools from "@/assets/spec-robotics-schools.jpg";
+import specRoboticsAi from "@/assets/spec-robotics-ai.jpg";
+import specRoboticsEquipment from "@/assets/spec-robotics-equipment.jpg";
+import specRoboticsTraining from "@/assets/spec-robotics-training.jpg";
+import specEnergyManufacturing from "@/assets/spec-energy-manufacturing.jpg";
+import specEnergySolar from "@/assets/spec-energy-solar.jpg";
 
 interface SpecItem {
   nameKey: string;
