@@ -51,9 +51,9 @@ const menuData = [
   {
     key: "menu.contactUs",
     items: [
-      { key: "menu.ammanOffice", href: "/contact" },
-      { key: "menu.baghdadOffice", href: "/contact" },
-      { key: "menu.generalInquiries", href: "/contact" },
+      { key: "menu.contactGeneral", href: "/contact" },
+      { key: "menu.ammanOffice", href: "/contact?office=amman" },
+      { key: "menu.tikritOffice", href: "/contact?office=tikrit" },
     ],
   },
 ];

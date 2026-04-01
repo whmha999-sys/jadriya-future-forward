@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { ArrowRight, Linkedin, Instagram, Facebook, Twitter, Mail, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
@@ -7,18 +8,74 @@ import { useLanguage } from "@/contexts/useLanguage";
 import logoYellow from "@/assets/logo-yellow-pattern.png";
 import logoWhite from "@/assets/logo-white-hero.png";
 
+const companyAutoFillMap: Record<string, string> = {
+  "/oil-gas": "Oil & Gas",
+  "/medical": "Medical",
+  "/robotics": "Robotics",
+  "/energy": "Energy",
+  "/engineering-consultancy": "Engineering Consultancy",
+  "/educational-technology": "Educational Technology",
+  "/equipment-supply": "Equipment Supply",
+};
+
+function detectCompanyFromReferrer(): string {
+  const referrer = document.referrer;
+  if (!referrer) return "";
+  try {
+    const url = new URL(referrer);
+    const path = url.pathname;
+    for (const [prefix, company] of Object.entries(companyAutoFillMap)) {
+      if (path === prefix || path.startsWith(prefix + "/")) {
+        return company;
+      }
+    }
+  } catch {
+    // invalid referrer
+  }
+  return "";
+}
+
 const Contact = () => {
   const { t } = useLanguage();
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const officeParam = searchParams.get("office");
+  const routerState = location.state as { company?: string } | null;
+
+  const ammanRef = useRef<HTMLDivElement>(null);
+  const tikritRef = useRef<HTMLDivElement>(null);
+
+  // Determine initial subject from router state or referrer
+  const getInitialSubject = () => {
+    if (routerState?.company) return routerState.company;
+    return detectCompanyFromReferrer();
+  };
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
+    subject: getInitialSubject(),
+    office: "",
     message: "",
   });
 
+  const [highlightedOffice, setHighlightedOffice] = useState<string | null>(null);
+
+  const showAmman = !officeParam || officeParam === "amman";
+  const showTikrit = !officeParam || officeParam === "tikrit";
+  const showOfficePicker = !officeParam; // both visible
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleOfficeSelect = (office: string) => {
+    setForm({ ...form, office });
+    setHighlightedOffice(office);
+    const ref = office === "amman" ? ammanRef : tikritRef;
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => setHighlightedOffice(null), 2000);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,6 +84,10 @@ const Contact = () => {
   };
 
   const subjectOptions = [
+    { value: "Oil & Gas", label: t("contact.subjectOilGas") },
+    { value: "Medical", label: t("contact.subjectMedical") },
+    { value: "Robotics", label: t("contact.subjectRobotics") },
+    { value: "Energy", label: t("contact.subjectEnergy") },
     { value: "Engineering Consultancy", label: t("contact.subjectEngConsultancy") },
     { value: "Educational Technology", label: t("contact.subjectEduTech") },
     { value: "Equipment Supply", label: t("contact.subjectEquipSupply") },
@@ -79,20 +140,34 @@ const Contact = () => {
             <div>
               <p className="section-label mb-6">{t("contact.offices")}</p>
               <div className="space-y-8">
-                <div className="flex gap-4">
-                  <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold text-primary">{t("contact.amman")}</h3>
-                    <p className="text-muted-foreground text-sm">{t("contact.hq")}</p>
+                {showAmman && (
+                  <div
+                    ref={ammanRef}
+                    className={`flex gap-4 p-4 -m-4 rounded-lg transition-all duration-500 ${
+                      highlightedOffice === "amman" ? "bg-accent/10 ring-2 ring-accent/30" : ""
+                    }`}
+                  >
+                    <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">{t("contact.amman")}</h3>
+                      <p className="text-muted-foreground text-sm">{t("contact.hq")}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold text-primary">{t("contact.baghdad")}</h3>
-                    <p className="text-muted-foreground text-sm">{t("contact.branch")}</p>
+                )}
+                {showTikrit && (
+                  <div
+                    ref={tikritRef}
+                    className={`flex gap-4 p-4 -m-4 rounded-lg transition-all duration-500 ${
+                      highlightedOffice === "tikrit" ? "bg-accent/10 ring-2 ring-accent/30" : ""
+                    }`}
+                  >
+                    <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">{t("contact.tikrit")}</h3>
+                      <p className="text-muted-foreground text-sm">{t("contact.branch")}</p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
@@ -140,6 +215,23 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Office Selector - only when both offices shown */}
+              {showOfficePicker && (
+                <div>
+                  <label className="block text-sm font-medium text-primary mb-2">{t("contact.whichOffice")}</label>
+                  <select
+                    name="office"
+                    value={form.office}
+                    onChange={(e) => handleOfficeSelect(e.target.value)}
+                    className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all appearance-none"
+                  >
+                    <option value="">{t("contact.selectOffice")}</option>
+                    <option value="amman">{t("contact.officeAmman")}</option>
+                    <option value="tikrit">{t("contact.officeTikrit")}</option>
+                  </select>
+                </div>
+              )}
+
               <div>
                 <label className="block text-sm font-medium text-primary mb-2">{t("contact.fullName")}</label>
                 <input
