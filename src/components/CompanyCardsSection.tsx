@@ -70,7 +70,7 @@ const CompanyCardsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/40 group-hover:bg-[hsl(var(--navy-deep))]/55 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--navy-deep))]/70 via-[hsl(var(--navy-deep))]/20 to-transparent group-hover:from-[hsl(var(--navy-deep))]/80 group-hover:via-[hsl(var(--navy-deep))]/30 transition-all duration-500" />
               
               {/* Top: label + headline */}
               <div className="absolute top-5 left-5 right-5 z-10">
