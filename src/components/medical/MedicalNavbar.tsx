@@ -93,7 +93,7 @@ const MedicalNavbar = () => {
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className={`transition-colors duration-300 ${
-                bgSolid ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary-foreground" : "text-primary"
               }`}
             >
               {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
