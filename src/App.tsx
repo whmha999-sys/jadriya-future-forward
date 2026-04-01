@@ -18,6 +18,13 @@ import OilGasExploration from "./pages/OilGasExploration";
 import OilGasInspection from "./pages/OilGasInspection";
 import OilGasUnderground from "./pages/OilGasUnderground";
 import OilGasAfterSales from "./pages/OilGasAfterSales";
+import Medical from "./pages/Medical";
+import MedicalBiomedical from "./pages/MedicalBiomedical";
+import MedicalEquipmentSupply from "./pages/MedicalEquipmentSupply";
+import MedicalCapacity from "./pages/MedicalCapacity";
+import MedicalTurnkey from "./pages/MedicalTurnkey";
+import MedicalTender from "./pages/MedicalTender";
+import MedicalAfterSales from "./pages/MedicalAfterSales";
 import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
@@ -52,6 +59,13 @@ const App = () => {
                 <Route path="/oil-gas/inspection" element={<OilGasInspection />} />
                 <Route path="/oil-gas/underground" element={<OilGasUnderground />} />
                 <Route path="/oil-gas/after-sales" element={<OilGasAfterSales />} />
+                <Route path="/medical" element={<Medical />} />
+                <Route path="/medical/biomedical-engineering" element={<MedicalBiomedical />} />
+                <Route path="/medical/equipment-supply" element={<MedicalEquipmentSupply />} />
+                <Route path="/medical/capacity-management" element={<MedicalCapacity />} />
+                <Route path="/medical/turnkey-projects" element={<MedicalTurnkey />} />
+                <Route path="/medical/tender-management" element={<MedicalTender />} />
+                <Route path="/medical/after-sales" element={<MedicalAfterSales />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
