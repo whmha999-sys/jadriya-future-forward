@@ -24,7 +24,7 @@ const cards = [
   {
     labelKey: "cards.robotics.label",
     headlineKey: "cards.robotics.headline",
-    photo: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+    photo: roboticsCard,
     link: "/robotics",
   },
   {
