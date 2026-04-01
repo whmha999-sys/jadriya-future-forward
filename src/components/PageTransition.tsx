@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logoIcon from "@/assets/logo-icon.png";
 
 interface TransitionContextType {
-  navigateWithTransition: (to: string) => void;
+  navigateWithTransition: (to: string, state?: Record<string, unknown>) => void;
 }
 
 const TransitionContext = createContext<TransitionContextType>({ navigateWithTransition: () => {} });
@@ -14,14 +14,12 @@ export const usePageTransition = () => useContext(TransitionContext);
 export const PageTransitionProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
-  const [target, setTarget] = useState("");
 
-  const navigateWithTransition = useCallback((to: string) => {
-    setTarget(to);
+  const navigateWithTransition = useCallback((to: string, state?: Record<string, unknown>) => {
     setShow(true);
 
     setTimeout(() => {
-      navigate(to);
+      navigate(to, { state });
       window.scrollTo(0, 0);
     }, 2200);
 
