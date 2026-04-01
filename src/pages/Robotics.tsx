@@ -67,8 +67,6 @@ const Robotics = () => {
         id="robo-hero"
         className="relative w-full overflow-hidden"
         style={{ height: "100vh" }}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
       >
         <AnimatePresence mode="sync">
           <motion.div
@@ -106,7 +104,7 @@ const Robotics = () => {
           <ArrowRight className={`h-5 w-5 ${isRTL ? "rotate-180" : ""}`} />
         </button>
 
-        <div className="absolute bottom-0 left-0 right-0 z-10 bg-[hsl(var(--navy-deep))]/50 backdrop-blur-sm">
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-[hsl(var(--navy-deep))]/50 backdrop-blur-sm" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
           <div className="flex">
             {slides.map((s, i) => (
               <button

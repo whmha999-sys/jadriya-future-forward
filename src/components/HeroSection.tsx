@@ -56,7 +56,7 @@ const HeroSection = () => {
           advance();
           return 0;
         }
-        return prev + 1.25;
+        return prev + 2;
       });
     }, 100);
     return () => clearInterval(timer);
@@ -73,8 +73,6 @@ const HeroSection = () => {
     <section
       className="relative w-full overflow-hidden"
       style={{ height: '100vh' }}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <AnimatePresence mode="sync">
         <motion.div
@@ -126,7 +124,7 @@ const HeroSection = () => {
       </button>
 
       {/* Bottom tab bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 bg-[hsl(var(--navy-deep))]/50 backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 right-0 z-10 bg-[hsl(var(--navy-deep))]/50 backdrop-blur-sm" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         <div className="flex">
           {slides.map((s, i) => (
             <button
