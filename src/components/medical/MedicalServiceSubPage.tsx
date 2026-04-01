@@ -151,7 +151,7 @@ const MedicalServiceSubPage = ({
         </div>
       </section>
 
-      <MedicalFooter />
+      <FooterSection />
     </div>
   );
 };

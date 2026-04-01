@@ -151,7 +151,7 @@ const OilGasServiceSubPage = ({
         </div>
       </section>
 
-      <OilGasFooter />
+      <FooterSection />
     </div>
   );
 };
