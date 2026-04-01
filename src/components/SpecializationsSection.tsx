@@ -40,11 +40,10 @@ const tabsData: TabData[] = [
   {
     tabKey: "spec.tab.medical",
     items: [
-      { nameKey: "spec.medical.1", descKey: "spec.medical.1.desc", photo: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80", link: "/medical/biomedical-engineering" },
-      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80", link: "/medical/hospital-equipment" },
-      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80", link: "/medical/capacity-management" },
-      { nameKey: "spec.medical.4", descKey: "spec.medical.4.desc", photo: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80", link: "/medical/turnkey-projects" },
-      { nameKey: "spec.medical.5", descKey: "spec.medical.5.desc", photo: "https://images.unsplash.com/photo-1582719471384-894fbb16f461?w=800&q=80", link: "/medical/tender-management" },
+      { nameKey: "spec.medical.1", descKey: "spec.medical.1.desc", photo: specMedical1, link: "/medical/hospital-equipment" },
+      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: specMedical2, link: "/medical/capacity-management" },
+      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: specMedical3, link: "/medical/tender-management" },
+      { nameKey: "spec.medical.4", descKey: "spec.medical.4.desc", photo: specMedical4, link: "/medical/turnkey-projects" },
     ],
   },
   {
