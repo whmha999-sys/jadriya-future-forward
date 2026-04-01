@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import OilGasNavbar from "./OilGasNavbar";
-import OilGasFooter from "./OilGasFooter";
+import FooterSection from "../FooterSection";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 import case1 from "@/assets/oilgas/case-1.jpg";
