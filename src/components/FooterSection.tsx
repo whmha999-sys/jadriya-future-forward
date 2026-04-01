@@ -27,8 +27,8 @@ const FooterSection = () => {
             <p className="text-primary-foreground/60 text-xs">{t("footer.tagline")}</p>
             <div className="space-y-2 text-xs text-primary-foreground/60">
               <div className="flex items-center gap-2">
-                <Mail className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0" />
-                <a href="mailto:info@hy-med.net" className="hover:text-[#F5A623] transition-colors">info@hy-med.net</a>
+                <Mail className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
+                <a href="mailto:info@hy-med.net" className="hover:text-primary-foreground transition-colors">info@hy-med.net</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0" />
