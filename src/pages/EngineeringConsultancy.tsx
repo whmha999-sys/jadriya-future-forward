@@ -118,7 +118,7 @@ const EngineeringConsultancy = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">{t("eng.visionHeading")}</h2>
             <div className="w-10 h-0.5 bg-accent mb-6" />
             <p className="body-text mb-8">{t("eng.visionText")}</p>
-            <button onClick={() => navigateWithTransition("/contact")} className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
+            <button onClick={() => navigateWithTransition("/contact", { company: "Engineering Consultancy" })} className="cta-button bg-primary text-primary-foreground hover:bg-primary/90">
               {t("eng.contactUs")} <ArrowRight className="h-4 w-4" />
             </button>
           </motion.div>
