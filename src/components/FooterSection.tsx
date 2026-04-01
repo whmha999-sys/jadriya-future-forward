@@ -31,7 +31,7 @@ const FooterSection = () => {
                 <a href="mailto:info@hy-med.net" className="hover:text-primary-foreground transition-colors">info@hy-med.net</a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-[#F5A623] flex-shrink-0" />
+                <Phone className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
                 <span>+962 788310769</span>
               </div>
               <div className="flex items-center gap-2">
