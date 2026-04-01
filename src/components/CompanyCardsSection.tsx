@@ -30,7 +30,7 @@ const cards = [
   {
     labelKey: "cards.energy.label",
     headlineKey: "cards.energy.headline",
-    photo: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+    photo: energyCard,
     link: "/energy",
   },
 ];
