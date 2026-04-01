@@ -3,6 +3,10 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
+import oilgasCard from "@/assets/oilgas-card.jpg";
+import medicalCard from "@/assets/medical-card.jpg";
+import roboticsCard from "@/assets/robotics-card.jpg";
+import energyCard from "@/assets/energy-card.jpg";
 
 const cards = [
   {
