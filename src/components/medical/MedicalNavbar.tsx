@@ -85,7 +85,7 @@ const MedicalNavbar = () => {
             <button
               onClick={() => navigateWithTransition("/contact", { company: "Medical" })}
               className={`nav-link hidden md:block transition-colors duration-300 ${
-                bgSolid ? "text-primary" : "text-primary-foreground"
+                bgSolid ? "text-primary-foreground" : "text-primary"
               }`}
             >
               {t("nav.contact")}
