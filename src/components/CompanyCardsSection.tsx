@@ -12,7 +12,7 @@ const cards = [
   {
     labelKey: "cards.oilgas.label",
     headlineKey: "cards.oilgas.headline",
-    photo: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
+    photo: oilgasCard,
     link: "/oil-gas",
   },
   {
