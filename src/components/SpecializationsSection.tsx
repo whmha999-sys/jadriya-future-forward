@@ -149,7 +149,7 @@ const SpecializationsSection = () => {
             </AnimatePresence>
 
             {/* Frosted glass overlay at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 backdrop-blur-xl bg-black/40 px-8 py-8">
+            <div className="absolute bottom-0 left-0 right-0 backdrop-blur-xl bg-black/40 px-6 py-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentItem.nameKey}
@@ -158,10 +158,10 @@ const SpecializationsSection = () => {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <h3 className="text-white text-xl font-bold mb-3">
+                  <h3 className="text-white text-base font-bold mb-1">
                     {t(currentItem.nameKey)}
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-xs leading-relaxed">
                     {t(currentItem.descKey)}
                   </p>
                 </motion.div>
