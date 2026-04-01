@@ -61,7 +61,7 @@ const CompanyCardsSection = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               onClick={() => navigateWithTransition(card.link)}
-              className="group relative h-[380px] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] transition-shadow duration-500 text-left cursor-pointer"
+              className="group relative h-[475px] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] transition-shadow duration-500 text-left cursor-pointer"
             >
               <div className="absolute inset-0 overflow-hidden">
                 <img
@@ -72,19 +72,19 @@ const CompanyCardsSection = () => {
               </div>
               <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/40 group-hover:bg-[hsl(var(--navy-deep))]/55 transition-colors duration-500" />
               
-              {/* Top label */}
-              <div className="absolute top-5 left-5 z-10">
+              {/* Top: label + headline */}
+              <div className="absolute top-5 left-5 right-5 z-10">
                 <span className="text-xs font-semibold uppercase tracking-[2px] text-primary-foreground">
                   {t(card.labelKey)}
                 </span>
-              </div>
-
-              {/* Bottom */}
-              <div className="absolute bottom-5 left-5 right-5 z-10 flex items-end justify-between">
-                <h3 className="text-xl font-bold text-primary-foreground">
+                <h3 className="text-xl font-bold text-primary-foreground mt-4 leading-tight">
                   {t(card.headlineKey)}
                 </h3>
-                <div className="w-10 h-10 rounded-full border border-primary-foreground/40 group-hover:border-accent flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+              </div>
+
+              {/* Bottom-right arrow */}
+              <div className="absolute bottom-5 right-5 z-10">
+                <div className="w-10 h-10 rounded-full border border-primary-foreground/40 group-hover:border-accent flex items-center justify-center transition-colors duration-300">
                   <ArrowRight className="h-4 w-4 text-primary-foreground group-hover:translate-x-0.5 transition-transform duration-300" />
                 </div>
               </div>
