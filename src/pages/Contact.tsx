@@ -73,6 +73,20 @@ const Contact = () => {
     message: "",
   });
 
+  const showAmman = !officeParam || officeParam === "amman";
+  const showTikrit = !officeParam || officeParam === "tikrit";
+
+  const [highlightedOffice, setHighlightedOffice] = useState<string | null>(null);
+
+  const handleOfficeSelect = (office: string) => {
+    setHighlightedOffice(office);
+    const ref = office === "amman" ? ammanRef : tikritRef;
+    if (showAmman && showTikrit) {
+      ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    setTimeout(() => setHighlightedOffice(null), 2000);
+  };
+
   return (
     <div className="min-h-screen bg-card">
       <Navbar />
@@ -193,99 +207,12 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Office Selector - only when both offices shown */}
-              {showOfficePicker && (
-                <div>
-                  <label className="block text-sm font-medium text-primary mb-2">{t("contact.whichOffice")}</label>
-                  <select
-                    name="office"
-                    value={form.office}
-                    onChange={(e) => handleOfficeSelect(e.target.value)}
-                    className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all appearance-none"
-                  >
-                    <option value="">{t("contact.selectOffice")}</option>
-                    <option value="amman">{t("contact.officeAmman")}</option>
-                    <option value="tikrit">{t("contact.officeTikrit")}</option>
-                  </select>
-                </div>
-              )}
-
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">{t("contact.fullName")}</label>
-                <input
-                  name="name"
-                  type="text"
-                  required
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder={t("contact.fullNamePlaceholder")}
-                  className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">{t("contact.emailAddress")}</label>
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder={t("contact.emailPlaceholder")}
-                  className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">{t("contact.phone")}</label>
-                <input
-                  name="phone"
-                  type="tel"
-                  value={form.phone}
-                  onChange={handleChange}
-                  placeholder={t("contact.phonePlaceholder")}
-                  className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">{t("contact.subject")}</label>
-                <select
-                  name="subject"
-                  required
-                  value={form.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all appearance-none"
-                >
-                  <option value="" disabled>{t("contact.subjectPlaceholder")}</option>
-                  {subjectOptions.map((opt) => (
-                    <option key={opt.value} value={opt.value}>{opt.label}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-primary mb-2">{t("contact.message")}</label>
-                <textarea
-                  name="message"
-                  required
-                  rows={6}
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder={t("contact.messagePlaceholder")}
-                  className="w-full px-4 py-3 border border-border rounded-sm bg-card text-primary placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="inline-flex items-center gap-3 font-semibold text-sm uppercase tracking-wider px-10 py-4 text-white transition-all duration-300 hover:brightness-110"
-                style={{ background: "#1A2B4A" }}
-              >
-                {t("contact.send")} <ArrowRight className="h-4 w-4" />
-              </button>
-            </form>
+            <ContactForm
+              initialCompany={getInitialCompany()}
+              initialOffice={getInitialOffice()}
+              initialCountry={getInitialCountry()}
+              onOfficeSelect={handleOfficeSelect}
+            />
           </motion.div>
         </div>
       </section>
