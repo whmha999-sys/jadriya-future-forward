@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import EngineeringConsultancy from "./pages/EngineeringConsultancy";
-import EducationalTechnology from "./pages/EducationalTechnology";
+
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import EquipmentSupply from "./pages/EquipmentSupply";
@@ -25,6 +25,11 @@ import MedicalCapacity from "./pages/MedicalCapacity";
 import MedicalTurnkey from "./pages/MedicalTurnkey";
 import MedicalTender from "./pages/MedicalTender";
 import MedicalAfterSales from "./pages/MedicalAfterSales";
+import Robotics from "./pages/Robotics";
+import RoboticsSchools from "./pages/RoboticsSchools";
+import RoboticsAiProgramming from "./pages/RoboticsAiProgramming";
+import RoboticsEquipment from "./pages/RoboticsEquipment";
+import RoboticsCorporateTraining from "./pages/RoboticsCorporateTraining";
 import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
@@ -48,7 +53,7 @@ const App = () => {
                 <Route path="/" element={<Index />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/engineering-consultancy" element={<EngineeringConsultancy />} />
-                <Route path="/educational-technology" element={<EducationalTechnology />} />
+                
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/equipment-supply" element={<EquipmentSupply />} />
@@ -66,6 +71,11 @@ const App = () => {
                 <Route path="/medical/turnkey-projects" element={<MedicalTurnkey />} />
                 <Route path="/medical/tender-management" element={<MedicalTender />} />
                 <Route path="/medical/after-sales" element={<MedicalAfterSales />} />
+                <Route path="/robotics" element={<Robotics />} />
+                <Route path="/robotics/schools" element={<RoboticsSchools />} />
+                <Route path="/robotics/ai-programming" element={<RoboticsAiProgramming />} />
+                <Route path="/robotics/equipment" element={<RoboticsEquipment />} />
+                <Route path="/robotics/corporate-training" element={<RoboticsCorporateTraining />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
