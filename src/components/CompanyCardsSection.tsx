@@ -3,30 +3,34 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
+import oilgasCard from "@/assets/oilgas-card.jpg";
+import medicalCard from "@/assets/medical-card.jpg";
+import roboticsCard from "@/assets/robotics-card.jpg";
+import energyCard from "@/assets/energy-card.jpg";
 
 const cards = [
   {
     labelKey: "cards.oilgas.label",
     headlineKey: "cards.oilgas.headline",
-    photo: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
+    photo: oilgasCard,
     link: "/oil-gas",
   },
   {
     labelKey: "cards.medical.label",
     headlineKey: "cards.medical.headline",
-    photo: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80",
+    photo: medicalCard,
     link: "/medical",
   },
   {
     labelKey: "cards.robotics.label",
     headlineKey: "cards.robotics.headline",
-    photo: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+    photo: roboticsCard,
     link: "/robotics",
   },
   {
     labelKey: "cards.energy.label",
     headlineKey: "cards.energy.headline",
-    photo: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+    photo: energyCard,
     link: "/energy",
   },
 ];
