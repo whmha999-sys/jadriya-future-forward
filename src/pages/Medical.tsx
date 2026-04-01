@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import MedicalNavbar from "@/components/medical/MedicalNavbar";
-import MedicalFooter from "@/components/medical/MedicalFooter";
+import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 
@@ -246,7 +246,7 @@ const Medical = () => {
         </div>
       </section>
 
-      <MedicalFooter />
+      <FooterSection />
     </div>
   );
 };

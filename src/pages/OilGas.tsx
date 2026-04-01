@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import OilGasNavbar from "@/components/oilgas/OilGasNavbar";
-import OilGasFooter from "@/components/oilgas/OilGasFooter";
+import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 
@@ -246,7 +246,7 @@ const OilGas = () => {
         </div>
       </section>
 
-      <OilGasFooter />
+      <FooterSection />
     </div>
   );
 };

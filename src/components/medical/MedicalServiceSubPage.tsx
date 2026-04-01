@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import MedicalNavbar from "./MedicalNavbar";
-import MedicalFooter from "./MedicalFooter";
+import FooterSection from "../FooterSection";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 import case1 from "@/assets/medical/case-1.jpg";
@@ -151,7 +151,7 @@ const MedicalServiceSubPage = ({
         </div>
       </section>
 
-      <MedicalFooter />
+      <FooterSection />
     </div>
   );
 };
