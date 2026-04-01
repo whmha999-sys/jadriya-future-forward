@@ -3,6 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/useLanguage";
+import specOilgas1 from "@/assets/spec-oilgas-1.jpg";
+import specOilgas2 from "@/assets/spec-oilgas-2.jpg";
+import specOilgas3 from "@/assets/spec-oilgas-3.jpg";
+import specOilgas4 from "@/assets/spec-oilgas-4.jpg";
+import specOilgas5 from "@/assets/spec-oilgas-5.jpg";
+import specMedical1 from "@/assets/spec-medical-1.jpg";
+import specMedical2 from "@/assets/spec-medical-2.jpg";
+import specMedical3 from "@/assets/spec-medical-3.jpg";
+import specMedical4 from "@/assets/spec-medical-4.jpg";
+import specRobotics1 from "@/assets/spec-robotics-1.jpg";
 
 interface SpecItem {
   nameKey: string;
