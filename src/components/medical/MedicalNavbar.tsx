@@ -59,7 +59,7 @@ const MedicalNavbar = () => {
           <button onClick={() => navigateWithTransition("/medical")} className="flex items-center gap-0">
             <div className="relative h-12 w-12 shrink-0">
               <img
-                src={medLogo}
+                src={bgSolid ? medLogo : medLogoDark}
                 alt="AL-JADRIYA Medical"
                 className={`h-full w-full object-contain transition-all duration-500 ${
                   bgSolid ? "brightness-0 invert" : ""
