@@ -162,8 +162,8 @@ const Contact = () => {
               <Mail className="h-5 w-5 text-accent mt-0.5 shrink-0" />
               <div>
                 <p className="text-sm text-muted-foreground mb-1">{t("contact.email")}</p>
-                <a href="mailto:info@aljadriya.com" className="text-primary font-semibold hover:text-accent transition-colors">
-                  info@aljadriya.com
+                <a href="mailto:info@hy-med.net" className="text-primary font-semibold hover:text-accent transition-colors">
+                  info@hy-med.net
                 </a>
               </div>
             </div>
