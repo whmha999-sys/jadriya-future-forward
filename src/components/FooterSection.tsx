@@ -131,6 +131,9 @@ const FooterSection = () => {
               {t("footer.quickLinks")}
             </h4>
             <div className="space-y-2">
+              <button onClick={() => navigateWithTransition("/references")} className={linkClass}>
+                Our Projects
+              </button>
               <button onClick={() => navigateWithTransition("/contact")} className={linkClass}>
                 {t("footer.contact")}
               </button>
