@@ -4,7 +4,7 @@ import { ChevronRight, X } from "lucide-react";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 
-type Category = "companies" | "specializations" | "contact";
+type Category = "companies" | "specializations" | "projects" | "contact";
 
 interface SubItem {
   labelKey: string;
@@ -85,6 +85,7 @@ const specRight: SubItem[] = [
 const categories: { key: Category; labelKey: string }[] = [
   { key: "companies", labelKey: "mega.ourCompanies" },
   { key: "specializations", labelKey: "mega.ourSpecializations" },
+  { key: "projects", labelKey: "mega.ourProjects" },
   { key: "contact", labelKey: "mega.contactUs" },
 ];
 
