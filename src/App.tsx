@@ -25,6 +25,7 @@ import MedicalCapacity from "./pages/MedicalCapacity";
 import MedicalTurnkey from "./pages/MedicalTurnkey";
 import MedicalTender from "./pages/MedicalTender";
 import MedicalAfterSales from "./pages/MedicalAfterSales";
+import MedicalCaseOxygen from "./pages/MedicalCaseOxygen";
 import Robotics from "./pages/Robotics";
 import RoboticsSchools from "./pages/RoboticsSchools";
 import RoboticsAiProgramming from "./pages/RoboticsAiProgramming";
