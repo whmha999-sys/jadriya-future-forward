@@ -10,6 +10,7 @@ import specOilgas4 from "@/assets/spec-oilgas-4.jpg";
 import specOilgas5 from "@/assets/spec-oilgas-5.jpg";
 import specMedical1 from "@/assets/spec-medical-1.jpg";
 import specMedical2 from "@/assets/spec-medical-2.jpg";
+import specMedical2New from "@/assets/spec-medical-2-new.jpg";
 import specMedical3 from "@/assets/spec-medical-3.jpg";
 import specMedical4 from "@/assets/spec-medical-4.jpg";
 import specRoboticsSchools from "@/assets/spec-robotics-schools.jpg";
@@ -46,8 +47,8 @@ const tabsData: TabData[] = [
     tabKey: "spec.tab.medical",
     items: [
       { nameKey: "spec.medical.1", descKey: "spec.medical.1.desc", photo: specMedical1, link: "/medical/hospital-equipment" },
-      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: specMedical2, link: "/medical/capacity-management" },
-      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: specMedical3, link: "/medical/tender-management" },
+      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: specMedical2New, link: "/medical/capacity-management" },
+      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: specMedical2, link: "/medical/tender-management" },
       { nameKey: "spec.medical.4", descKey: "spec.medical.4.desc", photo: specMedical4, link: "/medical/turnkey-projects" },
     ],
   },
