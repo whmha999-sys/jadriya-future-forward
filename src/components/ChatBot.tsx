@@ -90,7 +90,7 @@ const ChatBot = () => {
           className="fixed bottom-6 right-6 z-[90] w-14 h-14 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center border border-border"
           aria-label="Open chat"
         >
-          <img src={chatbotLogo} alt="Jadri" className="w-[450%] h-[450%] object-contain translate-y-[3%]" />
+          <img src={chatbotLogo} alt="Jadri" className="w-[450%] h-[450%] object-contain translate-y-[2%]" />
         </button>
       )}
 
