@@ -22,11 +22,11 @@ const sections = [
   },
   {
     title: "5. Your Rights",
-    text: "You have the right to access, correct, or delete your personal data at any time. To exercise these rights, contact us at info@aljadriya.com",
+    text: "You have the right to access, correct, or delete your personal data at any time. To exercise these rights, contact us at info@hy-med.net",
   },
   {
     title: "6. Contact",
-    text: "For any privacy-related questions, please reach out to us at info@aljadriya.com or visit our Contact Us page.",
+    text: "For any privacy-related questions, please reach out to us at info@hy-med.net or visit our Contact Us page.",
   },
 ];
 
