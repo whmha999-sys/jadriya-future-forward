@@ -64,8 +64,6 @@ const tabsData: TabData[] = [
     tabKey: "spec.tab.energy",
     items: [
       { nameKey: "spec.energy.1", descKey: "spec.energy.1.desc", photo: specEnergyManufacturing, link: "/energy/clean-manufacturing" },
-      { nameKey: "spec.energy.2", descKey: "spec.energy.2.desc", photo: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80", link: "/energy/wind" },
-      { nameKey: "spec.energy.3", descKey: "spec.energy.3.desc", photo: specEnergySolar, link: "/energy/solar" },
     ],
   },
 ];
