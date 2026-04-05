@@ -10,7 +10,7 @@ interface ContactFormProps {
   onOfficeSelect: (office: string) => void;
 }
 
-const WEBHOOK_URL = "https://n8n.srv971269.hstgr.cloud/webhook-test/7695d962-db6d-40e3-8bab-129d42475d64";
+const WEBHOOK_URL = "https://n8n.srv971269.hstgr.cloud/webhook/7695d962-db6d-40e3-8bab-129d42475d64";
 
 const underlineInput =
   "w-full bg-transparent border-0 border-b border-border py-3 text-sm text-primary placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent transition-colors";
