@@ -10,6 +10,8 @@ interface ContactFormProps {
   onOfficeSelect: (office: string) => void;
 }
 
+const WEBHOOK_URL = "https://n8n.srv971269.hstgr.cloud/webhook-test/7695d962-db6d-40e3-8bab-129d42475d64";
+
 const underlineInput =
   "w-full bg-transparent border-0 border-b border-border py-3 text-sm text-primary placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent transition-colors";
 
@@ -35,6 +37,8 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -45,10 +49,25 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError(t("form.errorMsg") || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -108,8 +127,8 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
           <input name="companyOrg" type="text" required value={form.companyOrg} onChange={handleChange} className={underlineInput} />
         </div>
         <div>
-          <label className={fieldLabel}>{t("form.country")}</label>
-          <select name="country" value={form.country} onChange={handleChange} className={underlineSelect}>
+          <label className={fieldLabel}>{t("form.country")} *</label>
+          <select name="country" required value={form.country} onChange={handleChange} className={underlineSelect}>
             <option value="">{t("form.selectCountry")}</option>
             {countries.map((c) => (
               <option key={c.value} value={c.value}>{c.label}</option>
@@ -120,10 +139,10 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
 
       {/* Row 3: Phone */}
       <div className="mb-10">
-        <label className={fieldLabel}>{t("form.phone")}</label>
+        <label className={fieldLabel}>{t("form.phone")} *</label>
         <div className="flex items-center gap-2">
           <span className="text-muted-foreground text-sm">+</span>
-          <input name="phone" type="tel" value={form.phone} onChange={handleChange} className={underlineInput + " flex-1"} />
+          <input name="phone" type="tel" required value={form.phone} onChange={handleChange} className={underlineInput + " flex-1"} />
         </div>
         <p className="text-xs text-muted-foreground/60 mt-1.5">{t("form.phoneHint")}</p>
       </div>
@@ -173,15 +192,20 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
       </div>
 
       {/* Privacy note */}
-      <p className="text-xs text-muted-foreground/60 mb-8">{t("form.privacy")}</p>
+      <p className="text-xs text-muted-foreground/60 mb-4">{t("form.privacy")}</p>
+
+      {error && (
+        <p className="text-sm text-red-600 text-center mb-4">{error}</p>
+      )}
 
       {/* Submit button */}
       <div className="text-center">
         <button
           type="submit"
-          className="inline-flex items-center gap-3 font-semibold text-sm tracking-wider px-10 py-3.5 rounded-full text-white bg-accent hover:bg-accent/90 transition-all duration-300"
+          disabled={submitting}
+          className="inline-flex items-center gap-3 font-semibold text-sm tracking-wider px-10 py-3.5 rounded-full text-white bg-accent hover:bg-accent/90 transition-all duration-300 disabled:opacity-50"
         >
-          {t("form.send")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
+          {submitting ? "..." : t("form.send")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
         </button>
       </div>
     </form>
