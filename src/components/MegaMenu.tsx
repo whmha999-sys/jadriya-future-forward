@@ -214,6 +214,27 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
                   </>
                 )}
 
+                {active === "projects" && (
+                  <div className="md:w-full">
+                    <button
+                      onClick={() => handleLink("/references")}
+                      className="block text-[15px] font-bold text-[#1A2B4A] hover:text-[#F5A623] transition-colors mb-4"
+                    >
+                      View All Projects →
+                    </button>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <button onClick={() => handleLink("/references?filter=Medical — Iraq")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">Medical — Iraq</button>
+                        <button onClick={() => handleLink("/references?filter=Medical — Jordan")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">Medical — Jordan</button>
+                        <button onClick={() => handleLink("/references?filter=Medical — Middle East")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">Medical — Middle East</button>
+                      </div>
+                      <div className="space-y-2">
+                        <button onClick={() => handleLink("/references?filter=Oil %26 Gas")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">Oil &amp; Gas</button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {active === "contact" && (
                   <>
                     <div className="md:w-1/2 space-y-3">
