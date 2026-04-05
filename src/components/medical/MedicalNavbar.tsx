@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Globe, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import medLogo from "@/assets/med-logo-icon.png";
+import medLogoDark from "@/assets/med-logo-dark.png";
 import MegaMenu from "../MegaMenu";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -58,7 +59,7 @@ const MedicalNavbar = () => {
           <button onClick={() => navigateWithTransition("/medical")} className="flex items-center gap-0">
             <div className="relative h-12 w-12 shrink-0">
               <img
-                src={medLogo}
+                src={bgSolid ? medLogo : medLogoDark}
                 alt="AL-JADRIYA Medical"
                 className={`h-full w-full object-contain transition-all duration-500 ${
                   bgSolid ? "brightness-0 invert" : ""
