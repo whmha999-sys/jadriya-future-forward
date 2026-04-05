@@ -47,8 +47,8 @@ const tabsData: TabData[] = [
     tabKey: "spec.tab.medical",
     items: [
       { nameKey: "spec.medical.1", descKey: "spec.medical.1.desc", photo: specMedical1, link: "/medical/hospital-equipment" },
-      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: specMedical2, link: "/medical/capacity-management" },
-      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: specMedical3, link: "/medical/tender-management" },
+      { nameKey: "spec.medical.2", descKey: "spec.medical.2.desc", photo: specMedical2New, link: "/medical/capacity-management" },
+      { nameKey: "spec.medical.3", descKey: "spec.medical.3.desc", photo: specMedical2, link: "/medical/tender-management" },
       { nameKey: "spec.medical.4", descKey: "spec.medical.4.desc", photo: specMedical4, link: "/medical/turnkey-projects" },
     ],
   },
