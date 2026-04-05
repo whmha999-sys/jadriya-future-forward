@@ -73,6 +73,7 @@ const App = () => {
                 <Route path="/medical/turnkey-projects" element={<MedicalTurnkey />} />
                 <Route path="/medical/tender-management" element={<MedicalTender />} />
                 <Route path="/medical/after-sales" element={<MedicalAfterSales />} />
+                <Route path="/medical/case/oxygen-plant" element={<MedicalCaseOxygen />} />
                 <Route path="/robotics" element={<Robotics />} />
                 <Route path="/robotics/schools" element={<RoboticsSchools />} />
                 <Route path="/robotics/ai-programming" element={<RoboticsAiProgramming />} />
