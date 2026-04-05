@@ -87,10 +87,10 @@ const ChatBot = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-[90] w-28 h-28 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center border border-border"
+          className="fixed bottom-6 right-6 z-[90] w-14 h-14 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center border border-border"
           aria-label="Open chat"
         >
-          <img src={chatbotLogo} alt="Jadri" className="w-[4.5rem] h-[4.5rem] object-contain" />
+          <img src={chatbotLogo} alt="Jadri" className="w-9 h-9 object-contain" />
         </button>
       )}
 
