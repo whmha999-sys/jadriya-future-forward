@@ -10,6 +10,8 @@ interface ContactFormProps {
   onOfficeSelect: (office: string) => void;
 }
 
+const WEBHOOK_URL = "https://n8n.srv971269.hstgr.cloud/webhook-test/7695d962-db6d-40e3-8bab-129d42475d64";
+
 const underlineInput =
   "w-full bg-transparent border-0 border-b border-border py-3 text-sm text-primary placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent transition-colors";
 
@@ -35,6 +37,8 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -45,10 +49,25 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError(t("form.errorMsg") || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
