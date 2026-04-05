@@ -10,6 +10,7 @@ import specOilgas4 from "@/assets/spec-oilgas-4.jpg";
 import specOilgas5 from "@/assets/spec-oilgas-5.jpg";
 import specMedical1 from "@/assets/spec-medical-1.jpg";
 import specMedical2 from "@/assets/spec-medical-2.jpg";
+import specMedical2New from "@/assets/spec-medical-2-new.jpg";
 import specMedical3 from "@/assets/spec-medical-3.jpg";
 import specMedical4 from "@/assets/spec-medical-4.jpg";
 import specRoboticsSchools from "@/assets/spec-robotics-schools.jpg";
