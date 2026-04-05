@@ -33,7 +33,10 @@ const WhoWeServeSection = () => {
           <h2 className="section-heading mb-6">{t("serve.heading")}</h2>
           <p className="body-text mb-8">{t("serve.text")}</p>
           <div>
-            <button className="cta-button rounded-full">
+            <button
+              className="cta-button rounded-full"
+              onClick={() => document.getElementById("specializations")?.scrollIntoView({ behavior: "smooth" })}
+            >
               {t("serve.cta")} <ArrowRight className="h-4 w-4" />
             </button>
           </div>
