@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { Send, X, MessageCircle } from "lucide-react";
 import chatbotLogo from "@/assets/chatbot-logo.png";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -19,6 +19,7 @@ const ChatBot = () => {
   const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [welcomed, setWelcomed] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const sessionId = useMemo(() => crypto.randomUUID(), []);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -65,7 +66,7 @@ const ChatBot = () => {
       const res = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, language }),
+        body: JSON.stringify({ message: text, language, sessionId }),
       });
       const data = await res.json();
       const reply = typeof data === "string" ? data : data.output || data.message || data.response || JSON.stringify(data);
