@@ -192,15 +192,20 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
       </div>
 
       {/* Privacy note */}
-      <p className="text-xs text-muted-foreground/60 mb-8">{t("form.privacy")}</p>
+      <p className="text-xs text-muted-foreground/60 mb-4">{t("form.privacy")}</p>
+
+      {error && (
+        <p className="text-sm text-red-600 text-center mb-4">{error}</p>
+      )}
 
       {/* Submit button */}
       <div className="text-center">
         <button
           type="submit"
-          className="inline-flex items-center gap-3 font-semibold text-sm tracking-wider px-10 py-3.5 rounded-full text-white bg-accent hover:bg-accent/90 transition-all duration-300"
+          disabled={submitting}
+          className="inline-flex items-center gap-3 font-semibold text-sm tracking-wider px-10 py-3.5 rounded-full text-white bg-accent hover:bg-accent/90 transition-all duration-300 disabled:opacity-50"
         >
-          {t("form.send")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
+          {submitting ? "..." : t("form.send")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
         </button>
       </div>
     </form>
