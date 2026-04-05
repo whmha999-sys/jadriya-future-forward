@@ -25,6 +25,7 @@ import MedicalCapacity from "./pages/MedicalCapacity";
 import MedicalTurnkey from "./pages/MedicalTurnkey";
 import MedicalTender from "./pages/MedicalTender";
 import MedicalAfterSales from "./pages/MedicalAfterSales";
+import MedicalCaseOxygen from "./pages/MedicalCaseOxygen";
 import Robotics from "./pages/Robotics";
 import RoboticsSchools from "./pages/RoboticsSchools";
 import RoboticsAiProgramming from "./pages/RoboticsAiProgramming";
@@ -72,6 +73,7 @@ const App = () => {
                 <Route path="/medical/turnkey-projects" element={<MedicalTurnkey />} />
                 <Route path="/medical/tender-management" element={<MedicalTender />} />
                 <Route path="/medical/after-sales" element={<MedicalAfterSales />} />
+                <Route path="/medical/case/oxygen-plant" element={<MedicalCaseOxygen />} />
                 <Route path="/robotics" element={<Robotics />} />
                 <Route path="/robotics/schools" element={<RoboticsSchools />} />
                 <Route path="/robotics/ai-programming" element={<RoboticsAiProgramming />} />

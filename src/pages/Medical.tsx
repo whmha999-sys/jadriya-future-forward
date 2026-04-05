@@ -43,9 +43,9 @@ const services = [
 ];
 
 const caseStudies = [
-  { img: case1, tagKey: "med.caseHospitalEquip", titleKey: "med.case1Title", locKey: "med.case1Loc", descKey: "med.case1Desc" },
-  { img: case2, tagKey: "med.caseDiagnostics", titleKey: "med.case2Title", locKey: "med.case2Loc", descKey: "med.case2Desc" },
-  { img: case3, tagKey: "med.caseLaboratory", titleKey: "med.case3Title", locKey: "med.case3Loc", descKey: "med.case3Desc" },
+  { img: case1, tagKey: "med.caseHospitalEquip", titleKey: "med.case1Title", locKey: "med.case1Loc", descKey: "med.case1Desc", href: "/medical/case/oxygen-plant" },
+  { img: case2, tagKey: "med.caseDiagnostics", titleKey: "med.case2Title", locKey: "med.case2Loc", descKey: "med.case2Desc", href: "" },
+  { img: case3, tagKey: "med.caseLaboratory", titleKey: "med.case3Title", locKey: "med.case3Loc", descKey: "med.case3Desc", href: "" },
 ];
 
 const Medical = () => {
@@ -218,7 +218,10 @@ const Medical = () => {
                   <h3 className="text-primary font-bold text-lg mt-2">{t(c.titleKey)}</h3>
                   <p className="text-muted-foreground text-xs mt-1">{t(c.locKey)}</p>
                   <p className="body-text text-sm mt-3">{t(c.descKey)}</p>
-                  <button className="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-4 hover:gap-3 transition-all">
+                  <button
+                    onClick={() => c.href && navigateWithTransition(c.href)}
+                    className={`inline-flex items-center gap-2 text-accent font-semibold text-sm mt-4 hover:gap-3 transition-all ${!c.href ? "opacity-50 cursor-default" : ""}`}
+                  >
                     {t("med.readMore")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
                   </button>
                 </div>
