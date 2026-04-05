@@ -135,6 +135,7 @@ export const translations: Record<string, Record<Language, string>> = {
   // New MegaMenu keys
   "mega.ourCompanies": { en: "Our Companies", ar: "شركاتنا" },
   "mega.ourSpecializations": { en: "Our Specializations", ar: "تخصصاتنا" },
+  "mega.ourProjects": { en: "Our Projects", ar: "مشاريعنا" },
   "mega.contactUs": { en: "Contact Us", ar: "تواصل معنا" },
   "mega.oilGas": { en: "Oil & Gas", ar: "النفط والغاز" },
   "mega.medical": { en: "Medical", ar: "الطبية" },

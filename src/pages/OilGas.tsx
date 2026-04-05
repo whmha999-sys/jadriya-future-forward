@@ -23,6 +23,8 @@ import cardAftersales from "@/assets/oilgas/card-aftersales.jpg";
 import case1 from "@/assets/oilgas/case-1.jpg";
 import case2 from "@/assets/oilgas/case-2.jpg";
 import case3 from "@/assets/oilgas/case-3.jpg";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import { oilGasProjects } from "@/data/projects";
 
 const slides = [
   { image: heroPipes, labelKey: "og.hero1.label", headingKey: "og.hero1.heading", tabKey: "og.hero1.tab" },
@@ -227,6 +229,15 @@ const OilGas = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Projects */}
+      <FeaturedProjects
+        label="OUR PROJECTS"
+        heading="Delivered with Precision"
+        projects={oilGasProjects}
+        ctaText="View All Projects →"
+        ctaHref="/references?filter=Oil %26 Gas"
+      />
 
       {/* Contact CTA */}
       <section className="bg-[hsl(var(--slate-dark))] py-20 md:py-28">

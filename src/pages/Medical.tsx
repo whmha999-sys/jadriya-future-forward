@@ -23,6 +23,14 @@ import cardAftersales from "@/assets/medical/card-aftersales.jpg";
 import case1 from "@/assets/medical/case-1-real.jpg";
 import case2 from "@/assets/medical/case-2.jpg";
 import case3 from "@/assets/medical/case-3.jpg";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import { allProjects } from "@/data/projects";
+
+const medFeatured = [
+  allProjects.find((p) => p.id === 25)!,
+  allProjects.find((p) => p.id === 29)!,
+  allProjects.find((p) => p.id === 38)!,
+];
 
 const slides = [
   { image: heroBiomedical, labelKey: "med.hero1.label", headingKey: "med.hero1.heading", tabKey: "med.hero1.tab" },
@@ -230,6 +238,15 @@ const Medical = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Projects */}
+      <FeaturedProjects
+        label="OUR PROJECTS"
+        heading="Proven Medical Expertise"
+        projects={medFeatured}
+        ctaText="View All Medical Projects →"
+        ctaHref="/references?filter=Medical — Iraq"
+      />
 
       {/* Contact CTA */}
       <section className="bg-[hsl(var(--slate-dark))] py-20 md:py-28">
