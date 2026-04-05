@@ -34,6 +34,7 @@ import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
 import { LanguageProvider } from "./contexts/LanguageProvider";
+import ChatBot from "./components/ChatBot";
 
 const queryClient = new QueryClient();
 
@@ -79,6 +80,7 @@ const App = () => {
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              <ChatBot />
             </PageTransitionProvider>
           </BrowserRouter>
         </LanguageProvider>
