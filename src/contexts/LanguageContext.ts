@@ -836,6 +836,11 @@ export const translations: Record<string, Record<Language, string>> = {
   "robo.corporate.f3.desc": { en: "Experience delivering programs for public sector institutions", ar: "خبرة في تقديم برامج لمؤسسات القطاع العام" },
   "robo.corporate.f4.title": { en: "Certified Completion", ar: "شهادة إتمام" },
   "robo.corporate.f4.desc": { en: "Participants receive certificates upon program completion", ar: "يحصل المشاركون على شهادات عند إتمام البرنامج" },
+
+  // Chatbot
+  "chatbot.welcome": { en: "Hello! I'm Jadri, your AL-JADRIYA GROUP assistant. How can I help you today?", ar: "مرحباً! أنا جدري، مساعدك من مجموعة الجادرية. كيف يمكنني مساعدتك؟" },
+  "chatbot.placeholder": { en: "Type a message...", ar: "اكتب رسالة..." },
+  "chatbot.title": { en: "Jadri — AL-JADRIYA Assistant", ar: "جدري — مساعد الجادرية" },
 };
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

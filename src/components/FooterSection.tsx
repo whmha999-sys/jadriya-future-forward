@@ -13,7 +13,7 @@ const FooterSection = () => {
     "flex items-center gap-2 text-primary-foreground font-bold text-sm uppercase tracking-wider mb-4 hover:text-primary-foreground/80 transition-colors cursor-pointer";
 
   return (
-    <footer className="bg-[hsl(var(--slate-dark))]">
+    <footer id="footer" className="bg-[hsl(var(--slate-dark))]">
       <div className="max-w-7xl mx-auto px-8 md:px-16 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Column 1: Brand */}
