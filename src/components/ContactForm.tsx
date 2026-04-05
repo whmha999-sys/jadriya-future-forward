@@ -127,8 +127,8 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
           <input name="companyOrg" type="text" required value={form.companyOrg} onChange={handleChange} className={underlineInput} />
         </div>
         <div>
-          <label className={fieldLabel}>{t("form.country")}</label>
-          <select name="country" value={form.country} onChange={handleChange} className={underlineSelect}>
+          <label className={fieldLabel}>{t("form.country")} *</label>
+          <select name="country" required value={form.country} onChange={handleChange} className={underlineSelect}>
             <option value="">{t("form.selectCountry")}</option>
             {countries.map((c) => (
               <option key={c.value} value={c.value}>{c.label}</option>
@@ -139,10 +139,10 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
 
       {/* Row 3: Phone */}
       <div className="mb-10">
-        <label className={fieldLabel}>{t("form.phone")}</label>
+        <label className={fieldLabel}>{t("form.phone")} *</label>
         <div className="flex items-center gap-2">
           <span className="text-muted-foreground text-sm">+</span>
-          <input name="phone" type="tel" value={form.phone} onChange={handleChange} className={underlineInput + " flex-1"} />
+          <input name="phone" type="tel" required value={form.phone} onChange={handleChange} className={underlineInput + " flex-1"} />
         </div>
         <p className="text-xs text-muted-foreground/60 mt-1.5">{t("form.phoneHint")}</p>
       </div>
