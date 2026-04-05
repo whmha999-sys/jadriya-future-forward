@@ -1,25 +1,33 @@
 
 
-## Plan: Fix Hero Timer to 5s and Move Pause to Tab Bar Only
+## Plan: Add AI Chatbot Widget
 
-### What Changes
+### Overview
+Add a floating chatbot widget (bottom-right, all pages) connected to the n8n webhook. It auto-opens when the user scrolls to the footer, with a localized welcome message from "Jadri."
 
-Two changes across all 4 hero sliders (Homepage, Medical, Oil & Gas, Robotics):
+### Changes
 
-1. **Timer to 5 seconds** — adjust the progress increment so 100% is reached in 5 seconds (currently varies per page)
-2. **Pause only on bottom tab bar** — move `onMouseEnter`/`onMouseLeave` from the full `<section>` to only the bottom tab bar `<div>`, so hovering over the image does not pause the slideshow
+**1. Copy uploaded logo → `src/assets/chatbot-logo.png`**
 
-### Files to Edit
+**2. New: `src/components/ChatBot.tsx`**
+- Fixed floating button (bottom-right) with white circle + gold knot logo
+- Toggles a chat panel (~350×450px, white background)
+- Header: logo + "Jadri — AL-JADRIYA Assistant"
+- Messages sent via POST to `https://n8n.srv971269.hstgr.cloud/webhook/jadri-chat` with `{ message, language }`
+- Opening message (auto-displayed on first open):
+  - EN: "Hello! I'm Jadri, your AL-JADRIYA GROUP assistant. How can I help you today?"
+  - AR: "مرحباً! أنا جدري، مساعدك من مجموعة الجادرية. كيف يمكنني مساعدتك؟"
+- Auto-open via IntersectionObserver on footer (once per session)
+- RTL support when language is Arabic
 
-| File | Timer fix | Pause fix |
-|------|-----------|-----------|
-| `src/components/HeroSection.tsx` | Change `prev + 1.25` to `prev + 2` (100 / 50 intervals = 5s) | Move `onMouseEnter`/`onMouseLeave` from `<section>` (line 76-77) to the bottom tab bar `<div>` (line 129) |
-| `src/pages/Medical.tsx` | Already `prev + 2` — correct for 5s | Move from `<section>` (line 86-87) to bottom tab bar `<div>` (line 125) |
-| `src/pages/OilGas.tsx` | Already `prev + 2` — correct for 5s | Move from `<section>` (line 86-87) to bottom tab bar `<div>` (line 125) |
-| `src/pages/Robotics.tsx` | Already `prev + 2` — correct for 5s | Move from `<section>` (line 70-71) to bottom tab bar `<div>` (line 109) |
+**3. Edit: `src/App.tsx`**
+- Render `<ChatBot />` globally inside the router
 
-### Technical Detail
+**4. Edit: `src/contexts/LanguageContext.ts`**
+- Add translation keys: `chatbot.welcome`, `chatbot.placeholder`, `chatbot.title`
+- EN welcome: "Hello! I'm Jadri, your AL-JADRIYA GROUP assistant. How can I help you today?"
+- AR welcome: "مرحباً! أنا جدري، مساعدك من مجموعة الجادرية. كيف يمكنني مساعدتك؟"
 
-- For HeroSection.tsx: progress increments at 100ms intervals. `prev + 2` means 50 ticks to reach 100% = 5 seconds exactly.
-- The `onMouseEnter={() => setPaused(true)}` and `onMouseLeave={() => setPaused(false)}` handlers will be removed from the hero `<section>` element and placed on the bottom tab bar container instead. This means hovering over the photo/content area will NOT pause the slideshow — only hovering over the named tab sections (ENERGY, ROBOTICS, MEDICAL, OIL & GAS) at the bottom will pause it.
+**5. Edit: `src/components/FooterSection.tsx`**
+- Add `id="footer"` to the root footer element for IntersectionObserver targeting
 
