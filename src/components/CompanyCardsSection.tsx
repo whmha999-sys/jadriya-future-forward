@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/useLanguage";
 import oilgasCard from "@/assets/oilgas-card.jpg";
 import medicalCard from "@/assets/medical-card.jpg";
 import roboticsCard from "@/assets/robotics-card.jpg";
-import energyCard from "@/assets/energy-card.jpg";
+import energyCard from "@/assets/energy-card.png";
 
 const cards = [
   {
