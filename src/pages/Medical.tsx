@@ -20,7 +20,7 @@ import cardTurnkey from "@/assets/medical/card-turnkey.jpg";
 import cardTender from "@/assets/medical/card-tender.jpg";
 import cardAftersales from "@/assets/medical/card-aftersales.jpg";
 
-import case1 from "@/assets/medical/case-1.jpg";
+import case1 from "@/assets/medical/case-1-real.jpg";
 import case2 from "@/assets/medical/case-2.jpg";
 import case3 from "@/assets/medical/case-3.jpg";
 

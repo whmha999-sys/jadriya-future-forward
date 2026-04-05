@@ -4,7 +4,7 @@ import MedicalNavbar from "./MedicalNavbar";
 import FooterSection from "../FooterSection";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
-import case1 from "@/assets/medical/case-1.jpg";
+import case1 from "@/assets/medical/case-1-real.jpg";
 import case2 from "@/assets/medical/case-2.jpg";
 
 interface Feature {
