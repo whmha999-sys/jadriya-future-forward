@@ -22,6 +22,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <section id="hero"><HeroSection /></section>
+      <PartnersSection />
       <CompanyCardsSection />
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
