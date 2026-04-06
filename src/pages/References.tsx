@@ -32,7 +32,7 @@ const References = () => {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative w-full min-h-screen flex items-center bg-[#1A2B4A] overflow-hidden">
+      <section className="relative w-full flex items-center bg-[#1A2B4A] overflow-hidden">
         <div className="max-w-7xl mx-auto px-8 md:px-16 w-full flex flex-col md:flex-row items-center gap-12 py-32">
           {/* Left 55% */}
           <div className="md:w-[55%]">
