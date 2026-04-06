@@ -7,6 +7,7 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import FinderSection from "@/components/FinderSection";
 import VisionSection from "@/components/VisionSection";
 import FooterSection from "@/components/FooterSection";
+import PartnersSection from "@/components/PartnersSection";
 import { allProjects } from "@/data/projects";
 
 // Featured: Project 29 (Egypt), Project 20 (Iraq open-heart), Project 38 (Oman Royal Hospital)
@@ -21,6 +22,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <section id="hero"><HeroSection /></section>
+      <PartnersSection />
       <CompanyCardsSection />
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
