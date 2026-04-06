@@ -1,12 +1,25 @@
+import karlStorz from "@/assets/partners/karl-storz.png";
+import stryker from "@/assets/partners/stryker.png";
+import vertisa from "@/assets/partners/vertisa.png";
+import comeg from "@/assets/partners/comeg.png";
+import coolex from "@/assets/partners/coolex.png";
+import angelantoni from "@/assets/partners/angelantoni.png";
+import histoLine from "@/assets/partners/histo-line.png";
+import medisam from "@/assets/partners/medisam.png";
+import amnotec from "@/assets/partners/amnotec.png";
+import sternmed from "@/assets/partners/sternmed.png";
+
 const partners = [
-  { src: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Leica_Camera_logo.svg", alt: "Leica" },
-  { src: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Stryker_Corporation_logo.svg", alt: "Stryker" },
-  { src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Midea_logo.svg", alt: "Midea" },
-  { src: "https://svgl.app/library/nvidia-wordmark-light.svg", alt: "Endomed" },
-  { src: "https://svgl.app/library/supabase_wordmark_light.svg", alt: "Oxyworld" },
-  { src: "https://svgl.app/library/openai_wordmark_light.svg", alt: "Sternmed" },
-  { src: "https://svgl.app/library/vercel_wordmark.svg", alt: "Amnotec" },
-  { src: "https://svgl.app/library/github_wordmark_light.svg", alt: "Medisam" },
+  { src: karlStorz, alt: "Karl Storz" },
+  { src: stryker, alt: "Stryker" },
+  { src: vertisa, alt: "Vertisa" },
+  { src: comeg, alt: "COMEG" },
+  { src: coolex, alt: "Coolex" },
+  { src: angelantoni, alt: "Angelantoni" },
+  { src: histoLine, alt: "Histo-Line" },
+  { src: medisam, alt: "Medisam" },
+  { src: amnotec, alt: "Amnotec" },
+  { src: sternmed, alt: "Sternmed" },
 ];
 
 const PartnersSection = () => {
@@ -36,7 +49,7 @@ const PartnersSection = () => {
               <img
                 src={partner.src}
                 alt={partner.alt}
-                className="h-5 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300"
               />
             </div>
           ))}
