@@ -1,63 +1,57 @@
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
-
 const partners = [
-  { name: "Leica", src: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Leica_Camera_logo.svg" },
-  { name: "Stryker", src: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Stryker_Corporation_logo.svg" },
-  { name: "Karl Storz", src: "https://www.karlstorz.com/content/dam/karlstorz/master/images/logo/ks-logo.svg" },
-  { name: "Midea", src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Midea_logo.svg" },
-  { name: "Endomed", src: "" },
-  { name: "Oxyworld", src: "" },
-  { name: "Sternmed", src: "" },
-  { name: "Amnotec", src: "" },
-  { name: "Medisam", src: "" },
-  { name: "Histo-Line", src: "" },
-  { name: "Angelantoni", src: "" },
-  { name: "Vertisa", src: "" },
-  { name: "Coolex", src: "" },
-  { name: "Comeg", src: "" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Leica_Camera_logo.svg", alt: "Leica" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Stryker_Corporation_logo.svg", alt: "Stryker" },
+  { src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Midea_logo.svg", alt: "Midea" },
+  { src: "https://svgl.app/library/nvidia-wordmark-light.svg", alt: "Endomed" },
+  { src: "https://svgl.app/library/supabase_wordmark_light.svg", alt: "Oxyworld" },
+  { src: "https://svgl.app/library/openai_wordmark_light.svg", alt: "Sternmed" },
+  { src: "https://svgl.app/library/vercel_wordmark.svg", alt: "Amnotec" },
+  { src: "https://svgl.app/library/github_wordmark_light.svg", alt: "Medisam" },
 ];
 
 const PartnersSection = () => {
   return (
     <section className="py-8 md:py-12" style={{ background: "#FFFFFF" }}>
-      <div className="container mx-auto px-4 mb-6">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-2">
-          OUR PARTNERS
-        </p>
-        <p className="text-lg md:text-xl text-gray-400 font-normal leading-snug">
-          Trusted by experts.
-        </p>
-        <p className="text-lg md:text-xl text-gray-600 font-semibold leading-snug">
-          Working with the best.
-        </p>
+      <div className="text-center mb-6">
+        <span className="text-gray-400 text-base md:text-lg">Trusted by experts.</span>
+        <br />
+        <span className="text-gray-800 text-base md:text-lg font-semibold">Working with the best.</span>
       </div>
 
-      <div className="relative w-full">
+      <div
+        className="mx-auto"
+        style={{
+          height: "1px",
+          background: "linear-gradient(to right, transparent, #e5e7eb 20%, #e5e7eb 80%, transparent)",
+        }}
+      />
+
+      <div className="relative overflow-hidden py-6">
         {/* Left fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #FFFFFF 0%, transparent 100%)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #FFFFFF, transparent)" }} />
         {/* Right fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #FFFFFF 0%, transparent 100%)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #FFFFFF, transparent)" }} />
 
-        <InfiniteSlider gap={56} duration={30} durationOnHover={60}>
-          {partners.map((partner) =>
-            partner.src ? (
+        <div className="animate-scroll-left flex w-max" style={{ gap: "42px" }}>
+          {[...partners, ...partners].map((partner, index) => (
+            <div key={index} className="flex items-center justify-center shrink-0">
               <img
-                key={partner.name}
                 src={partner.src}
-                alt={partner.name}
-                className="h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0"
+                alt={partner.alt}
+                className="h-5 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               />
-            ) : (
-              <span
-                key={partner.name}
-                className="inline-flex items-center h-8 px-4 text-sm font-semibold tracking-wide text-gray-400 hover:text-gray-700 whitespace-nowrap transition-colors duration-300 shrink-0"
-              >
-                {partner.name}
-              </span>
-            )
-          )}
-        </InfiniteSlider>
+            </div>
+          ))}
+        </div>
       </div>
+
+      <div
+        className="mx-auto"
+        style={{
+          height: "1px",
+          background: "linear-gradient(to right, transparent, #e5e7eb 20%, #e5e7eb 80%, transparent)",
+        }}
+      />
     </section>
   );
 };
