@@ -1,51 +1,56 @@
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 
 const partners = [
-  { name: "Leica Microsystems", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Leica_Microsystems_logo.svg/2560px-Leica_Microsystems_logo.svg.png" },
-  { name: "Stryker", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Stryker_Corporation_logo.svg/2560px-Stryker_Corporation_logo.svg.png" },
-  { name: "Karl Storz", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/KARL_STORZ_Logo.svg/2560px-KARL_STORZ_Logo.svg.png" },
-  { name: "Endomed Systems", src: "" },
-  { name: "Oxyworld Group", src: "" },
+  { name: "Leica", src: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Leica_Camera_logo.svg" },
+  { name: "Stryker", src: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Stryker_Corporation_logo.svg" },
+  { name: "Karl Storz", src: "https://www.karlstorz.com/content/dam/karlstorz/master/images/logo/ks-logo.svg" },
+  { name: "Midea", src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Midea_logo.svg" },
+  { name: "Endomed", src: "" },
+  { name: "Oxyworld", src: "" },
   { name: "Sternmed", src: "" },
   { name: "Amnotec", src: "" },
   { name: "Medisam", src: "" },
-  { name: "Histo-Line Laboratories", src: "" },
-  { name: "Angelantoni Life Science", src: "" },
+  { name: "Histo-Line", src: "" },
+  { name: "Angelantoni", src: "" },
   { name: "Vertisa", src: "" },
   { name: "Coolex", src: "" },
-  { name: "Comeg Medical Technologies", src: "" },
+  { name: "Comeg", src: "" },
 ];
 
 const PartnersSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4 mb-12">
-        <p className="text-sm font-semibold tracking-[0.2em] uppercase text-primary mb-3">
+    <section className="py-8 md:py-12" style={{ background: "#FFFFFF" }}>
+      <div className="container mx-auto px-4 mb-6">
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-2">
           OUR PARTNERS
         </p>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-            Trusted by experts.
-            <br />
-            Working with the best.
-          </h2>
-        </div>
+        <p className="text-lg md:text-xl text-gray-400 font-normal leading-snug">
+          Trusted by experts.
+        </p>
+        <p className="text-lg md:text-xl text-gray-600 font-semibold leading-snug">
+          Working with the best.
+        </p>
       </div>
 
-      <div className="w-full">
-        <InfiniteSlider gap={48} duration={30} durationOnHover={60}>
+      <div className="relative w-full">
+        {/* Left fade */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #FFFFFF 0%, transparent 100%)" }} />
+        {/* Right fade */}
+        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #FFFFFF 0%, transparent 100%)" }} />
+
+        <InfiniteSlider gap={56} duration={30} durationOnHover={60}>
           {partners.map((partner) =>
             partner.src ? (
               <img
                 key={partner.name}
                 src={partner.src}
                 alt={partner.name}
-                className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 shrink-0"
               />
             ) : (
               <span
                 key={partner.name}
-                className="inline-flex items-center h-12 px-6 text-lg font-semibold tracking-wide text-muted-foreground/60 hover:text-foreground whitespace-nowrap transition-colors duration-300"
+                className="inline-flex items-center h-8 px-4 text-sm font-semibold tracking-wide text-gray-400 hover:text-gray-700 whitespace-nowrap transition-colors duration-300 shrink-0"
               >
                 {partner.name}
               </span>
