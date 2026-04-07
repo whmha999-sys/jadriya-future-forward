@@ -28,6 +28,8 @@ const Index = () => {
       <PartnersSection />
       <CompanyCardsSection />
       <CompaniesSection />
+      <CompanyDetailSection />
+      <ParallaxCTA />
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
       <FeaturedProjects
