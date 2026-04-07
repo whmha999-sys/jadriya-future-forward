@@ -78,7 +78,7 @@ const CompaniesSection = () => {
 
         <div ref={trackRef} className="flex w-max will-change-transform" style={{ gap: "0px" }}>
           {[...companies, ...companies, ...companies].map((company, index) => (
-            <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "560px" }}>
+            <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "280px" }}>
               <img
                 src={company.src}
                 alt={company.alt}
