@@ -13,13 +13,13 @@ const partners = [
   { src: karlStorz, alt: "Karl Storz", className: "h-8" },
   { src: stryker, alt: "Stryker", className: "h-8" },
   { src: vertisa, alt: "Vertisa", className: "h-8" },
-  { src: comeg, alt: "COMEG", className: "h-8" },
-  { src: coolex, alt: "Coolex", className: "h-12" },
-  { src: angelantoni, alt: "Angelantoni", className: "h-12" },
+  { src: comeg, alt: "COMEG", className: "h-16" },
+  { src: coolex, alt: "Coolex", className: "h-24" },
+  { src: angelantoni, alt: "Angelantoni", className: "h-24" },
   { src: histoLine, alt: "Histo-Line", className: "h-12" },
   { src: medisam, alt: "Medisam", className: "h-24" },
   { src: amnotec, alt: "Amnotec", className: "h-12" },
-  { src: sternmed, alt: "Sternmed", className: "h-10" },
+  { src: sternmed, alt: "Sternmed", className: "h-20" },
 ];
 
 const PartnersSection = () => {
