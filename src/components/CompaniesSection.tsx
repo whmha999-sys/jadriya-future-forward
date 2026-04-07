@@ -56,7 +56,7 @@ const CompaniesSection = () => {
   }, []);
 
   return (
-    <section className="py-8 md:py-12 bg-background">
+    <section className="py-4 md:py-6 bg-background">
       <div className="text-center mb-6">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">OUR COMPANIES</h2>
         <span className="text-muted-foreground text-base md:text-lg">Four divisions.</span>
@@ -72,11 +72,11 @@ const CompaniesSection = () => {
         }}
       />
 
-      <div className="relative overflow-hidden py-6">
+      <div className="relative overflow-hidden py-2">
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--background)), transparent)" }} />
 
-        <div ref={trackRef} className="flex w-max will-change-transform" style={{ gap: "100px" }}>
+        <div ref={trackRef} className="flex w-max will-change-transform" style={{ gap: "20px" }}>
           {[...companies, ...companies, ...companies].map((company, index) => (
             <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "560px" }}>
               <img
