@@ -1,15 +1,13 @@
 
 
-## Plan: Double the size of 4 partner logos
+## Plan: Remove Case Studies Section from Oil & Gas Page
 
-**File: `src/components/PartnersSection.tsx`** — Update `className` for these 4 logos:
+**File to edit:** `src/pages/OilGas.tsx`
 
-| Logo | Current | New (doubled) |
-|------|---------|---------------|
-| COMEG | `h-8` (32px) | `h-16` (64px) |
-| Coolex | `h-12` (48px) | `h-24` (96px) |
-| Sternmed | `h-10` (40px) | `h-20` (80px) |
-| Angelantoni (ALS) | `h-12` (48px) | `h-24` (96px) |
+1. Remove the case study image imports (`case1`, `case2`, `case3`)
+2. Remove the `caseStudies` array definition
+3. Remove the entire Case Studies `<section>` block (the one with `og.caseStudies` heading)
+4. Remove unused translation keys reference (`og.readMore`, etc.) if they become orphaned
 
-The section container stays unchanged — only the individual logo image heights increase.
+No other files or sections will be touched.
 
