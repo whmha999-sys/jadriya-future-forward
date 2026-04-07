@@ -9,6 +9,8 @@ import VisionSection from "@/components/VisionSection";
 import FooterSection from "@/components/FooterSection";
 import PartnersSection from "@/components/PartnersSection";
 import CompaniesSection from "@/components/CompaniesSection";
+import CompanyDetailSection from "@/components/CompanyDetailSection";
+import ParallaxCTA from "@/components/ParallaxCTA";
 import { allProjects } from "@/data/projects";
 
 // Featured: Project 29 (Egypt), Project 20 (Iraq open-heart), Project 38 (Oman Royal Hospital)
