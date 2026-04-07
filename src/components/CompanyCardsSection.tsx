@@ -42,7 +42,7 @@ const CompanyCardsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-background py-20 px-8 md:px-16">
+    <section className="bg-background pt-4 pb-20 px-8 md:px-16">
       <div className="max-w-[88rem] mx-auto" ref={ref}>
         {/* Label */}
         <div className="mb-12">
