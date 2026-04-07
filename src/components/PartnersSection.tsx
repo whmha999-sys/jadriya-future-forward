@@ -40,7 +40,7 @@ const PartnersSection = () => {
         }}
       />
 
-      <div className="relative overflow-hidden py-6">
+      <div className="relative overflow-hidden py-6" dir="ltr">
         <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--background)), transparent)" }} />
 
