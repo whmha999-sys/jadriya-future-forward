@@ -6,8 +6,8 @@ import jadriyaEnergy from "@/assets/companies/jadriya-energy.png";
 
 const companies = [
   { src: jadriyaMedical, alt: "AL-JADRIYA Medical" },
-  { src: jadriyaOilGas, alt: "AL-JADRIYA Oil & Gas" },
   { src: jadriyaRobotics, alt: "AL-JADRIYA Robotics" },
+  { src: jadriyaOilGas, alt: "AL-JADRIYA Oil & Gas" },
   { src: jadriyaEnergy, alt: "AL-JADRIYA Energy" },
 ];
 
