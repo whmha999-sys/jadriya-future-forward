@@ -20,6 +20,9 @@ import cardInspection from "@/assets/oilgas/card-inspection.jpg";
 import cardUnderground from "@/assets/oilgas/card-underground.jpg";
 import cardAftersales from "@/assets/oilgas/card-aftersales.jpg";
 
+import case1 from "@/assets/oilgas/case-1.jpg";
+import case2 from "@/assets/oilgas/case-2.jpg";
+import case3 from "@/assets/oilgas/case-3.jpg";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import { oilGasProjects } from "@/data/projects";
 
@@ -41,6 +44,13 @@ const services = [
   { img: cardAftersales, nameKey: "og.afterSales", descKey: "og.afterSalesDesc", href: "/oil-gas/after-sales" },
 ];
 
+const caseStudies = [
+  { img: case1, tagKey: "og.casePipeline", titleKey: "og.case1Title", locKey: "og.case1Loc", descKey: "og.case1Desc" },
+  { img: case2, tagKey: "og.caseRefinery", titleKey: "og.case2Title", locKey: "og.case2Loc", descKey: "og.case2Desc" },
+  { img: case3, tagKey: "og.caseExtraction", titleKey: "og.case3Title", locKey: "og.case3Loc", descKey: "og.case3Desc" },
+];
+
+const OilGas = () => {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -189,6 +199,36 @@ const services = [
         </div>
       </section>
 
+      {/* Case Studies */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-8 md:px-16">
+          <p className="section-label text-accent mb-4">{t("og.caseStudies")}</p>
+          <h2 className="section-heading mb-16">{t("og.caseHeading")}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {caseStudies.map((c, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card rounded-lg overflow-hidden shadow-sm"
+              >
+                <img src={c.img} alt="" className="w-full h-52 object-cover" loading="lazy" />
+                <div className="p-6">
+                  <span className="text-accent text-xs font-semibold uppercase tracking-wider">{t(c.tagKey)}</span>
+                  <h3 className="text-primary font-bold text-lg mt-2">{t(c.titleKey)}</h3>
+                  <p className="text-muted-foreground text-xs mt-1">{t(c.locKey)}</p>
+                  <p className="body-text text-sm mt-3">{t(c.descKey)}</p>
+                  <button className="inline-flex items-center gap-2 text-accent font-semibold text-sm mt-4 hover:gap-3 transition-all">
+                    {t("og.readMore")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Our Projects */}
       <FeaturedProjects
