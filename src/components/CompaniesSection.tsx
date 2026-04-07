@@ -1,16 +1,28 @@
+import { useState, useEffect, useCallback } from "react";
 import jadriyaMedical from "@/assets/companies/jadriya-medical.png";
 import jadriyaOilGas from "@/assets/companies/jadriya-oilgas.png";
 import jadriyaRobotics from "@/assets/companies/jadriya-robotics.png";
 import jadriyaEnergy from "@/assets/companies/jadriya-energy.png";
 
 const companies = [
-  { src: jadriyaMedical, alt: "AL-JADRIYA Medical", className: "h-16 md:h-20" },
-  { src: jadriyaOilGas, alt: "AL-JADRIYA Oil & Gas", className: "h-16 md:h-20" },
-  { src: jadriyaRobotics, alt: "AL-JADRIYA Robotics", className: "h-16 md:h-20" },
-  { src: jadriyaEnergy, alt: "AL-JADRIYA Energy", className: "h-16 md:h-20" },
+  { src: jadriyaMedical, alt: "AL-JADRIYA Medical" },
+  { src: jadriyaOilGas, alt: "AL-JADRIYA Oil & Gas" },
+  { src: jadriyaRobotics, alt: "AL-JADRIYA Robotics" },
+  { src: jadriyaEnergy, alt: "AL-JADRIYA Energy" },
 ];
 
 const CompaniesSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  const advance = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % companies.length);
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(advance, 3000);
+    return () => clearInterval(id);
+  }, [advance]);
+
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="text-center mb-6">
@@ -28,19 +40,35 @@ const CompaniesSection = () => {
         }}
       />
 
-      <div className="relative overflow-hidden py-6">
-        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--background)), transparent)" }} />
+      <div className="relative overflow-hidden py-8 md:py-12">
+        <div className="flex items-center justify-center h-28 md:h-40">
+          {companies.map((company, i) => (
+            <img
+              key={company.alt}
+              src={company.src}
+              alt={company.alt}
+              className={`absolute max-h-28 md:max-h-40 w-auto object-contain transition-all duration-700 ease-in-out ${
+                i === current
+                  ? "opacity-100 scale-100"
+                  : "opacity-0 scale-95"
+              }`}
+            />
+          ))}
+        </div>
 
-        <div className="animate-scroll-left flex w-max" style={{ gap: "80px" }}>
-          {[...companies, ...companies, ...companies].map((company, index) => (
-            <div key={index} className="flex items-center justify-center shrink-0">
-              <img
-                src={company.src}
-                alt={company.alt}
-                className={`${company.className} w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300`}
-              />
-            </div>
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2 mt-4">
+          {companies.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                i === current
+                  ? "bg-accent scale-110"
+                  : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
+              }`}
+              aria-label={`Company ${i + 1}`}
+            />
           ))}
         </div>
       </div>
