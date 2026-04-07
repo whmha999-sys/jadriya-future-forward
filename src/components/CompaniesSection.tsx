@@ -78,11 +78,11 @@ const CompaniesSection = () => {
 
         <div ref={trackRef} className="flex w-max will-change-transform" style={{ gap: "100px" }}>
           {[...companies, ...companies, ...companies].map((company, index) => (
-            <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "280px" }}>
+            <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "560px" }}>
               <img
                 src={company.src}
                 alt={company.alt}
-                className="h-20 md:h-28 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="h-40 md:h-56 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           ))}
