@@ -23,7 +23,7 @@ const CompaniesSection = () => {
     let offset = 0;
     let animFrame: number;
     let lastTime = 0;
-    const speed = 40; // pixels per second
+    const speed = 20; // pixels per second
 
     const step = (time: number) => {
       if (lastTime) {
@@ -72,7 +72,7 @@ const CompaniesSection = () => {
         }}
       />
 
-      <div className="relative overflow-hidden" style={{ paddingTop: "12px", paddingBottom: "12px" }}>
+      <div className="relative overflow-hidden" style={{ paddingTop: "4px", paddingBottom: "4px" }}>
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--background)), transparent)" }} />
 
