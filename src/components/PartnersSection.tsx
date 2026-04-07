@@ -17,7 +17,7 @@ const partners = [
   { src: coolex, alt: "Coolex", className: "h-12" },
   { src: angelantoni, alt: "Angelantoni", className: "h-12" },
   { src: histoLine, alt: "Histo-Line", className: "h-12" },
-  { src: medisam, alt: "Medisam", className: "h-12" },
+  { src: medisam, alt: "Medisam", className: "h-24" },
   { src: amnotec, alt: "Amnotec", className: "h-12" },
   { src: sternmed, alt: "Sternmed", className: "h-10" },
 ];
