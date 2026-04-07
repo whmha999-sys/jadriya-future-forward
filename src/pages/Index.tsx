@@ -8,6 +8,7 @@ import FinderSection from "@/components/FinderSection";
 import VisionSection from "@/components/VisionSection";
 import FooterSection from "@/components/FooterSection";
 import PartnersSection from "@/components/PartnersSection";
+import CompaniesSection from "@/components/CompaniesSection";
 import { allProjects } from "@/data/projects";
 
 // Featured: Project 29 (Egypt), Project 20 (Iraq open-heart), Project 38 (Oman Royal Hospital)
@@ -24,6 +25,7 @@ const Index = () => {
       <section id="hero"><HeroSection /></section>
       <PartnersSection />
       <CompanyCardsSection />
+      <CompaniesSection />
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
       <FeaturedProjects
