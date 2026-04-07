@@ -26,6 +26,7 @@ const PartnersSection = () => {
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="text-center mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">OUR PARTNERS</h2>
         <span className="text-muted-foreground text-base md:text-lg">Trusted by experts.</span>
         <br />
         <span className="text-foreground text-base md:text-lg font-semibold">Working with the best.</span>
