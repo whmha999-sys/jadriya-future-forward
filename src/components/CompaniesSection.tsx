@@ -56,21 +56,8 @@ const CompaniesSection = () => {
   }, []);
 
   return (
-    <section className="py-2 md:py-3 bg-background">
-      <div className="text-center" style={{ marginBottom: "16px" }}>
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">OUR COMPANIES</h2>
-        <span className="text-muted-foreground text-base md:text-lg">Four divisions.</span>
-        <br />
-        <span className="text-foreground text-base md:text-lg font-semibold">One vision.</span>
-      </div>
+    <section className="py-0 bg-background">
 
-      <div
-        className="mx-auto"
-        style={{
-          height: "1px",
-          background: "linear-gradient(to right, transparent, hsl(var(--border)) 20%, hsl(var(--border)) 80%, transparent)",
-        }}
-      />
 
       <div className="relative overflow-hidden" dir="ltr" style={{ paddingTop: "4px", paddingBottom: "4px" }}>
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
