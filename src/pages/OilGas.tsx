@@ -20,35 +20,10 @@ import cardInspection from "@/assets/oilgas/card-inspection.jpg";
 import cardUnderground from "@/assets/oilgas/card-underground.jpg";
 import cardAftersales from "@/assets/oilgas/card-aftersales.jpg";
 
-import case1 from "@/assets/oilgas/case-1.jpg";
-import case2 from "@/assets/oilgas/case-2.jpg";
-import case3 from "@/assets/oilgas/case-3.jpg";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import { oilGasProjects } from "@/data/projects";
 
 const slides = [
-  { image: heroPipes, labelKey: "og.hero1.label", headingKey: "og.hero1.heading", tabKey: "og.hero1.tab" },
-  { image: heroDrilling, labelKey: "og.hero2.label", headingKey: "og.hero2.heading", tabKey: "og.hero2.tab" },
-  { image: heroExploration, labelKey: "og.hero3.label", headingKey: "og.hero3.heading", tabKey: "og.hero3.tab" },
-  { image: heroInspection, labelKey: "og.hero4.label", headingKey: "og.hero4.heading", tabKey: "og.hero4.tab" },
-  { image: heroUnderground, labelKey: "og.hero5.label", headingKey: "og.hero5.heading", tabKey: "og.hero5.tab" },
-  { image: heroAftersales, labelKey: "og.hero6.label", headingKey: "og.hero6.heading", tabKey: "og.hero6.tab" },
-];
-
-const services = [
-  { img: cardPipes, nameKey: "og.pipesSupply", descKey: "og.pipesDesc", href: "/oil-gas/pipes-supply" },
-  { img: cardDrilling, nameKey: "og.drillingEquipment", descKey: "og.drillingDesc", href: "/oil-gas/drilling-equipment" },
-  { img: cardExploration, nameKey: "og.exploration", descKey: "og.explorationDesc", href: "/oil-gas/exploration" },
-  { img: cardInspection, nameKey: "og.inspection", descKey: "og.inspectionDesc", href: "/oil-gas/inspection" },
-  { img: cardUnderground, nameKey: "og.underground", descKey: "og.undergroundDesc", href: "/oil-gas/underground" },
-  { img: cardAftersales, nameKey: "og.afterSales", descKey: "og.afterSalesDesc", href: "/oil-gas/after-sales" },
-];
-
-const caseStudies = [
-  { img: case1, tagKey: "og.casePipeline", titleKey: "og.case1Title", locKey: "og.case1Loc", descKey: "og.case1Desc" },
-  { img: case2, tagKey: "og.caseRefinery", titleKey: "og.case2Title", locKey: "og.case2Loc", descKey: "og.case2Desc" },
-  { img: case3, tagKey: "og.caseExtraction", titleKey: "og.case3Title", locKey: "og.case3Loc", descKey: "og.case3Desc" },
-];
 
 const OilGas = () => {
   const [current, setCurrent] = useState(0);
