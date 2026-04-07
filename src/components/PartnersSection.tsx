@@ -10,16 +10,16 @@ import amnotec from "@/assets/partners/amnotec.png";
 import sternmed from "@/assets/partners/sternmed.png";
 
 const partners = [
-  { src: karlStorz, alt: "Karl Storz" },
-  { src: stryker, alt: "Stryker" },
-  { src: vertisa, alt: "Vertisa" },
-  { src: comeg, alt: "COMEG" },
-  { src: coolex, alt: "Coolex" },
-  { src: angelantoni, alt: "Angelantoni" },
-  { src: histoLine, alt: "Histo-Line" },
-  { src: medisam, alt: "Medisam" },
-  { src: amnotec, alt: "Amnotec" },
-  { src: sternmed, alt: "Sternmed" },
+  { src: karlStorz, alt: "Karl Storz", className: "h-8" },
+  { src: stryker, alt: "Stryker", className: "h-8" },
+  { src: vertisa, alt: "Vertisa", className: "h-8" },
+  { src: comeg, alt: "COMEG", className: "h-8" },
+  { src: coolex, alt: "Coolex", className: "h-12" },
+  { src: angelantoni, alt: "Angelantoni", className: "h-12" },
+  { src: histoLine, alt: "Histo-Line", className: "h-12" },
+  { src: medisam, alt: "Medisam", className: "h-12" },
+  { src: amnotec, alt: "Amnotec", className: "h-12" },
+  { src: sternmed, alt: "Sternmed", className: "h-10" },
 ];
 
 const PartnersSection = () => {
@@ -49,7 +49,7 @@ const PartnersSection = () => {
               <img
                 src={partner.src}
                 alt={partner.alt}
-                className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300"
+                className={`${partner.className} w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300`}
               />
             </div>
           ))}
