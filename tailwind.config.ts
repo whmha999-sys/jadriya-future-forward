@@ -91,6 +91,7 @@ export default {
         "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "1" },
+        },
         "companies-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-33.333%)" },
