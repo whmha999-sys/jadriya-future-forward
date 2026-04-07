@@ -149,9 +149,7 @@ function CompanyBlock({ company }: { company: CompanyBlock }) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8">
-      <div className={`grid grid-cols-1 gap-10 md:gap-16 items-center ${
-        company.imageLeft ? "md:grid-cols-[3fr_2fr]" : "md:grid-cols-[2fr_3fr]"
-      }`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         {company.imageLeft ? (
           <>
             <div className="order-1">{slideshow}</div>

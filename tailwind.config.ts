@@ -91,9 +91,6 @@ export default {
         "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "1" },
-        "companies-scroll": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-33.333%)" },
         },
       },
       animation: {
@@ -101,7 +98,6 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
         "fade-in": "fade-in 0.6s ease-out forwards",
-        "companies-scroll": "companies-scroll 60s linear infinite",
       },
     },
   },
