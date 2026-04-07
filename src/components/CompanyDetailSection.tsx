@@ -80,7 +80,7 @@ function Slideshow({ images }: { images: string[] }) {
 
   return (
     <div
-      className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden scale-[1.5] origin-center"
+      className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -149,7 +149,7 @@ function CompanyBlock({ company }: { company: CompanyBlock }) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-center">
         {company.imageLeft ? (
           <>
             <div className="order-1">{slideshow}</div>
