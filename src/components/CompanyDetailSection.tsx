@@ -80,7 +80,7 @@ function Slideshow({ images }: { images: string[] }) {
 
   return (
     <div
-      className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden"
+      className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden scale-[1.5] origin-center"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
