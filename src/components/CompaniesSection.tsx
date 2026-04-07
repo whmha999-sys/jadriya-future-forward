@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useRef } from "react";
 import jadriyaMedical from "@/assets/companies/jadriya-medical.png";
 import jadriyaOilGas from "@/assets/companies/jadriya-oilgas.png";
 import jadriyaRobotics from "@/assets/companies/jadriya-robotics.png";
@@ -12,16 +12,48 @@ const companies = [
 ];
 
 const CompaniesSection = () => {
-  const [current, setCurrent] = useState(0);
-
-  const advance = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % companies.length);
-  }, []);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const id = setInterval(advance, 3000);
-    return () => clearInterval(id);
-  }, [advance]);
+    const track = trackRef.current;
+    if (!track) return;
+
+    // Each logo block width including gap
+    const logoWidth = track.scrollWidth / (companies.length * 3);
+    let offset = 0;
+    let animFrame: number;
+    let lastTime = 0;
+    const speed = 40; // pixels per second
+
+    const step = (time: number) => {
+      if (lastTime) {
+        const delta = (time - lastTime) / 1000;
+        offset += speed * delta;
+        // Reset when we've scrolled one full set
+        const oneSetWidth = logoWidth * companies.length;
+        if (offset >= oneSetWidth) {
+          offset -= oneSetWidth;
+        }
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+      lastTime = time;
+      animFrame = requestAnimationFrame(step);
+    };
+
+    animFrame = requestAnimationFrame(step);
+
+    const pause = () => { cancelAnimationFrame(animFrame); lastTime = 0; };
+    const resume = () => { animFrame = requestAnimationFrame(step); };
+
+    track.addEventListener("mouseenter", pause);
+    track.addEventListener("mouseleave", resume);
+
+    return () => {
+      cancelAnimationFrame(animFrame);
+      track.removeEventListener("mouseenter", pause);
+      track.removeEventListener("mouseleave", resume);
+    };
+  }, []);
 
   return (
     <section className="py-8 md:py-12 bg-background">
@@ -40,35 +72,19 @@ const CompaniesSection = () => {
         }}
       />
 
-      <div className="relative overflow-hidden py-8 md:py-12">
-        <div className="flex items-center justify-center h-28 md:h-40">
-          {companies.map((company, i) => (
-            <img
-              key={company.alt}
-              src={company.src}
-              alt={company.alt}
-              className={`absolute max-h-28 md:max-h-40 w-auto object-contain transition-all duration-700 ease-in-out ${
-                i === current
-                  ? "opacity-100 scale-100"
-                  : "opacity-0 scale-95"
-              }`}
-            />
-          ))}
-        </div>
+      <div className="relative overflow-hidden py-6">
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--background)), transparent)" }} />
 
-        {/* Dot indicators */}
-        <div className="flex justify-center gap-2 mt-4">
-          {companies.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "bg-accent scale-110"
-                  : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
-              }`}
-              aria-label={`Company ${i + 1}`}
-            />
+        <div ref={trackRef} className="flex w-max will-change-transform" style={{ gap: "100px" }}>
+          {[...companies, ...companies, ...companies].map((company, index) => (
+            <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "280px" }}>
+              <img
+                src={company.src}
+                alt={company.alt}
+                className="h-20 md:h-28 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
           ))}
         </div>
       </div>
