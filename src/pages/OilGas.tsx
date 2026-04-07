@@ -24,8 +24,23 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import { oilGasProjects } from "@/data/projects";
 
 const slides = [
+  { image: heroPipes, labelKey: "og.hero1.label", headingKey: "og.hero1.heading", tabKey: "og.hero1.tab" },
+  { image: heroDrilling, labelKey: "og.hero2.label", headingKey: "og.hero2.heading", tabKey: "og.hero2.tab" },
+  { image: heroExploration, labelKey: "og.hero3.label", headingKey: "og.hero3.heading", tabKey: "og.hero3.tab" },
+  { image: heroInspection, labelKey: "og.hero4.label", headingKey: "og.hero4.heading", tabKey: "og.hero4.tab" },
+  { image: heroUnderground, labelKey: "og.hero5.label", headingKey: "og.hero5.heading", tabKey: "og.hero5.tab" },
+  { image: heroAftersales, labelKey: "og.hero6.label", headingKey: "og.hero6.heading", tabKey: "og.hero6.tab" },
+];
 
-const OilGas = () => {
+const services = [
+  { img: cardPipes, nameKey: "og.pipesSupply", descKey: "og.pipesDesc", href: "/oil-gas/pipes-supply" },
+  { img: cardDrilling, nameKey: "og.drillingEquipment", descKey: "og.drillingDesc", href: "/oil-gas/drilling-equipment" },
+  { img: cardExploration, nameKey: "og.exploration", descKey: "og.explorationDesc", href: "/oil-gas/exploration" },
+  { img: cardInspection, nameKey: "og.inspection", descKey: "og.inspectionDesc", href: "/oil-gas/inspection" },
+  { img: cardUnderground, nameKey: "og.underground", descKey: "og.undergroundDesc", href: "/oil-gas/underground" },
+  { img: cardAftersales, nameKey: "og.afterSales", descKey: "og.afterSalesDesc", href: "/oil-gas/after-sales" },
+];
+
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
   const [paused, setPaused] = useState(false);
