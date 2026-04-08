@@ -49,10 +49,10 @@ const StatBlock = ({ stat, started, t }: { stat: Stat; started: boolean; t: (k: 
 
   return (
     <div className="text-center">
-      <span className="block text-[80px] font-[800] leading-none" style={{ color: "#F5A623" }}>
+      <span className="block text-[80px] font-[800] leading-none text-white">
         {display}{stat.suffix}
       </span>
-      <span className="block mt-3 text-lg font-bold" style={{ color: "#F5A623" }}>
+      <span className="block mt-3 text-lg font-bold text-white">
         {t(stat.labelKey)}
       </span>
       <span className="block mt-1 text-sm text-white/80">{t(stat.subKey)}</span>
