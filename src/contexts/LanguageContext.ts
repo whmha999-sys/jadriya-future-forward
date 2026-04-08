@@ -310,7 +310,7 @@ export const translations: Record<string, Record<Language, string>> = {
   // Company Cards Section
   "cards.sectionLabel": { en: "OUR COMPANIES", ar: "شركاتنا" },
   "cards.oilgas.label": { en: "Oil & Gas", ar: "النفط والغاز" },
-  "cards.oilgas.headline": { en: "Supply. Drill. Deliver.", ar: "نورّد. نحفر. نسلّم." },
+  "cards.oilgas.headline": { en: "Supply. Deliver.", ar: "نورّد. نسلّم." },
   "cards.medical.label": { en: "Medical", ar: "الطبية" },
   "cards.medical.headline": { en: "From Equipment to Full Hospitals.", ar: "من المعدات إلى مستشفيات كاملة." },
   "cards.robotics.label": { en: "Robotics", ar: "الروبوتات" },
@@ -878,7 +878,7 @@ export const translations: Record<string, Record<Language, string>> = {
 
   // Company Detail Section
   "detail.oilgas.label": { en: "OIL & GAS", ar: "النفط والغاز" },
-  "detail.oilgas.headline": { en: "Supply. Drill. Deliver.", ar: "نورّد. نحفر. نسلّم." },
+  "detail.oilgas.headline": { en: "Supply. Deliver.", ar: "نورّد. نسلّم." },
   "detail.oilgas.body": { en: "AL-JADRIYA Oil & Gas is a specialized supplier of high-grade pipes, drilling equipment, and underground infrastructure solutions. We serve oil and gas operators, contractors, and government projects across Jordan, Iraq, and the wider region. From exploration requirements to after-sales support, we are your single trusted partner in the field.", ar: "الجادرية للنفط والغاز هي مورد متخصص للأنابيب عالية الجودة ومعدات الحفر وحلول البنية التحتية تحت الأرض. نخدم مشغلي النفط والغاز والمقاولين والمشاريع الحكومية في الأردن والعراق والمنطقة الأوسع. من متطلبات الاستكشاف إلى دعم ما بعد البيع، نحن شريككم الموثوق الوحيد في الميدان." },
   "detail.oilgas.button": { en: "Explore Oil & Gas →", ar: "← استكشف النفط والغاز" },
 
