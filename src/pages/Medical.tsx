@@ -22,6 +22,24 @@ import cardAftersales from "@/assets/medical/card-aftersales.jpg";
 
 import CaseStudiesGrid from "@/components/CaseStudiesGrid";
 
+const slides = [
+  { image: heroBiomedical, labelKey: "med.hero1.label", headingKey: "med.hero1.heading", tabKey: "med.hero1.tab" },
+  { image: heroEquipment, labelKey: "med.hero2.label", headingKey: "med.hero2.heading", tabKey: "med.hero2.tab" },
+  { image: heroCapacity, labelKey: "med.hero3.label", headingKey: "med.hero3.heading", tabKey: "med.hero3.tab" },
+  { image: heroTurnkey, labelKey: "med.hero4.label", headingKey: "med.hero4.heading", tabKey: "med.hero4.tab" },
+  { image: heroTender, labelKey: "med.hero5.label", headingKey: "med.hero5.heading", tabKey: "med.hero5.tab" },
+  { image: heroAftersales, labelKey: "med.hero6.label", headingKey: "med.hero6.heading", tabKey: "med.hero6.tab" },
+];
+
+const services = [
+  { img: cardBiomedical, nameKey: "med.biomedical", descKey: "med.biomedicalDesc", href: "/medical/biomedical-engineering" },
+  { img: cardEquipment, nameKey: "med.equipmentSupply", descKey: "med.equipmentSupplyDesc", href: "/medical/equipment-supply" },
+  { img: cardCapacity, nameKey: "med.capacityMgmt", descKey: "med.capacityMgmtDesc", href: "/medical/capacity-management" },
+  { img: cardTurnkey, nameKey: "med.turnkey", descKey: "med.turnkeyDesc", href: "/medical/turnkey-projects" },
+  { img: cardTender, nameKey: "med.tenderMgmt", descKey: "med.tenderMgmtDesc", href: "/medical/tender-management" },
+  { img: cardAftersales, nameKey: "med.afterSales", descKey: "med.afterSalesDesc", href: "/medical/after-sales" },
+];
+
 const Medical = () => {
   const [current, setCurrent] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -172,46 +190,11 @@ const Medical = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-8 md:px-16">
-          <p className="section-label text-accent mb-4">{t("med.caseStudies")}</p>
-          <h2 className="section-heading mb-16">{t("med.caseHeading")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((c, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-card rounded-lg overflow-hidden shadow-sm"
-              >
-                <img src={c.img} alt="" className="w-full h-52 object-cover" loading="lazy" />
-                <div className="p-6">
-                  <span className="text-accent text-xs font-semibold uppercase tracking-wider">{t(c.tagKey)}</span>
-                  <h3 className="text-primary font-bold text-lg mt-2">{t(c.titleKey)}</h3>
-                  <p className="text-muted-foreground text-xs mt-1">{t(c.locKey)}</p>
-                  <p className="body-text text-sm mt-3">{t(c.descKey)}</p>
-                  <button
-                    onClick={() => c.href && navigateWithTransition(c.href)}
-                    className={`inline-flex items-center gap-2 text-accent font-semibold text-sm mt-4 hover:gap-3 transition-all ${!c.href ? "opacity-50 cursor-default" : ""}`}
-                  >
-                    {t("med.readMore")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Projects */}
-      <FeaturedProjects
-        label={t("feat.ourProjects")}
-        heading={t("feat.medicalExpertise")}
-        projects={medFeatured}
-        ctaText={t("feat.viewAllMedical")}
-        ctaHref="/references?filter=Medical — Iraq"
+      <CaseStudiesGrid
+        label={t("med.caseStudies")}
+        heading={t("med.caseHeading")}
+        showViewAll
+        viewAllText={t("feat.viewAll")}
       />
 
       {/* Contact CTA */}
