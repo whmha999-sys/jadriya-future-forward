@@ -96,33 +96,6 @@ const MedicalCaseOxygen = () => {
             </div>
           </div>
 
-          {/* Key Deliverables */}
-          <div className="mt-16">
-            <h3 className="text-xl font-bold text-foreground mb-6">
-              {isRTL ? "المخرجات الرئيسية" : "Key Deliverables"}
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: "🏭", title: isRTL ? "محطة توليد أوكسجين PSA" : "PSA Oxygen Generation Plant", desc: isRTL ? "محطة متكاملة لتوليد أوكسجين طبي عالي النقاء" : "Complete plant for high-purity medical oxygen generation" },
-                { icon: "⚙️", title: isRTL ? "ضاغط هواء صناعي" : "Industrial Air Compressor", desc: isRTL ? "ضاغط هواء بمواصفات صناعية عالية الأداء" : "High-performance industrial-grade air compressor" },
-                { icon: "🔧", title: isRTL ? "نظام تعبئة ٣٠ أسطوانة" : "30-Cylinder Filling System", desc: isRTL ? "منظومة تعبئة أسطوانات أوكسجين متكاملة" : "Complete oxygen cylinder filling manifold system" },
-                { icon: "🔌", title: isRTL ? "لوحة تحكم كهربائية" : "Electrical Control Panel", desc: isRTL ? "لوحة تحكم متقدمة لإدارة المنظومة بالكامل" : "Advanced control panel for full system management" },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-background rounded-lg p-6 shadow-sm"
-                >
-                  <span className="text-3xl mb-3 block">{item.icon}</span>
-                  <h4 className="text-foreground font-bold mb-2">{item.title}</h4>
-                  <p className="text-muted-foreground text-sm">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
