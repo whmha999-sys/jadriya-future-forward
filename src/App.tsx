@@ -34,6 +34,7 @@ import RoboticsCorporateTraining from "./pages/RoboticsCorporateTraining";
 import NotFound from "./pages/NotFound";
 import References from "./pages/References";
 import CaseStudies from "./pages/CaseStudies";
+import EducationalTechnology from "./pages/EducationalTechnology";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
 import { LanguageProvider } from "./contexts/LanguageProvider";
@@ -65,22 +66,33 @@ const App = () => {
                 <Route path="/oil-gas/pipes-supply" element={<OilGasPipesSupply />} />
                 <Route path="/oil-gas/drilling-equipment" element={<OilGasDrillingEquipment />} />
                 <Route path="/oil-gas/exploration" element={<OilGasExploration />} />
+                <Route path="/oil-gas/exploration-requirements" element={<OilGasExploration />} />
                 <Route path="/oil-gas/inspection" element={<OilGasInspection />} />
+                <Route path="/oil-gas/tc-equipment-inspection" element={<OilGasInspection />} />
                 <Route path="/oil-gas/underground" element={<OilGasUnderground />} />
+                <Route path="/oil-gas/underground-infrastructure" element={<OilGasUnderground />} />
                 <Route path="/oil-gas/after-sales" element={<OilGasAfterSales />} />
+                <Route path="/oil-gas/after-sales-support" element={<OilGasAfterSales />} />
                 <Route path="/medical" element={<Medical />} />
                 <Route path="/medical/biomedical-engineering" element={<MedicalBiomedical />} />
                 <Route path="/medical/equipment-supply" element={<MedicalEquipmentSupply />} />
+                <Route path="/medical/hospital-equipment-supply" element={<MedicalEquipmentSupply />} />
                 <Route path="/medical/capacity-management" element={<MedicalCapacity />} />
                 <Route path="/medical/turnkey-projects" element={<MedicalTurnkey />} />
+                <Route path="/medical/turnkey-medical-projects" element={<MedicalTurnkey />} />
                 <Route path="/medical/tender-management" element={<MedicalTender />} />
+                <Route path="/medical/medical-tender-management" element={<MedicalTender />} />
                 <Route path="/medical/after-sales" element={<MedicalAfterSales />} />
+                <Route path="/medical/after-sales-support" element={<MedicalAfterSales />} />
                 <Route path="/medical/case/oxygen-plant" element={<MedicalCaseOxygen />} />
                 <Route path="/robotics" element={<Robotics />} />
                 <Route path="/robotics/schools" element={<RoboticsSchools />} />
+                <Route path="/robotics/robotics-for-schools" element={<RoboticsSchools />} />
                 <Route path="/robotics/ai-programming" element={<RoboticsAiProgramming />} />
                 <Route path="/robotics/equipment" element={<RoboticsEquipment />} />
+                <Route path="/robotics/robotics-equipment-supply" element={<RoboticsEquipment />} />
                 <Route path="/robotics/corporate-training" element={<RoboticsCorporateTraining />} />
+                <Route path="/energy" element={<EducationalTechnology />} />
                 <Route path="/references" element={<References />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
