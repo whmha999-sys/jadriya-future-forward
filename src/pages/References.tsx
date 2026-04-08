@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ProjectBlock from "@/components/ProjectBlock";
 import { usePageTransition } from "@/components/PageTransition";
-import { allProjects, oilGasProjects, filters, type Project } from "@/data/projects";
+import { allProjects, oilGasProjects, filters, filtersAr, type Project } from "@/data/projects";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const allCombined = [...allProjects, ...oilGasProjects];
@@ -14,7 +14,7 @@ const allCombined = [...allProjects, ...oilGasProjects];
 const References = () => {
   const [activeFilter, setActiveFilter] = useState("All Projects");
   const { navigateWithTransition } = usePageTransition();
-  const { isRTL } = useLanguage();
+  const { t, isRTL, language } = useLanguage();
 
   // Check URL for pre-selected filter
   useEffect(() => {
@@ -36,16 +36,18 @@ const References = () => {
         <div className="max-w-7xl mx-auto px-8 md:px-16 w-full flex flex-col md:flex-row items-center gap-12 py-32">
           {/* Left 55% */}
           <div className="md:w-[55%]">
-            <span className="text-accent text-xs font-bold uppercase tracking-[0.3em]">OUR TRACK RECORD</span>
+            <span className="text-accent text-xs font-bold uppercase tracking-[0.3em]">
+              {t("ref.trackRecord")}
+            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mt-4" style={{ lineHeight: 1.1 }}>
-              Our Work Speaks<br />for Itself
+              {t("ref.heroHeading")}
             </h1>
             <div className="flex items-center gap-4 mt-8 text-primary-foreground/80 text-sm font-semibold">
-              <span>50+ Projects</span>
+              <span>{t("ref.stat1")}</span>
               <span className="text-accent">|</span>
-              <span>6 Markets</span>
+              <span>{t("ref.stat2")}</span>
               <span className="text-accent">|</span>
-              <span>10+ Years</span>
+              <span>{t("ref.stat3")}</span>
             </div>
           </div>
           {/* Right 45% - Lottie */}
@@ -73,7 +75,7 @@ const References = () => {
                   : "text-muted-foreground hover:text-primary"
               }`}
             >
-              {f}
+              {isRTL ? filtersAr[f] : f}
             </button>
           ))}
         </div>
@@ -92,16 +94,16 @@ const References = () => {
       <section className="bg-[#1A2B4A] py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground mb-4" style={{ lineHeight: 1.1 }}>
-            Have a Project in Mind?
+            {t("ref.ctaHeading")}
           </h2>
           <p className="text-primary-foreground/60 mb-8">
-            Our team has delivered 50+ projects across 6 markets. Let us help with yours.
+            {t("ref.ctaText")}
           </p>
           <button
             onClick={() => navigateWithTransition("/contact")}
             className="cta-button rounded-full"
           >
-            Get In Touch <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
+            {t("ref.ctaButton")} <ArrowRight className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
           </button>
         </div>
       </section>
