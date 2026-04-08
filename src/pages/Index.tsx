@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import CompanyCardsSection from "@/components/CompanyCardsSection";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import SpecializationsSection from "@/components/SpecializationsSection";
-import FeaturedProjects from "@/components/FeaturedProjects";
+import CaseStudiesGrid from "@/components/CaseStudiesGrid";
 import FinderSection from "@/components/FinderSection";
 import VisionSection from "@/components/VisionSection";
 import FooterSection from "@/components/FooterSection";
@@ -13,15 +13,7 @@ import CompaniesSection from "@/components/CompaniesSection";
 import CompanyDetailSection from "@/components/CompanyDetailSection";
 import ParallaxCTA from "@/components/ParallaxCTA";
 import QuoteSection from "@/components/QuoteSection";
-import { allProjects } from "@/data/projects";
 import { useLanguage } from "@/contexts/useLanguage";
-
-// Featured: Project 29 (Egypt), Project 20 (Iraq open-heart), Project 38 (Oman Royal Hospital)
-const featured = [
-  allProjects.find((p) => p.id === 29)!,
-  allProjects.find((p) => p.id === 20)!,
-  allProjects.find((p) => p.id === 38)!,
-];
 
 const Index = () => {
   const { t } = useLanguage();
@@ -37,12 +29,11 @@ const Index = () => {
       <ParallaxCTA />
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
-      <FeaturedProjects
+      <CaseStudiesGrid
         label={t("feat.selectedProjects")}
         heading={t("feat.trustedRegion")}
-        projects={featured}
-        ctaText={t("feat.viewAll")}
-        ctaHref="/references"
+        showViewAll
+        viewAllText={t("feat.viewAll")}
       />
       <section id="finder"><FinderSection /></section>
       <section id="vision"><VisionSection /></section>
