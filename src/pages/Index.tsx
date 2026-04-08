@@ -4,6 +4,15 @@ import CompanyCardsSection from "@/components/CompanyCardsSection";
 import WhoWeServeSection from "@/components/WhoWeServeSection";
 import SpecializationsSection from "@/components/SpecializationsSection";
 import CaseStudiesGrid from "@/components/CaseStudiesGrid";
+import FinderSection from "@/components/FinderSection";
+import VisionSection from "@/components/VisionSection";
+import FooterSection from "@/components/FooterSection";
+import PartnersSection from "@/components/PartnersSection";
+import AchievementsSection from "@/components/AchievementsSection";
+import CompaniesSection from "@/components/CompaniesSection";
+import CompanyDetailSection from "@/components/CompanyDetailSection";
+import ParallaxCTA from "@/components/ParallaxCTA";
+import QuoteSection from "@/components/QuoteSection";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const Index = () => {
