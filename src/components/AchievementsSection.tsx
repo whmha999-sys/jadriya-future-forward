@@ -12,7 +12,7 @@ interface Stat {
 
 const stats: Stat[] = [
   { target: 128, suffix: "", labelKey: "ach.hospitalsNum", subKey: "ach.hospitalsSub" },
-  { target: 6, suffix: "", labelKey: "ach.turkishNum", subKey: "ach.turkishSub" },
+  { target: 700, suffix: "", labelKey: "ach.turkishNum", subKey: "ach.turkishSub" },
   {
     target: 4200,
     suffix: "+",
