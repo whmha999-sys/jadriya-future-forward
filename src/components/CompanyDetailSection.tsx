@@ -51,15 +51,6 @@ const companies: CompanyBlock[] = [
     images: [robotics1, robotics2, robotics3],
     imageLeft: false,
   },
-  {
-    labelKey: "detail.energy.label",
-    headlineKey: "detail.energy.headline",
-    bodyKey: "detail.energy.body",
-    buttonKey: "detail.energy.button",
-    disabled: true,
-    images: [energy1, energy2, energy3],
-    imageLeft: true,
-  },
 ];
 
 function Slideshow({ images }: { images: string[] }) {
