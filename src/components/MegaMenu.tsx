@@ -226,7 +226,7 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
                       onClick={() => handleLink("/case-studies")}
                       className="block text-[15px] font-bold text-[#1A2B4A] hover:text-[#F5A623] transition-colors mb-4"
                     >
-                      Case Studies & Achievements →
+                      {t("mega.caseStudies")}
                     </button>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
