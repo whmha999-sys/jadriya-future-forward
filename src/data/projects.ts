@@ -39,7 +39,7 @@ import ref38 from "@/assets/references/ref-38.jpg";
 import ref39 from "@/assets/references/ref-39.jpg";
 import ref40 from "@/assets/references/ref-40.jpg";
 import refOil1 from "@/assets/references/ref-oil-1.jpg";
-import refOil2 from "@/assets/references/ref-oil-2.jpg";
+
 import refOil3 from "@/assets/references/ref-oil-3.jpg";
 
 export interface Project {
@@ -103,7 +103,6 @@ export const allProjects: Project[] = [
 
 export const oilGasProjects: Project[] = [
   { id: 101, label: "IRAQ • PIPELINE", labelAr: "العراق • خطوط الأنابيب", title: "Industrial Pipeline Supply — Salah Al-Din", titleAr: "توريد أنابيب صناعية — صلاح الدين", description: "Supply of high-grade steel pipes and fittings for industrial pipeline infrastructure in Salah Al-Din Governorate.", descriptionAr: "توريد أنابيب ومواسير فولاذية عالية الجودة للبنية التحتية لخطوط الأنابيب الصناعية في محافظة صلاح الدين.", year: "2023", image: refOil1, filter: "Oil & Gas" },
-  { id: 102, label: "JORDAN • DRILLING", labelAr: "الأردن • الحفر", title: "Drilling Equipment Package — Amman", titleAr: "حزمة معدات حفر — عمّان", description: "Complete drilling equipment package supplied for exploration operations in the Amman region.", descriptionAr: "حزمة معدات حفر متكاملة موردة لعمليات الاستكشاف في منطقة عمّان.", year: "2023", image: refOil2, filter: "Oil & Gas" },
   { id: 103, label: "IRAQ • INFRASTRUCTURE", labelAr: "العراق • البنية التحتية", title: "Underground Pipeline System — Tikrit", titleAr: "نظام أنابيب تحت أرضي — تكريت", description: "Design and supply of underground pipeline system for industrial infrastructure in Tikrit, Salah Al-Din.", descriptionAr: "تصميم وتوريد نظام أنابيب تحت أرضي للبنية التحتية الصناعية في تكريت، صلاح الدين.", year: "2023", image: refOil3, filter: "Oil & Gas" },
 ];
 
