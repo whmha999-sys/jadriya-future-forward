@@ -20,41 +20,7 @@ import cardTurnkey from "@/assets/medical/card-turnkey.jpg";
 import cardTender from "@/assets/medical/card-tender.jpg";
 import cardAftersales from "@/assets/medical/card-aftersales.jpg";
 
-import case1 from "@/assets/medical/case-1-real.jpg";
-import case2 from "@/assets/medical/case-2.jpg";
-import case3 from "@/assets/medical/case-3.jpg";
-import FeaturedProjects from "@/components/FeaturedProjects";
-import { allProjects } from "@/data/projects";
-
-const medFeatured = [
-  allProjects.find((p) => p.id === 25)!,
-  allProjects.find((p) => p.id === 29)!,
-  allProjects.find((p) => p.id === 38)!,
-];
-
-const slides = [
-  { image: heroBiomedical, labelKey: "med.hero1.label", headingKey: "med.hero1.heading", tabKey: "med.hero1.tab" },
-  { image: heroEquipment, labelKey: "med.hero2.label", headingKey: "med.hero2.heading", tabKey: "med.hero2.tab" },
-  { image: heroCapacity, labelKey: "med.hero3.label", headingKey: "med.hero3.heading", tabKey: "med.hero3.tab" },
-  { image: heroTurnkey, labelKey: "med.hero4.label", headingKey: "med.hero4.heading", tabKey: "med.hero4.tab" },
-  { image: heroTender, labelKey: "med.hero5.label", headingKey: "med.hero5.heading", tabKey: "med.hero5.tab" },
-  { image: heroAftersales, labelKey: "med.hero6.label", headingKey: "med.hero6.heading", tabKey: "med.hero6.tab" },
-];
-
-const services = [
-  { img: cardBiomedical, nameKey: "med.biomedical", descKey: "med.biomedicalDesc", href: "/medical/biomedical-engineering" },
-  { img: cardEquipment, nameKey: "med.equipmentSupply", descKey: "med.equipmentSupplyDesc", href: "/medical/equipment-supply" },
-  { img: cardCapacity, nameKey: "med.capacityMgmt", descKey: "med.capacityMgmtDesc", href: "/medical/capacity-management" },
-  { img: cardTurnkey, nameKey: "med.turnkey", descKey: "med.turnkeyDesc", href: "/medical/turnkey-projects" },
-  { img: cardTender, nameKey: "med.tenderMgmt", descKey: "med.tenderMgmtDesc", href: "/medical/tender-management" },
-  { img: cardAftersales, nameKey: "med.afterSales", descKey: "med.afterSalesDesc", href: "/medical/after-sales" },
-];
-
-const caseStudies = [
-  { img: case1, tagKey: "med.caseHospitalEquip", titleKey: "med.case1Title", locKey: "med.case1Loc", descKey: "med.case1Desc", href: "/medical/case/oxygen-plant" },
-  { img: case2, tagKey: "med.caseDiagnostics", titleKey: "med.case2Title", locKey: "med.case2Loc", descKey: "med.case2Desc", href: "" },
-  { img: case3, tagKey: "med.caseLaboratory", titleKey: "med.case3Title", locKey: "med.case3Loc", descKey: "med.case3Desc", href: "" },
-];
+import CaseStudiesGrid from "@/components/CaseStudiesGrid";
 
 const Medical = () => {
   const [current, setCurrent] = useState(0);
