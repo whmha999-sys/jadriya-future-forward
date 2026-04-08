@@ -915,8 +915,8 @@ export const translations: Record<string, Record<Language, string>> = {
   "cs.contactProject": { en: "Contact Us for a Similar Project →", ar: "← تواصل معنا لمشروع مشابه" },
 
   "cs.block1.label": { en: "REHABILITATION PROJECT", ar: "مشروع إعادة تأهيل" },
-  "cs.block1.title": { en: "Al-Hussein Teaching Hospital — Al-Samawa", ar: "مستشفى الحسين التعليمي — السماوة" },
-  "cs.block1.location": { en: "Al-Muthanna Governorate, Iraq", ar: "محافظة المثنى، العراق" },
+  "cs.block1.title": { en: "Al-Hussein Teaching Hospital — Al-Samawa", ar: "محافظة سماوة — مستشفى الحسين التعليمي" },
+  "cs.block1.location": { en: "Al-Samawa Governorate, Iraq", ar: "محافظة السماوة، العراق" },
   "cs.block1.body": { en: "Complete rehabilitation of Al-Hussein Teaching Hospital, a 500-bed facility in Al-Samawa. The project covered full wall rehabilitation using HPL medical wall panels, crash barriers, and fire and antimicrobial resistant medical doors. Scope also included complete ceiling rehabilitation, full fire suppression system overhaul, complete HVAC system rehabilitation including cooling towers, air distribution systems and ductwork, and full flooring replacement across all departments.", ar: "إعادة تأهيل كاملة لمستشفى الحسين التعليمي، منشأة بسعة ٥٠٠ سرير في السماوة. شمل المشروع إعادة تأهيل الجدران بالكامل باستخدام ألواح HPL الطبية، وحواجز الصدمات، وأبواب طبية مقاومة للحريق ومضادة للميكروبات. كما شمل إعادة تأهيل الأسقف بالكامل، وإصلاح نظام إطفاء الحريق، وإعادة تأهيل نظام التكييف بما في ذلك أبراج التبريد وأنظمة توزيع الهواء والقنوات، واستبدال الأرضيات في جميع الأقسام." },
 
   "cs.block2.label": { en: "MEDICAL OXYGEN", ar: "أوكسجين طبي" },

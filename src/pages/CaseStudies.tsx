@@ -1,18 +1,94 @@
+import { useEffect, useRef, useState, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 
 import husseinImg from "@/assets/case-studies/hussein-hospital.jpg";
+import hussein1 from "@/assets/case-studies/hussein-1.jpg";
+import hussein2 from "@/assets/case-studies/hussein-2.jpg";
+import hussein3 from "@/assets/case-studies/hussein-3.jpg";
+import hussein4 from "@/assets/case-studies/hussein-4.jpg";
+
 import anaImg from "@/assets/case-studies/ana-oxygen.jpg";
+import ana1 from "@/assets/case-studies/ana-1.jpg";
+import ana2 from "@/assets/case-studies/ana-2.jpg";
+import ana3 from "@/assets/case-studies/ana-3.jpg";
+import ana4 from "@/assets/case-studies/ana-4.jpg";
+import ana5 from "@/assets/case-studies/ana-5.jpg";
+import ana6 from "@/assets/case-studies/ana-6.jpg";
+
 import baghdadImg from "@/assets/case-studies/baghdad-water.jpg";
 import salahuddinImg from "@/assets/case-studies/salahuddin-oxygen.jpg";
 
+/* ── Auto-scrolling image slider ── */
+const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
+  const [current, setCurrent] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval>>();
+
+  const startTimer = useCallback(() => {
+    timerRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000);
+  }, [images.length]);
+
+  useEffect(() => {
+    startTimer();
+    return () => clearInterval(timerRef.current);
+  }, [startTimer]);
+
+  const goTo = (i: number) => {
+    setCurrent(i);
+    clearInterval(timerRef.current);
+    startTimer();
+  };
+
+  return (
+    <div className="relative w-full h-[320px] md:h-[400px] rounded-xl overflow-hidden shadow-lg group">
+      {images.map((img, i) => (
+        <img
+          key={i}
+          src={img}
+          alt={`${alt} ${i + 1}`}
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+        />
+      ))}
+      {/* Dots */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${i === current ? "bg-[#F5A623]" : "bg-white/50"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const caseStudyKeys = [
-  { labelKey: "cs.block1.label", titleKey: "cs.block1.title", locationKey: "cs.block1.location", bodyKey: "cs.block1.body", cta: "/contact?ref=hussein-hospital", image: husseinImg },
-  { labelKey: "cs.block2.label", titleKey: "cs.block2.title", locationKey: "cs.block2.location", bodyKey: "cs.block2.body", cta: "/contact?ref=ana-hospital", image: anaImg },
-  { labelKey: "cs.block3.label", titleKey: "cs.block3.title", locationKey: "cs.block3.location", bodyKey: "cs.block3.body", cta: "/contact?ref=baghdad-water", image: baghdadImg },
-  { labelKey: "cs.block4.label", titleKey: "cs.block4.title", locationKey: "cs.block4.location", bodyKey: "cs.block4.body", cta: "/contact?ref=salahuddin-oxygen", image: salahuddinImg },
+  {
+    labelKey: "cs.block1.label", titleKey: "cs.block1.title", locationKey: "cs.block1.location", bodyKey: "cs.block1.body",
+    cta: "/contact?ref=hussein-hospital",
+    images: [husseinImg, hussein1, hussein2, hussein3, hussein4],
+  },
+  {
+    labelKey: "cs.block2.label", titleKey: "cs.block2.title", locationKey: "cs.block2.location", bodyKey: "cs.block2.body",
+    cta: "/contact?ref=ana-hospital",
+    images: [anaImg, ana1, ana2, ana3, ana4, ana5, ana6],
+  },
+  {
+    labelKey: "cs.block3.label", titleKey: "cs.block3.title", locationKey: "cs.block3.location", bodyKey: "cs.block3.body",
+    cta: "/contact?ref=baghdad-water",
+    images: [baghdadImg],
+  },
+  {
+    labelKey: "cs.block4.label", titleKey: "cs.block4.title", locationKey: "cs.block4.location", bodyKey: "cs.block4.body",
+    cta: "/contact?ref=salahuddin-oxygen",
+    images: [salahuddinImg],
+  },
 ];
 
 const achievementKeys = [
@@ -51,14 +127,18 @@ const CaseStudies = () => {
                 className={`max-w-6xl mx-auto px-6 py-20 flex flex-col ${isOdd ? "md:flex-row" : "md:flex-row-reverse"} gap-10 items-center`}
               >
                 <div className="md:w-1/2">
-                  <img
-                    src={cs.image}
-                    alt={t(cs.titleKey)}
-                    loading="lazy"
-                    width={1280}
-                    height={864}
-                    className="w-full h-[320px] md:h-[400px] object-cover rounded-xl shadow-lg"
-                  />
+                  {cs.images.length > 1 ? (
+                    <ImageSlider images={cs.images} alt={t(cs.titleKey)} />
+                  ) : (
+                    <img
+                      src={cs.images[0]}
+                      alt={t(cs.titleKey)}
+                      loading="lazy"
+                      width={1280}
+                      height={864}
+                      className="w-full h-[320px] md:h-[400px] object-cover rounded-xl shadow-lg"
+                    />
+                  )}
                 </div>
                 <div className="md:w-1/2" style={{ padding: "0 24px" }}>
                   <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#F5A623" }}>
