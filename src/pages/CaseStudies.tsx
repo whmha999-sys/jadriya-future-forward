@@ -4,13 +4,11 @@ import FooterSection from "@/components/FooterSection";
 import { usePageTransition } from "@/components/PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 
-import husseinImg from "@/assets/case-studies/hussein-hospital.jpg";
 import hussein1 from "@/assets/case-studies/hussein-1.jpg";
 import hussein2 from "@/assets/case-studies/hussein-2.jpg";
 import hussein3 from "@/assets/case-studies/hussein-3.jpg";
 import hussein4 from "@/assets/case-studies/hussein-4.jpg";
 
-import anaImg from "@/assets/case-studies/ana-oxygen.jpg";
 import ana1 from "@/assets/case-studies/ana-1.jpg";
 import ana2 from "@/assets/case-studies/ana-2.jpg";
 import ana3 from "@/assets/case-studies/ana-3.jpg";
@@ -18,8 +16,14 @@ import ana4 from "@/assets/case-studies/ana-4.jpg";
 import ana5 from "@/assets/case-studies/ana-5.jpg";
 import ana6 from "@/assets/case-studies/ana-6.jpg";
 
-import baghdadImg from "@/assets/case-studies/baghdad-water.jpg";
-import salahuddinImg from "@/assets/case-studies/salahuddin-oxygen.jpg";
+import baghdad1 from "@/assets/case-studies/baghdad-1.jpg";
+import baghdad2 from "@/assets/case-studies/baghdad-2.jpg";
+import baghdad3 from "@/assets/case-studies/baghdad-3.jpg";
+import baghdad4 from "@/assets/case-studies/baghdad-4.jpg";
+
+import salahuddin1 from "@/assets/case-studies/salahuddin-1.jpg";
+import salahuddin2 from "@/assets/case-studies/salahuddin-2.jpg";
+import salahuddin3 from "@/assets/case-studies/salahuddin-3.jpg";
 
 /* ── Auto-scrolling image slider ── */
 const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
@@ -72,22 +76,22 @@ const caseStudyKeys = [
   {
     labelKey: "cs.block1.label", titleKey: "cs.block1.title", locationKey: "cs.block1.location", bodyKey: "cs.block1.body",
     cta: "/contact?ref=hussein-hospital",
-    images: [husseinImg, hussein1, hussein2, hussein3, hussein4],
+    images: [hussein1, hussein2, hussein3, hussein4],
   },
   {
     labelKey: "cs.block2.label", titleKey: "cs.block2.title", locationKey: "cs.block2.location", bodyKey: "cs.block2.body",
     cta: "/contact?ref=ana-hospital",
-    images: [anaImg, ana1, ana2, ana3, ana4, ana5, ana6],
+    images: [ana1, ana2, ana3, ana4, ana5, ana6],
   },
   {
     labelKey: "cs.block3.label", titleKey: "cs.block3.title", locationKey: "cs.block3.location", bodyKey: "cs.block3.body",
     cta: "/contact?ref=baghdad-water",
-    images: [baghdadImg],
+    images: [baghdad1, baghdad2, baghdad3, baghdad4],
   },
   {
     labelKey: "cs.block4.label", titleKey: "cs.block4.title", locationKey: "cs.block4.location", bodyKey: "cs.block4.body",
     cta: "/contact?ref=salahuddin-oxygen",
-    images: [salahuddinImg],
+    images: [salahuddin1, salahuddin2, salahuddin3],
   },
 ];
 
