@@ -3,11 +3,11 @@ import stryker from "@/assets/partners/stryker.png";
 import vertisa from "@/assets/partners/vertisa.png";
 import comeg from "@/assets/partners/comeg.png";
 import coolex from "@/assets/partners/coolex.png";
-import angelantoni from "@/assets/partners/angelantoni.png";
 import histoLine from "@/assets/partners/histo-line.png";
-import medisam from "@/assets/partners/medisam.png";
+import medisam from "@/assets/partners/medisam-new.png";
 import amnotec from "@/assets/partners/amnotec.png";
 import sternmed from "@/assets/partners/sternmed.png";
+import midea from "@/assets/partners/midea.png";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const partners = [
@@ -16,11 +16,11 @@ const partners = [
   { src: vertisa, alt: "Vertisa", className: "h-8" },
   { src: comeg, alt: "COMEG", className: "h-16" },
   { src: coolex, alt: "Coolex", className: "h-24" },
-  { src: angelantoni, alt: "Angelantoni", className: "h-24" },
   { src: histoLine, alt: "Histo-Line", className: "h-12" },
-  { src: medisam, alt: "Medisam", className: "h-24" },
+  { src: medisam, alt: "Medisam", className: "h-16" },
   { src: amnotec, alt: "Amnotec", className: "h-12" },
   { src: sternmed, alt: "Sternmed", className: "h-20" },
+  { src: midea, alt: "Midea", className: "h-16" },
 ];
 
 const PartnersSection = () => {
