@@ -34,6 +34,7 @@ import RoboticsCorporateTraining from "./pages/RoboticsCorporateTraining";
 import NotFound from "./pages/NotFound";
 import References from "./pages/References";
 import CaseStudies from "./pages/CaseStudies";
+import EducationalTechnology from "./pages/EducationalTechnology";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
 import { LanguageProvider } from "./contexts/LanguageProvider";
