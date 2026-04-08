@@ -222,6 +222,12 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
                     >
                       View All Projects →
                     </button>
+                    <button
+                      onClick={() => handleLink("/case-studies")}
+                      className="block text-[15px] font-bold text-[#1A2B4A] hover:text-[#F5A623] transition-colors mb-4"
+                    >
+                      Case Studies & Achievements →
+                    </button>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <button onClick={() => handleLink("/references?filter=Medical — Iraq")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">Medical — Iraq</button>
