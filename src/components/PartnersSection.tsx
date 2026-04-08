@@ -19,8 +19,8 @@ const partners = [
   { src: histoLine, alt: "Histo-Line", className: "h-12" },
   { src: medisam, alt: "Medisam", className: "h-16" },
   { src: amnotec, alt: "Amnotec", className: "h-12" },
-  { src: sternmed, alt: "Sternmed", className: "h-20" },
-  { src: midea, alt: "Midea", className: "h-16" },
+  { src: sternmed, alt: "Sternmed", className: "h-[120px]" },
+  { src: midea, alt: "Midea", className: "h-24" },
 ];
 
 const PartnersSection = () => {
