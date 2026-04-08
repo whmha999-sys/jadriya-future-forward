@@ -13,6 +13,7 @@ import CompanyDetailSection from "@/components/CompanyDetailSection";
 import ParallaxCTA from "@/components/ParallaxCTA";
 import QuoteSection from "@/components/QuoteSection";
 import { allProjects } from "@/data/projects";
+import { useLanguage } from "@/contexts/useLanguage";
 
 // Featured: Project 29 (Egypt), Project 20 (Iraq open-heart), Project 38 (Oman Royal Hospital)
 const featured = [
@@ -22,6 +23,7 @@ const featured = [
 ];
 
 const Index = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen">
       <Navbar />
