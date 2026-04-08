@@ -11,9 +11,6 @@ import medical3 from "@/assets/companies/medical-slide3.jpg";
 import robotics1 from "@/assets/companies/robotics-slide1.jpg";
 import robotics2 from "@/assets/companies/robotics-slide2.jpg";
 import robotics3 from "@/assets/companies/robotics-slide3.jpg";
-import energy1 from "@/assets/companies/energy-slide1.jpg";
-import energy2 from "@/assets/companies/energy-slide2.jpg";
-import energy3 from "@/assets/companies/energy-slide3.jpg";
 
 type CompanyBlock = {
   labelKey: string;
