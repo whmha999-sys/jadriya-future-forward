@@ -900,8 +900,8 @@ export const translations: Record<string, Record<Language, string>> = {
   // Achievements Section (Homepage)
   "ach.hospitalsNum": { en: "Hospitals Equipped", ar: "مستشفى مجهز" },
   "ach.hospitalsSub": { en: "Across Iraq & Kurdistan", ar: "في العراق وكردستان" },
-  "ach.turkishNum": { en: "Turkish Hospitals", ar: "مستشفيات تركية" },
-  "ach.turkishSub": { en: "700 Beds Each — Fully Equipped", ar: "٧٠٠ سرير لكل مستشفى — مجهزة بالكامل" },
+  "ach.turkishNum": { en: "Beds Across 6 Turkish Hospitals in Iraq", ar: "سرير في ٦ مستشفيات تركية في العراق" },
+  "ach.turkishSub": { en: "Fully Equipped by AL-JADRIYA", ar: "مجهزة بالكامل من الجادرية" },
   "ach.devicesNum": { en: "Medical Devices Installed", ar: "جهاز طبي مُركّب" },
   "ach.devicesSub": { en: "Across Jordan, Iraq & UAE", ar: "في الأردن والعراق والإمارات" },
   "ach.contactBtn": { en: "Contact Us Today →", ar: "← تواصل معنا اليوم" },
