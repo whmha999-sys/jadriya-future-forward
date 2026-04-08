@@ -25,16 +25,16 @@ const Index = () => {
       <CompanyCardsSection />
       <PartnersSection />
       <AchievementsSection />
-      <CompanyDetailSection />
-      <ParallaxCTA />
-      <section id="about"><WhoWeServeSection /></section>
-      <section id="specializations"><SpecializationsSection /></section>
       <CaseStudiesGrid
         label={t("feat.selectedProjects")}
         heading={t("feat.trustedRegion")}
         showViewAll
         viewAllText={t("feat.viewAll")}
       />
+      <CompanyDetailSection />
+      <ParallaxCTA />
+      <section id="about"><WhoWeServeSection /></section>
+      <section id="specializations"><SpecializationsSection /></section>
       <section id="finder"><FinderSection /></section>
       <section id="vision"><VisionSection /></section>
       <QuoteSection />
