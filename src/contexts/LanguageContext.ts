@@ -897,6 +897,59 @@ export const translations: Record<string, Record<Language, string>> = {
   "detail.energy.body": { en: "AL-JADRIYA Energy is our clean energy division, currently in development. We are building our capability to deliver solar, wind, and clean energy manufacturing solutions across the region. Our Energy division will bring the same standard of excellence and regional expertise that defines the AL-JADRIYA GROUP to the clean energy sector.", ar: "الجادرية للطاقة هي قسم الطاقة النظيفة لدينا، قيد التطوير حالياً. نبني قدرتنا لتقديم حلول الطاقة الشمسية والرياح وتصنيع الطاقة النظيفة في المنطقة. سيجلب قسم الطاقة لدينا نفس مستوى التميز والخبرة الإقليمية التي تميز مجموعة الجادرية إلى قطاع الطاقة النظيفة." },
   "detail.energy.button": { en: "Coming Soon", ar: "قريباً" },
 
+  // Achievements Section (Homepage)
+  "ach.hospitalsNum": { en: "Hospitals Equipped", ar: "مستشفى مجهز" },
+  "ach.hospitalsSub": { en: "Across Iraq & Kurdistan", ar: "في العراق وكردستان" },
+  "ach.turkishNum": { en: "Turkish Hospitals", ar: "مستشفيات تركية" },
+  "ach.turkishSub": { en: "700 Beds Each — Fully Equipped", ar: "٧٠٠ سرير لكل مستشفى — مجهزة بالكامل" },
+  "ach.devicesNum": { en: "Medical Devices Installed", ar: "جهاز طبي مُركّب" },
+  "ach.devicesSub": { en: "Across Jordan, Iraq & UAE", ar: "في الأردن والعراق والإمارات" },
+  "ach.contactBtn": { en: "Contact Us Today →", ar: "← تواصل معنا اليوم" },
+  "ach.caseStudiesLink": { en: "Check All Case Studies →", ar: "← عرض جميع دراسات الحالة" },
+
+  // Case Studies Page
+  "cs.heroTitle": { en: "Our Case Studies & Achievements", ar: "دراسات الحالة والإنجازات" },
+  "cs.heroSub": { en: "Real projects. Real impact. Across the region.", ar: "مشاريع حقيقية. أثر حقيقي. في جميع أنحاء المنطقة." },
+  "cs.contactSimilar": { en: "Contact Us for a Similar Project →", ar: "← تواصل معنا لمشروع مشابه" },
+  "cs.achievementsTitle": { en: "Our Achievements", ar: "إنجازاتنا" },
+  "cs.contactProject": { en: "Contact Us for a Similar Project →", ar: "← تواصل معنا لمشروع مشابه" },
+
+  "cs.block1.label": { en: "REHABILITATION PROJECT", ar: "مشروع إعادة تأهيل" },
+  "cs.block1.title": { en: "Al-Hussein Teaching Hospital — Al-Samawa", ar: "مستشفى الحسين التعليمي — السماوة" },
+  "cs.block1.location": { en: "Al-Muthanna Governorate, Iraq", ar: "محافظة المثنى، العراق" },
+  "cs.block1.body": { en: "Complete rehabilitation of Al-Hussein Teaching Hospital, a 500-bed facility in Al-Samawa. The project covered full wall rehabilitation using HPL medical wall panels, crash barriers, and fire and antimicrobial resistant medical doors. Scope also included complete ceiling rehabilitation, full fire suppression system overhaul, complete HVAC system rehabilitation including cooling towers, air distribution systems and ductwork, and full flooring replacement across all departments.", ar: "إعادة تأهيل كاملة لمستشفى الحسين التعليمي، منشأة بسعة ٥٠٠ سرير في السماوة. شمل المشروع إعادة تأهيل الجدران بالكامل باستخدام ألواح HPL الطبية، وحواجز الصدمات، وأبواب طبية مقاومة للحريق ومضادة للميكروبات. كما شمل إعادة تأهيل الأسقف بالكامل، وإصلاح نظام إطفاء الحريق، وإعادة تأهيل نظام التكييف بما في ذلك أبراج التبريد وأنظمة توزيع الهواء والقنوات، واستبدال الأرضيات في جميع الأقسام." },
+
+  "cs.block2.label": { en: "MEDICAL OXYGEN", ar: "أوكسجين طبي" },
+  "cs.block2.title": { en: "Ana Hospital Medical Oxygen Plant — Al-Anbar", ar: "محطة أوكسجين مستشفى عانة الطبي — الأنبار" },
+  "cs.block2.location": { en: "Al-Anbar Governorate, Iraq · In Partnership with IOM", ar: "محافظة الأنبار، العراق · بالشراكة مع المنظمة الدولية للهجرة" },
+  "cs.block2.body": { en: "Supply and installation of a medical oxygen production plant for Ana Hospital in Al-Anbar, with a filling system capacity of 30 cylinders. Project delivered in collaboration with the International Organization for Migration (IOM) to support healthcare infrastructure in underserved areas.", ar: "توريد وتركيب محطة إنتاج أوكسجين طبي لمستشفى عانة في الأنبار، بسعة نظام تعبئة ٣٠ أسطوانة. تم تنفيذ المشروع بالتعاون مع المنظمة الدولية للهجرة لدعم البنية التحتية الصحية في المناطق المحرومة." },
+
+  "cs.block3.label": { en: "WATER INFRASTRUCTURE", ar: "بنية تحتية للمياه" },
+  "cs.block3.title": { en: "Baghdad Water Authority — High-Capacity Pumping Station", ar: "هيئة ماء بغداد — محطة ضخ عالية السعة" },
+  "cs.block3.location": { en: "Baghdad, Iraq", ar: "بغداد، العراق" },
+  "cs.block3.body": { en: "Supply and installation of industrial water pumps for the Baghdad Water Authority, with a total combined capacity of 12,000 cubic meters per hour. Project delivered to support the city's core water distribution infrastructure.", ar: "توريد وتركيب مضخات مياه صناعية لهيئة ماء بغداد، بسعة إجمالية مشتركة تبلغ ١٢٬٠٠٠ متر مكعب في الساعة. تم تنفيذ المشروع لدعم البنية التحتية الأساسية لتوزيع المياه في المدينة." },
+
+  "cs.block4.label": { en: "MEDICAL OXYGEN · 5 HOSPITALS", ar: "أوكسجين طبي · ٥ مستشفيات" },
+  "cs.block4.title": { en: "Salah Al-Din Health Directorate — Medical Oxygen Plants", ar: "دائرة صحة صلاح الدين — محطات أوكسجين طبي" },
+  "cs.block4.location": { en: "Salah Al-Din Governorate, Iraq", ar: "محافظة صلاح الدين، العراق" },
+  "cs.block4.body": { en: "Supply and installation of medical oxygen production plants with a capacity of 42 cubic meters per hour for five hospitals across Salah Al-Din Governorate: Al-Alam Hospital, Balad Hospital, Al-Dhuluiya Hospital, Amerli Hospital, and Al-Dauz Hospital. All five plants were delivered and commissioned as part of a single coordinated project.", ar: "توريد وتركيب محطات إنتاج أوكسجين طبي بسعة ٤٢ متر مكعب في الساعة لخمسة مستشفيات في محافظة صلاح الدين: مستشفى العلم، مستشفى بلد، مستشفى الضلوعية، مستشفى أمرلي، ومستشفى الدوز. تم تسليم وتشغيل جميع المحطات الخمس كجزء من مشروع منسق واحد." },
+
+  "cs.ach1.headline": { en: "Hospitals Equipped", ar: "مستشفى مجهز" },
+  "cs.ach1.desc": { en: "Full medical equipment supply including blood refrigerators, ultra-cold freezers (-80°C to -96°C), maternity beds, forensic medicine departments, and dissection tables — across Iraq and Kurdistan.", ar: "توريد معدات طبية كاملة تشمل ثلاجات الدم، والمجمدات فائقة البرودة (-٨٠ درجة إلى -٩٦ درجة مئوية)، وأسرّة الولادة، وأقسام الطب الشرعي، وطاولات التشريح — في العراق وكردستان." },
+  "cs.ach2.headline": { en: "Turkish Hospitals Equipped", ar: "مستشفيات تركية مجهزة" },
+  "cs.ach2.desc": { en: "Complete turnkey equipment supply for six hospitals with 700 beds each, including blood laboratories, anatomy laboratories, and microbiology laboratories.", ar: "توريد معدات تسليم مفتاح كاملة لست مستشفيات بسعة ٧٠٠ سرير لكل منها، تشمل مختبرات الدم ومختبرات التشريح ومختبرات الأحياء الدقيقة." },
+  "cs.ach3.headline": { en: "Al Ain Hospital — UAE", ar: "مستشفى العين — الإمارات" },
+  "cs.ach3.desc": { en: "Complete hospital equipment supply in partnership with VAMED, including all patient room refrigeration, laboratory and forensic medicine departments, and hazardous waste treatment.", ar: "توريد معدات مستشفى كاملة بالشراكة مع VAMED، تشمل جميع ثلاجات غرف المرضى، وأقسام المختبرات والطب الشرعي، ومعالجة النفايات الخطرة." },
+  "cs.ach4.headline": { en: "Dubai Main Blood Center — UAE", ar: "مركز دبي الرئيسي للدم — الإمارات" },
+  "cs.ach4.desc": { en: "Supply of Shouk Freeze plasma blood freezers for the main blood center in Dubai.", ar: "توريد مجمدات بلازما الدم Shouk Freeze لمركز الدم الرئيسي في دبي." },
+  "cs.ach5.headline": { en: "Operating Rooms Equipped — Iraq", ar: "غرف عمليات مجهزة — العراق" },
+  "cs.ach5.desc": { en: "5 operating rooms for Salah Al-Din Health Directorate and 4 operating rooms for Al-Muthanna Directorate (build and equip).", ar: "٥ غرف عمليات لدائرة صحة صلاح الدين و٤ غرف عمليات لدائرة صحة المثنى (بناء وتجهيز)." },
+  "cs.ach6.headline": { en: "Al-Husayniyya — Iraq", ar: "الحسينية — العراق" },
+  "cs.ach6.desc": { en: "Complete supply of premature infant (NICU) departments and urodynamics laboratory equipment.", ar: "توريد كامل لأقسام حديثي الولادة الخُدّج (NICU) ومعدات مختبر ديناميكا البول." },
+
+  // Mega Menu Case Studies
+  "mega.caseStudies": { en: "Case Studies & Achievements →", ar: "← دراسات الحالة والإنجازات" },
+
   // Footer
   "footer.ourProjects": { en: "Our Projects", ar: "مشاريعنا" },
 };
