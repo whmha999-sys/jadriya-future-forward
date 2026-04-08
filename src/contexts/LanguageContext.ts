@@ -838,6 +838,15 @@ export const translations: Record<string, Record<Language, string>> = {
   "robo.corporate.f4.title": { en: "Certified Completion", ar: "شهادة إتمام" },
   "robo.corporate.f4.desc": { en: "Participants receive certificates upon program completion", ar: "يحصل المشاركون على شهادات عند إتمام البرنامج" },
 
+  // Featured Projects Section
+  "feat.selectedProjects": { en: "SELECTED PROJECTS", ar: "مشاريع مختارة" },
+  "feat.trustedRegion": { en: "Trusted Across the Region", ar: "موثوقون في المنطقة" },
+  "feat.viewAll": { en: "View All Projects →", ar: "← عرض جميع المشاريع" },
+  "feat.ourProjects": { en: "OUR PROJECTS", ar: "مشاريعنا" },
+  "feat.medicalExpertise": { en: "Proven Medical Expertise", ar: "خبرة طبية مثبتة" },
+  "feat.viewAllMedical": { en: "View All Medical Projects →", ar: "← عرض جميع المشاريع الطبية" },
+  "feat.deliveredPrecision": { en: "Delivered with Precision", ar: "تسليم بدقة" },
+
   // Quote Section
   "quote.text": { en: "He who has health has hope, and he who has hope has everything.", ar: "من كان معافى في بدنه عنده أمل، ومن عنده أمل فعنده كل شيء." },
   "quote.author": { en: "Arabian proverb", ar: "مثل عربي" },
