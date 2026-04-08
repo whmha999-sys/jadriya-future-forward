@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/useLanguage";
 
 import oilgas1 from "@/assets/companies/oilgas-slide1.jpg";
 import oilgas2 from "@/assets/companies/oilgas-slide2.jpg";
@@ -15,10 +16,10 @@ import energy2 from "@/assets/companies/energy-slide2.jpg";
 import energy3 from "@/assets/companies/energy-slide3.jpg";
 
 type CompanyBlock = {
-  label: string;
-  headline: string;
-  body: string;
-  buttonText: string;
+  labelKey: string;
+  headlineKey: string;
+  bodyKey: string;
+  buttonKey: string;
   href?: string;
   disabled?: boolean;
   images: string[];
@@ -27,37 +28,37 @@ type CompanyBlock = {
 
 const companies: CompanyBlock[] = [
   {
-    label: "OIL & GAS",
-    headline: "Supply. Drill. Deliver.",
-    body: "AL-JADRIYA Oil & Gas is a specialized supplier of high-grade pipes, drilling equipment, and underground infrastructure solutions. We serve oil and gas operators, contractors, and government projects across Jordan, Iraq, and the wider region. From exploration requirements to after-sales support, we are your single trusted partner in the field.",
-    buttonText: "Explore Oil & Gas →",
+    labelKey: "detail.oilgas.label",
+    headlineKey: "detail.oilgas.headline",
+    bodyKey: "detail.oilgas.body",
+    buttonKey: "detail.oilgas.button",
     href: "/oil-gas",
     images: [oilgas1, oilgas2, oilgas3],
     imageLeft: false,
   },
   {
-    label: "MEDICAL",
-    headline: "Engineering Better Healthcare.",
-    body: "AL-JADRIYA Medical provides comprehensive medical engineering consultancy and full hospital equipment supply to healthcare facilities across the region. From biomedical engineering to complete turnkey hospital projects, we manage every stage of the process — from planning and procurement through to final installation and after-sales support.",
-    buttonText: "Explore Medical →",
+    labelKey: "detail.medical.label",
+    headlineKey: "detail.medical.headline",
+    bodyKey: "detail.medical.body",
+    buttonKey: "detail.medical.button",
     href: "/medical",
     images: [medical1, medical2, medical3],
     imageLeft: true,
   },
   {
-    label: "ROBOTICS & AI",
-    headline: "Shaping the Next Generation.",
-    body: "AL-JADRIYA Robotics delivers world-class robotics and AI education programs to schools, professionals, and institutions across Jordan and Iraq. We supply educational robotics kits, deliver curriculum-aligned programs, and provide corporate training solutions that prepare individuals and organizations for the AI economy.",
-    buttonText: "Explore Robotics →",
+    labelKey: "detail.robotics.label",
+    headlineKey: "detail.robotics.headline",
+    bodyKey: "detail.robotics.body",
+    buttonKey: "detail.robotics.button",
     href: "/robotics",
     images: [robotics1, robotics2, robotics3],
     imageLeft: false,
   },
   {
-    label: "ENERGY",
-    headline: "Powering a Cleaner Future.",
-    body: "AL-JADRIYA Energy is our clean energy division, currently in development. We are building our capability to deliver solar, wind, and clean energy manufacturing solutions across the region. Our Energy division will bring the same standard of excellence and regional expertise that defines the AL-JADRIYA GROUP to the clean energy sector.",
-    buttonText: "Coming Soon",
+    labelKey: "detail.energy.label",
+    headlineKey: "detail.energy.headline",
+    bodyKey: "detail.energy.body",
+    buttonKey: "detail.energy.button",
     disabled: true,
     images: [energy1, energy2, energy3],
     imageLeft: true,
@@ -115,31 +116,31 @@ function Slideshow({ images }: { images: string[] }) {
   );
 }
 
-function CompanyBlock({ company }: { company: CompanyBlock }) {
+function CompanyBlockComponent({ company, t }: { company: CompanyBlock; t: (key: string) => string }) {
   const textContent = (
     <div className="flex flex-col justify-center space-y-5">
       <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
-        {company.label}
+        {t(company.labelKey)}
       </span>
       <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-        {company.headline}
+        {t(company.headlineKey)}
       </h3>
       <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-        {company.body}
+        {t(company.bodyKey)}
       </p>
       {company.disabled ? (
         <button
           disabled
           className="self-start px-8 py-3 rounded-full bg-accent/40 text-accent-foreground/60 font-semibold text-sm cursor-not-allowed"
         >
-          {company.buttonText}
+          {t(company.buttonKey)}
         </button>
       ) : (
         <Link
           to={company.href!}
           className="self-start px-8 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:bg-accent/90 transition-colors"
         >
-          {company.buttonText}
+          {t(company.buttonKey)}
         </Link>
       )}
     </div>
@@ -167,10 +168,12 @@ function CompanyBlock({ company }: { company: CompanyBlock }) {
 }
 
 const CompanyDetailSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-16 md:py-24 bg-background space-y-20 md:space-y-28">
       {companies.map((company) => (
-        <CompanyBlock key={company.label} company={company} />
+        <CompanyBlockComponent key={company.labelKey} company={company} t={t} />
       ))}
     </section>
   );

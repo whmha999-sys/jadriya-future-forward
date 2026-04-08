@@ -865,6 +865,40 @@ export const translations: Record<string, Record<Language, string>> = {
   "chatbot.welcome": { en: "Hello! I'm Jadri, your AL-JADRIYA GROUP assistant. How can I help you today?", ar: "مرحباً! أنا جدري، مساعدك من مجموعة الجادرية. كيف يمكنني مساعدتك؟" },
   "chatbot.placeholder": { en: "Type a message...", ar: "اكتب رسالة..." },
   "chatbot.title": { en: "Jadri — AL-JADRIYA Assistant", ar: "جدري — مساعد الجادرية" },
+
+  // Partners Section
+  "partners.heading": { en: "OUR PARTNERS", ar: "شركاؤنا" },
+  "partners.sub1": { en: "Trusted by experts.", ar: "موثوقون لدى الخبراء." },
+  "partners.sub2": { en: "Working with the best.", ar: "نعمل مع الأفضل." },
+
+  // Parallax CTA
+  "cta.heading": { en: "We Deliver Engineering Excellence Across the Region", ar: "نقدم التميز الهندسي عبر المنطقة" },
+  "cta.text": { en: "For all your inquiries about our services, get in touch with our team today.", ar: "لجميع استفساراتكم حول خدماتنا، تواصلوا مع فريقنا اليوم." },
+  "cta.button": { en: "Contact Us Today →", ar: "← تواصل معنا اليوم" },
+
+  // Company Detail Section
+  "detail.oilgas.label": { en: "OIL & GAS", ar: "النفط والغاز" },
+  "detail.oilgas.headline": { en: "Supply. Drill. Deliver.", ar: "نورّد. نحفر. نسلّم." },
+  "detail.oilgas.body": { en: "AL-JADRIYA Oil & Gas is a specialized supplier of high-grade pipes, drilling equipment, and underground infrastructure solutions. We serve oil and gas operators, contractors, and government projects across Jordan, Iraq, and the wider region. From exploration requirements to after-sales support, we are your single trusted partner in the field.", ar: "الجادرية للنفط والغاز هي مورد متخصص للأنابيب عالية الجودة ومعدات الحفر وحلول البنية التحتية تحت الأرض. نخدم مشغلي النفط والغاز والمقاولين والمشاريع الحكومية في الأردن والعراق والمنطقة الأوسع. من متطلبات الاستكشاف إلى دعم ما بعد البيع، نحن شريككم الموثوق الوحيد في الميدان." },
+  "detail.oilgas.button": { en: "Explore Oil & Gas →", ar: "← استكشف النفط والغاز" },
+
+  "detail.medical.label": { en: "MEDICAL", ar: "الطبية" },
+  "detail.medical.headline": { en: "Engineering Better Healthcare.", ar: "هندسة رعاية صحية أفضل." },
+  "detail.medical.body": { en: "AL-JADRIYA Medical provides comprehensive medical engineering consultancy and full hospital equipment supply to healthcare facilities across the region. From biomedical engineering to complete turnkey hospital projects, we manage every stage of the process — from planning and procurement through to final installation and after-sales support.", ar: "توفر الجادرية الطبية استشارات هندسة طبية شاملة وتوريد كامل لمعدات المستشفيات للمرافق الصحية في المنطقة. من الهندسة الطبية الحيوية إلى مشاريع المستشفيات المتكاملة، ندير كل مرحلة من العملية — من التخطيط والمشتريات حتى التركيب النهائي ودعم ما بعد البيع." },
+  "detail.medical.button": { en: "Explore Medical →", ar: "← استكشف الطبية" },
+
+  "detail.robotics.label": { en: "ROBOTICS & AI", ar: "الروبوتات والذكاء الاصطناعي" },
+  "detail.robotics.headline": { en: "Shaping the Next Generation.", ar: "نصنع الجيل القادم." },
+  "detail.robotics.body": { en: "AL-JADRIYA Robotics delivers world-class robotics and AI education programs to schools, professionals, and institutions across Jordan and Iraq. We supply educational robotics kits, deliver curriculum-aligned programs, and provide corporate training solutions that prepare individuals and organizations for the AI economy.", ar: "تقدم الجادرية للروبوتات برامج تعليم روبوتات وذكاء اصطناعي على مستوى عالمي للمدارس والمهنيين والمؤسسات في الأردن والعراق. نورد مجموعات الروبوتات التعليمية، ونقدم برامج متوافقة مع المناهج، ونوفر حلول تدريب الشركات التي تُعد الأفراد والمنظمات لاقتصاد الذكاء الاصطناعي." },
+  "detail.robotics.button": { en: "Explore Robotics →", ar: "← استكشف الروبوتات" },
+
+  "detail.energy.label": { en: "ENERGY", ar: "الطاقة" },
+  "detail.energy.headline": { en: "Powering a Cleaner Future.", ar: "نمد مستقبلاً أنظف بالطاقة." },
+  "detail.energy.body": { en: "AL-JADRIYA Energy is our clean energy division, currently in development. We are building our capability to deliver solar, wind, and clean energy manufacturing solutions across the region. Our Energy division will bring the same standard of excellence and regional expertise that defines the AL-JADRIYA GROUP to the clean energy sector.", ar: "الجادرية للطاقة هي قسم الطاقة النظيفة لدينا، قيد التطوير حالياً. نبني قدرتنا لتقديم حلول الطاقة الشمسية والرياح وتصنيع الطاقة النظيفة في المنطقة. سيجلب قسم الطاقة لدينا نفس مستوى التميز والخبرة الإقليمية التي تميز مجموعة الجادرية إلى قطاع الطاقة النظيفة." },
+  "detail.energy.button": { en: "Coming Soon", ar: "قريباً" },
+
+  // Footer
+  "footer.ourProjects": { en: "Our Projects", ar: "مشاريعنا" },
 };
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
