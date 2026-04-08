@@ -8,6 +8,7 @@ import FinderSection from "@/components/FinderSection";
 import VisionSection from "@/components/VisionSection";
 import FooterSection from "@/components/FooterSection";
 import PartnersSection from "@/components/PartnersSection";
+import AchievementsSection from "@/components/AchievementsSection";
 import CompaniesSection from "@/components/CompaniesSection";
 import CompanyDetailSection from "@/components/CompanyDetailSection";
 import ParallaxCTA from "@/components/ParallaxCTA";
@@ -31,6 +32,7 @@ const Index = () => {
       <CompaniesSection />
       <CompanyCardsSection />
       <PartnersSection />
+      <AchievementsSection />
       <CompanyDetailSection />
       <ParallaxCTA />
       <section id="about"><WhoWeServeSection /></section>

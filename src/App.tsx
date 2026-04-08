@@ -33,6 +33,7 @@ import RoboticsEquipment from "./pages/RoboticsEquipment";
 import RoboticsCorporateTraining from "./pages/RoboticsCorporateTraining";
 import NotFound from "./pages/NotFound";
 import References from "./pages/References";
+import CaseStudies from "./pages/CaseStudies";
 import SplashScreen from "./components/SplashScreen";
 import { PageTransitionProvider } from "./components/PageTransition";
 import { LanguageProvider } from "./contexts/LanguageProvider";
@@ -81,6 +82,7 @@ const App = () => {
                 <Route path="/robotics/equipment" element={<RoboticsEquipment />} />
                 <Route path="/robotics/corporate-training" element={<RoboticsCorporateTraining />} />
                 <Route path="/references" element={<References />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
