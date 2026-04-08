@@ -838,6 +838,29 @@ export const translations: Record<string, Record<Language, string>> = {
   "robo.corporate.f4.title": { en: "Certified Completion", ar: "شهادة إتمام" },
   "robo.corporate.f4.desc": { en: "Participants receive certificates upon program completion", ar: "يحصل المشاركون على شهادات عند إتمام البرنامج" },
 
+  // Featured Projects Section
+  "feat.selectedProjects": { en: "SELECTED PROJECTS", ar: "مشاريع مختارة" },
+  "feat.trustedRegion": { en: "Trusted Across the Region", ar: "موثوقون في المنطقة" },
+  "feat.viewAll": { en: "View All Projects →", ar: "← عرض جميع المشاريع" },
+  "feat.ourProjects": { en: "OUR PROJECTS", ar: "مشاريعنا" },
+  "feat.medicalExpertise": { en: "Proven Medical Expertise", ar: "خبرة طبية مثبتة" },
+  "feat.viewAllMedical": { en: "View All Medical Projects →", ar: "← عرض جميع المشاريع الطبية" },
+  "feat.deliveredPrecision": { en: "Delivered with Precision", ar: "تسليم بدقة" },
+
+  // Quote Section
+  "quote.text": { en: "He who has health has hope, and he who has hope has everything.", ar: "من كان معافى في بدنه عنده أمل، ومن عنده أمل فعنده كل شيء." },
+  "quote.author": { en: "Arabian proverb", ar: "مثل عربي" },
+
+  // References Page
+  "ref.trackRecord": { en: "OUR TRACK RECORD", ar: "سجلنا الحافل" },
+  "ref.heroHeading": { en: "Our Work Speaks\nfor Itself", ar: "أعمالنا تتحدث\nعن نفسها" },
+  "ref.stat1": { en: "50+ Projects", ar: "+٥٠ مشروع" },
+  "ref.stat2": { en: "6 Markets", ar: "٦ أسواق" },
+  "ref.stat3": { en: "10+ Years", ar: "+١٠ سنوات" },
+  "ref.ctaHeading": { en: "Have a Project in Mind?", ar: "هل لديك مشروع في بالك؟" },
+  "ref.ctaText": { en: "Our team has delivered 50+ projects across 6 markets. Let us help with yours.", ar: "فريقنا أنجز أكثر من ٥٠ مشروعاً في ٦ أسواق. دعنا نساعدك في مشروعك." },
+  "ref.ctaButton": { en: "Get In Touch", ar: "تواصل معنا" },
+
   // Chatbot
   "chatbot.welcome": { en: "Hello! I'm Jadri, your AL-JADRIYA GROUP assistant. How can I help you today?", ar: "مرحباً! أنا جدري، مساعدك من مجموعة الجادرية. كيف يمكنني مساعدتك؟" },
   "chatbot.placeholder": { en: "Type a message...", ar: "اكتب رسالة..." },

@@ -194,10 +194,10 @@ const OilGas = () => {
 
       {/* Our Projects */}
       <FeaturedProjects
-        label="OUR PROJECTS"
-        heading="Delivered with Precision"
+        label={t("feat.ourProjects")}
+        heading={t("feat.deliveredPrecision")}
         projects={oilGasProjects}
-        ctaText="View All Projects →"
+        ctaText={t("feat.viewAll")}
         ctaHref="/references?filter=Oil %26 Gas"
       />
 

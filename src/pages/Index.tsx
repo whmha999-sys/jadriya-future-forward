@@ -13,6 +13,7 @@ import CompanyDetailSection from "@/components/CompanyDetailSection";
 import ParallaxCTA from "@/components/ParallaxCTA";
 import QuoteSection from "@/components/QuoteSection";
 import { allProjects } from "@/data/projects";
+import { useLanguage } from "@/contexts/useLanguage";
 
 // Featured: Project 29 (Egypt), Project 20 (Iraq open-heart), Project 38 (Oman Royal Hospital)
 const featured = [
@@ -22,6 +23,7 @@ const featured = [
 ];
 
 const Index = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -34,10 +36,10 @@ const Index = () => {
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
       <FeaturedProjects
-        label="SELECTED PROJECTS"
-        heading="Trusted Across the Region"
+        label={t("feat.selectedProjects")}
+        heading={t("feat.trustedRegion")}
         projects={featured}
-        ctaText="View All Projects →"
+        ctaText={t("feat.viewAll")}
         ctaHref="/references"
       />
       <section id="finder"><FinderSection /></section>
