@@ -39,7 +39,7 @@ import ref38 from "@/assets/references/ref-38.jpg";
 import ref39 from "@/assets/references/ref-39.jpg";
 import ref40 from "@/assets/references/ref-40.jpg";
 import refOil1 from "@/assets/references/ref-oil-1.jpg";
-import refOil2 from "@/assets/references/ref-oil-2.jpg";
+
 import refOil3 from "@/assets/references/ref-oil-3.jpg";
 
 export interface Project {
