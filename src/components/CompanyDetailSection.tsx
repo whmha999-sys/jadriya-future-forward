@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
 
 import oilgas1 from "@/assets/companies/oilgas-slide1.jpg";

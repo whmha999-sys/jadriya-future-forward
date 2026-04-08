@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
 import parallaxBg from "@/assets/companies/parallax-bg.jpg";
 import { useLanguage } from "@/contexts/useLanguage";
+import { usePageTransition } from "./PageTransition";
 
 const ParallaxCTA = () => {
   const { t } = useLanguage();
+  const { navigateWithTransition } = usePageTransition();
 
   return (
     <section
@@ -18,12 +19,12 @@ const ParallaxCTA = () => {
         <p className="text-white/90 text-base md:text-lg">
           {t("cta.text")}
         </p>
-        <Link
-          to="/contact"
+        <button
+          onClick={() => navigateWithTransition("/contact")}
           className="inline-block px-8 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:bg-accent/90 transition-colors"
         >
           {t("cta.button")}
-        </Link>
+        </button>
       </div>
     </section>
   );
