@@ -117,6 +117,8 @@ function Slideshow({ images }: { images: string[] }) {
 }
 
 function CompanyBlockComponent({ company, t }: { company: CompanyBlock; t: (key: string) => string }) {
+  const { navigateWithTransition } = usePageTransition();
+
   const textContent = (
     <div className="flex flex-col justify-center space-y-5">
       <span className="text-sm font-bold uppercase tracking-[0.2em] text-accent">
@@ -136,12 +138,12 @@ function CompanyBlockComponent({ company, t }: { company: CompanyBlock; t: (key:
           {t(company.buttonKey)}
         </button>
       ) : (
-        <Link
-          to={company.href!}
+        <button
+          onClick={() => navigateWithTransition(company.href!)}
           className="self-start px-8 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:bg-accent/90 transition-colors"
         >
           {t(company.buttonKey)}
-        </Link>
+        </button>
       )}
     </div>
   );
