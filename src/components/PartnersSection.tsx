@@ -8,6 +8,7 @@ import histoLine from "@/assets/partners/histo-line.png";
 import medisam from "@/assets/partners/medisam.png";
 import amnotec from "@/assets/partners/amnotec.png";
 import sternmed from "@/assets/partners/sternmed.png";
+import { useLanguage } from "@/contexts/useLanguage";
 
 const partners = [
   { src: karlStorz, alt: "Karl Storz", className: "h-8" },
@@ -23,13 +24,15 @@ const partners = [
 ];
 
 const PartnersSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="text-center mb-6">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">OUR PARTNERS</h2>
-        <span className="text-muted-foreground text-base md:text-lg">Trusted by experts.</span>
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">{t("partners.heading")}</h2>
+        <span className="text-muted-foreground text-base md:text-lg">{t("partners.sub1")}</span>
         <br />
-        <span className="text-foreground text-base md:text-lg font-semibold">Working with the best.</span>
+        <span className="text-foreground text-base md:text-lg font-semibold">{t("partners.sub2")}</span>
       </div>
 
       <div
