@@ -34,10 +34,10 @@ const Index = () => {
       <section id="about"><WhoWeServeSection /></section>
       <section id="specializations"><SpecializationsSection /></section>
       <FeaturedProjects
-        label="SELECTED PROJECTS"
-        heading="Trusted Across the Region"
+        label={t("feat.selectedProjects")}
+        heading={t("feat.trustedRegion")}
         projects={featured}
-        ctaText="View All Projects →"
+        ctaText={t("feat.viewAll")}
         ctaHref="/references"
       />
       <section id="finder"><FinderSection /></section>

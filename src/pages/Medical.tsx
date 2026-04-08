@@ -241,10 +241,10 @@ const Medical = () => {
 
       {/* Our Projects */}
       <FeaturedProjects
-        label="OUR PROJECTS"
-        heading="Proven Medical Expertise"
+        label={t("feat.ourProjects")}
+        heading={t("feat.medicalExpertise")}
         projects={medFeatured}
-        ctaText="View All Medical Projects →"
+        ctaText={t("feat.viewAllMedical")}
         ctaHref="/references?filter=Medical — Iraq"
       />
 
