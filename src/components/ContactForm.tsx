@@ -157,7 +157,7 @@ const ContactForm = ({ initialCompany, initialOffice, initialCountry, onOfficeSe
           <select name="office" required value={form.office} onChange={handleChange} className={underlineSelect}>
             <option value="">{t("form.selectOffice")}</option>
             <option value="amman">{t("form.ammanJordan")}</option>
-            <option value="tikrit">{t("form.tikritIraq")}</option>
+            
           </select>
         </div>
         <div>

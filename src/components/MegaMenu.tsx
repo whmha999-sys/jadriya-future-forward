@@ -250,16 +250,10 @@ const MegaMenu = ({ onClose }: { onClose: () => void }) => {
                       <button onClick={() => handleLink("/contact?office=amman")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">
                         {t("mega.ammanOffice")}
                       </button>
-                      <button onClick={() => handleLink("/contact?office=tikrit")} className="block text-[13px] text-[#6B7280] hover:text-[#F5A623] transition-colors">
-                        {t("mega.tikritOffice")}
-                      </button>
                     </div>
                     <div className="md:w-1/2 space-y-3">
                       <p className="text-[13px] text-[#6B7280]">
                         <span className="font-semibold text-[#1A2B4A]">{t("mega.email")}:</span> info@hy-med.net
-                      </p>
-                      <p className="text-[13px] text-[#6B7280]">
-                        <span className="font-semibold text-[#1A2B4A]">{t("mega.jordan")}:</span> +962 788310769
                       </p>
                       <p className="text-[13px] text-[#6B7280]">
                         <span className="font-semibold text-[#1A2B4A]">{t("mega.iraq")}:</span> +964 7717323273

@@ -128,7 +128,7 @@ export const translations: Record<string, Record<Language, string>> = {
   "menu.newsroom": { en: "Newsroom", ar: "غرفة الأخبار" },
   "menu.contactGeneral": { en: "Contact Us", ar: "تواصل معنا" },
   "menu.ammanOffice": { en: "Amman Office", ar: "مكتب عمّان" },
-  "menu.tikritOffice": { en: "Tikrit Office", ar: "مكتب تكريت" },
+  
   "menu.baghdadOffice": { en: "Baghdad Office", ar: "مكتب بغداد" },
   "menu.generalInquiries": { en: "General Inquiries", ar: "استفسارات عامة" },
 
@@ -161,7 +161,7 @@ export const translations: Record<string, Record<Language, string>> = {
   "mega.cleanEnergy": { en: "Clean Energy Manufacturing", ar: "تصنيع الطاقة النظيفة" },
   "mega.contactGeneral": { en: "Contact Us (General)", ar: "تواصل معنا (عام)" },
   "mega.ammanOffice": { en: "Amman Office", ar: "مكتب عمّان" },
-  "mega.tikritOffice": { en: "Tikrit Office", ar: "مكتب تكريت" },
+  
   "mega.email": { en: "Email", ar: "البريد الإلكتروني" },
   "mega.jordan": { en: "Jordan", ar: "الأردن" },
   "mega.iraq": { en: "Iraq", ar: "العراق" },
@@ -173,7 +173,7 @@ export const translations: Record<string, Record<Language, string>> = {
   "contact.offices": { en: "Our Offices", ar: "مكاتبنا" },
   "contact.amman": { en: "Amman, Jordan", ar: "عمّان، الأردن" },
   "contact.hq": { en: "Headquarters", ar: "المقر الرئيسي" },
-  "contact.tikrit": { en: "Tikrit, Iraq", ar: "تكريت، العراق" },
+  
   "contact.baghdad": { en: "Baghdad, Iraq", ar: "بغداد، العراق" },
   "contact.branch": { en: "Branch Office", ar: "مكتب فرعي" },
   "contact.email": { en: "Email", ar: "البريد الإلكتروني" },
@@ -181,7 +181,7 @@ export const translations: Record<string, Record<Language, string>> = {
   "contact.whichOffice": { en: "Which office would you like to contact?", ar: "أي مكتب تود التواصل معه؟" },
   "contact.selectOffice": { en: "Select an office", ar: "اختر مكتباً" },
   "contact.officeAmman": { en: "Amman, Jordan", ar: "عمّان، الأردن" },
-  "contact.officeTikrit": { en: "Tikrit, Iraq", ar: "تكريت، العراق" },
+  
   "contact.fullName": { en: "Full Name", ar: "الاسم الكامل" },
   "contact.fullNamePlaceholder": { en: "Your full name", ar: "اسمك الكامل" },
   "contact.emailAddress": { en: "Email Address", ar: "البريد الإلكتروني" },
@@ -382,12 +382,10 @@ export const translations: Record<string, Record<Language, string>> = {
   "footer.quickLinks": { en: "Quick Links", ar: "روابط سريعة" },
   "footer.careers": { en: "Careers", ar: "الوظائف" },
   "footer.ammanAddress": { en: "Wasfi Al-Tal St, Building 124", ar: "شارع وصفي التل، بناية ١٢٤" },
-  "footer.tikrit": { en: "Tikrit, Iraq", ar: "تكريت، العراق" },
-  "footer.tikritAddress": { en: "Main Street opposite Governorate Building, Salah al-Din", ar: "الشارع الرئيسي مقابل مبنى المحافظة، صلاح الدين" },
   "footer.rights": { en: "© 2026 AL-JADRIYA GROUP. All rights reserved.", ar: "© ٢٠٢٦ مجموعة الجادرية. جميع الحقوق محفوظة." },
   "footer.comingSoon": { en: "Coming Soon", ar: "قريباً" },
   "footer.ammanOffice": { en: "Amman Office", ar: "مكتب عمّان" },
-  "footer.tikritOffice": { en: "Tikrit Office", ar: "مكتب تكريت" },
+  
 
   // Contact Form
   "form.contactInfo": { en: "Contact Information", ar: "معلومات الاتصال" },
@@ -403,7 +401,7 @@ export const translations: Record<string, Record<Language, string>> = {
   "form.whichOffice": { en: "Which office?", ar: "أي مكتب؟" },
   "form.selectOffice": { en: "Select office", ar: "اختر مكتباً" },
   "form.ammanJordan": { en: "Amman, Jordan", ar: "عمّان، الأردن" },
-  "form.tikritIraq": { en: "Tikrit, Iraq", ar: "تكريت، العراق" },
+  
   "form.whichCompany": { en: "Which company?", ar: "أي شركة؟" },
   "form.selectCompany": { en: "Select company", ar: "اختر شركة" },
   "form.oilGas": { en: "Oil & Gas", ar: "النفط والغاز" },

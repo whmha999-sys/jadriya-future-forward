@@ -28,10 +28,6 @@ const MedicalFooter = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>+962 788310769</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-accent flex-shrink-0" />
                 <span>+964 7717323273</span>
               </div>
             </div>
@@ -91,13 +87,6 @@ const MedicalFooter = () => {
                 <div>
                   <p className="text-primary-foreground text-sm font-semibold">{t("footer.amman")}</p>
                   <p className="text-primary-foreground/50 text-xs">{t("footer.ammanAddress")}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-primary-foreground text-sm font-semibold">{t("footer.tikrit")}</p>
-                  <p className="text-primary-foreground/50 text-xs">{t("footer.tikritAddress")}</p>
                 </div>
               </div>
             </div>

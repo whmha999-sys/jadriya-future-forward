@@ -44,9 +44,7 @@ const Contact = () => {
   const routerState = location.state as { company?: string } | null;
 
   const ammanRef = useRef<HTMLDivElement>(null);
-  const tikritRef = useRef<HTMLDivElement>(null);
 
-  // Determine initial subject from router state or referrer
   const getInitialCompany = () => {
     if (routerState?.company) return routerState.company;
     return detectCompanyFromReferrer();
@@ -54,29 +52,20 @@ const Contact = () => {
 
   const getInitialOffice = () => {
     if (officeParam === "amman") return "amman";
-    if (officeParam === "tikrit") return "tikrit";
     return "";
   };
 
   const getInitialCountry = () => {
     if (officeParam === "amman") return "Jordan";
-    if (officeParam === "tikrit") return "Iraq";
     return "";
   };
-
-
-
-
-  const showAmman = !officeParam || officeParam === "amman";
-  const showTikrit = !officeParam || officeParam === "tikrit";
 
   const [highlightedOffice, setHighlightedOffice] = useState<string | null>(null);
 
   const handleOfficeSelect = (office: string) => {
     setHighlightedOffice(office);
-    const ref = office === "amman" ? ammanRef : tikritRef;
-    if (showAmman && showTikrit) {
-      ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (office === "amman") {
+      ammanRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     setTimeout(() => setHighlightedOffice(null), 2000);
   };
@@ -127,34 +116,18 @@ const Contact = () => {
             <div>
               <p className="section-label mb-6">{t("contact.offices")}</p>
               <div className="space-y-8">
-                {showAmman && (
-                  <div
-                    ref={ammanRef}
-                    className={`flex gap-4 p-4 -m-4 rounded-lg transition-all duration-500 ${
-                      highlightedOffice === "amman" ? "bg-accent/10 ring-2 ring-accent/30" : ""
-                    }`}
-                  >
-                    <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-bold text-primary">{t("contact.amman")}</h3>
-                      <p className="text-muted-foreground text-sm">{t("contact.hq")}</p>
-                    </div>
+                <div
+                  ref={ammanRef}
+                  className={`flex gap-4 p-4 -m-4 rounded-lg transition-all duration-500 ${
+                    highlightedOffice === "amman" ? "bg-accent/10 ring-2 ring-accent/30" : ""
+                  }`}
+                >
+                  <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-bold text-primary">{t("contact.amman")}</h3>
+                    <p className="text-muted-foreground text-sm">{t("contact.hq")}</p>
                   </div>
-                )}
-                {showTikrit && (
-                  <div
-                    ref={tikritRef}
-                    className={`flex gap-4 p-4 -m-4 rounded-lg transition-all duration-500 ${
-                      highlightedOffice === "tikrit" ? "bg-accent/10 ring-2 ring-accent/30" : ""
-                    }`}
-                  >
-                    <MapPin className="h-5 w-5 text-accent mt-1 shrink-0" />
-                    <div>
-                      <h3 className="text-lg font-bold text-primary">{t("contact.tikrit")}</h3>
-                      <p className="text-muted-foreground text-sm">{t("contact.branch")}</p>
-                    </div>
-                  </div>
-                )}
+                </div>
               </div>
             </div>
 
