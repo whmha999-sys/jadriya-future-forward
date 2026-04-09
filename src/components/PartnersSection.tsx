@@ -10,6 +10,7 @@ import sternmed from "@/assets/partners/sternmed.png";
 import midea from "@/assets/partners/midea.png";
 import kalstein from "@/assets/partners/kalstein.png";
 import leica from "@/assets/partners/leica.png";
+import kuficLogo from "@/assets/partners/kufic-logo.png";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const partners = [
