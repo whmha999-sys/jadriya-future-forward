@@ -10,6 +10,7 @@ import sternmed from "@/assets/partners/sternmed.png";
 import midea from "@/assets/partners/midea.png";
 import kalstein from "@/assets/partners/kalstein.png";
 import leica from "@/assets/partners/leica.png";
+import kuficLogo from "@/assets/partners/kufic-logo.png";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const partners = [
@@ -25,6 +26,7 @@ const partners = [
   { src: midea, alt: "Midea", className: "h-24" },
   { src: kalstein, alt: "Kalstein", className: "h-12" },
   { src: leica, alt: "Leica Microsystems", className: "h-14" },
+  { src: kuficLogo, alt: "Kufic Partner", className: "h-16" },
 ];
 
 const PartnersSection = () => {
