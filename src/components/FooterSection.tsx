@@ -32,10 +32,6 @@ const FooterSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
-                <span>+962 788310769</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0" />
                 <span>+964 7717323273</span>
               </div>
             </div>
@@ -45,13 +41,6 @@ const FooterSection = () => {
                 <div>
                   <p className="text-primary-foreground text-xs font-semibold">{t("footer.amman")}</p>
                   <p>{t("footer.ammanAddress")}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <MapPin className="h-3.5 w-3.5 text-primary-foreground flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-primary-foreground text-xs font-semibold">{t("footer.tikrit")}</p>
-                  <p>{t("footer.tikritAddress")}</p>
                 </div>
               </div>
             </div>
@@ -139,9 +128,6 @@ const FooterSection = () => {
               </button>
               <button onClick={() => navigateWithTransition("/contact?office=amman")} className={linkClass}>
                 {t("footer.ammanOffice")}
-              </button>
-              <button onClick={() => navigateWithTransition("/contact?office=tikrit")} className={linkClass}>
-                {t("footer.tikritOffice")}
               </button>
               <a href="#" className={linkClass}>
                 {t("footer.careers")}
