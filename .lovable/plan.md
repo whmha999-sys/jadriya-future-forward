@@ -1,41 +1,45 @@
 
 
-# Update All Oil & Gas Content to Supply-Only Positioning
+# Remove Tikrit Office, Tikrit Address, and +962 788310769 Phone Number
 
 ## Summary
-All Oil & Gas text changes are localized in a single file: `src/contexts/LanguageContext.ts`. No layout, photo, or component changes needed.
+Remove all references to Tikrit (office, address "Main Street opposite Governorate Building, Salah al-Din"), and the Jordan phone number (+962 788310769) from every page across the site.
 
-## Changes (single file: `src/contexts/LanguageContext.ts`)
+## Files to Edit
 
-### 1. Hero Slide Headings (lines 446-461)
-Update the 6 hero headings to the new supply-focused taglines:
-- Slide 1: "The Right Pipe. Every Specification. On Time."
-- Slide 2: "Every Tool Your Drill Site Demands."
-- Slide 3: "Supplying the Instruments That Find What's Below."
-- Slide 4: "Precision Instruments for Every Quality Check."
-- Slide 5: "Materials Built for What Lies Beneath."
-- Slide 6: "With You After Every Delivery." (already correct)
+### 1. `src/contexts/LanguageContext.ts` — Translation strings
+- Remove keys: `menu.tikritOffice`, `mega.tikritOffice`, `contact.tikrit`, `contact.officeTikrit`, `footer.tikrit`, `footer.tikritAddress`, `footer.tikritOffice`
+- Keep all Amman/Baghdad entries intact
 
-### 2. Services Grid Descriptions (lines 467-479)
-Update the 6 short service descriptions on the main Oil & Gas landing page to reflect supply-only language. Also update the main heading from "Six Specialized Services" to "Six Specialized Supply Lines."
+### 2. `src/components/FooterSection.tsx` — Main footer
+- Remove the `+962 788310769` phone number block (lines 33-36)
+- Remove the Tikrit office address block (lines 51-56)
+- Remove the "Tikrit Office" quick link button (lines 143-145)
 
-### 3. Sub-Page Overview Text (lines 517-586)
-For each of the 6 sub-pages, update:
-- **Overview heading** to match the new tagline
-- **Overview paragraph** to the user-provided description
-- **4 feature titles and descriptions** to match the user-provided features
+### 3. `src/components/medical/MedicalFooter.tsx` — Medical footer
+- Remove the `+962 788310769` phone number block (lines 29-32)
+- Remove the Tikrit office address block (lines 96-102)
 
-### 4. Footer/Navbar Tagline (line 440)
-Change `og.footerTagline` from "Trusted oil and gas equipment supply and services across the Middle East." to "Specialized supplier of oil and gas equipment across the region."
+### 4. `src/components/oilgas/OilGasFooter.tsx` — Oil & Gas footer
+- Remove the `+962 788310769` phone number block (lines 29-32)
+- Remove the Tikrit office address block (lines 96-102)
 
-### 5. Arabic Translations
-All Arabic translations for the above keys will be updated to match the new English content.
+### 5. `src/components/MegaMenu.tsx` — Navigation mega menu
+- Remove the Tikrit Office button (lines 253-255)
+- Remove the Jordan phone number line (lines 261-263)
 
-## Files Modified
-- `src/contexts/LanguageContext.ts` — ~70 translation key updates (English + Arabic)
+### 6. `src/pages/Contact.tsx` — Contact page
+- Remove the `tikritRef` and all `showTikrit` logic
+- Remove the Tikrit office card (lines 144-157)
+- Remove `tikrit` cases from `getInitialOffice` and `getInitialCountry`
+- Simplify `handleOfficeSelect` (no more tikrit ref)
 
-## What Will NOT Change
-- No photos, layouts, stats bar, navigation, or other pages touched
-- No component files modified
-- Service names (titles) remain the same
+### 7. `src/components/ContactForm.tsx` — Contact form
+- Remove the Tikrit option from the office `<select>` dropdown (line 160)
+
+## What stays unchanged
+- All page content, design, and layout
+- Amman office info remains everywhere
+- Iraq phone number (+964 7717323273) remains
+- Baghdad office references remain
 
