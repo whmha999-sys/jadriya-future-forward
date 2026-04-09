@@ -23,7 +23,7 @@ const partners = [
   { src: medisam, alt: "Medisam", className: "h-16" },
   { src: amnotec, alt: "Amnotec", className: "h-12" },
   { src: sternmed, alt: "Sternmed", className: "h-[120px]" },
-  { src: midea, alt: "Midea", className: "h-24" },
+  { src: midea, alt: "Midea", className: "h-36" },
   { src: kalstein, alt: "Kalstein", className: "h-12" },
   { src: leica, alt: "Leica Microsystems", className: "h-14" },
   { src: kuficLogo, alt: "Kufic Partner", className: "h-16" },
