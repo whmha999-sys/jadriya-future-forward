@@ -26,6 +26,7 @@ const partners = [
   { src: midea, alt: "Midea", className: "h-24" },
   { src: kalstein, alt: "Kalstein", className: "h-12" },
   { src: leica, alt: "Leica Microsystems", className: "h-14" },
+  { src: kuficLogo, alt: "Kufic Partner", className: "h-16" },
 ];
 
 const PartnersSection = () => {
