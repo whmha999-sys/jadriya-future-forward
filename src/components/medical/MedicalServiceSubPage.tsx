@@ -41,7 +41,7 @@ const MedicalServiceSubPage = ({
       <MedicalNavbar />
 
       {/* Hero */}
-      <section className="relative w-full h-[70vh] overflow-hidden">
+      <section className="relative w-full min-h-[70vh] overflow-hidden" style={{ height: '70dvh' }}>
         <img src={heroImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/60" />
         <div className="relative z-10 h-full flex flex-col justify-end pb-20 px-8 md:px-16">

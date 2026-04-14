@@ -162,12 +162,20 @@ html {
   }
 }
 
+@-webkit-keyframes scroll-left {
+  0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { -webkit-transform: translateX(0); transform: translateX(0); }
+  100% { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 }
 .animate-scroll-left {
+  -webkit-animation: scroll-left 40s linear infinite;
   animation: scroll-left 40s linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .animate-scroll-left:hover {
   animation-play-state: paused;

@@ -54,8 +54,9 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
           key={i}
           src={img}
           alt={`${alt} ${i + 1}`}
-          loading="lazy"
+          loading={i === current ? "eager" : "lazy"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+          style={{ WebkitBackfaceVisibility: "hidden" }}
         />
       ))}
       {/* Dots */}
@@ -177,7 +178,7 @@ const CaseStudies = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {achievementKeys.map((a, i) => (
               <div key={i} className="rounded-xl p-10" style={{ background: "#1E3459" }}>
-                <span className="block text-[60px] font-[800] leading-none" style={{ color: "#F5A623" }}>
+                <span className="block text-[28px] sm:text-[40px] md:text-[60px] font-[800] leading-none break-all" style={{ color: "#F5A623" }}>
                   {a.stat}
                 </span>
                 <h3 className="text-white font-bold text-lg mt-4">{t(a.headlineKey)}</h3>

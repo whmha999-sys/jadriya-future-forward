@@ -72,7 +72,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ height: '100vh' }}
+      style={{ minHeight: '100vh', height: '100dvh' }}
     >
       <AnimatePresence mode="sync">
         <motion.div
