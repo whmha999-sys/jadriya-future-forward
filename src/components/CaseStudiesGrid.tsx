@@ -53,8 +53,9 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
           key={i}
           src={img}
           alt={`${alt} ${i + 1}`}
-          loading="lazy"
+          loading={i === current ? "eager" : "lazy"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+          style={{ WebkitBackfaceVisibility: "hidden" }}
         />
       ))}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">

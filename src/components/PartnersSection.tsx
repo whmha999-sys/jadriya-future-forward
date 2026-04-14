@@ -53,13 +53,14 @@ const PartnersSection = () => {
         <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--background)), transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--background)), transparent)" }} />
 
-        <div className="animate-scroll-left flex w-max" style={{ gap: "42px" }}>
+        <div className="animate-scroll-left inline-flex min-w-max" style={{ gap: "42px" }}>
           {[...partners, ...partners].map((partner, index) => (
-            <div key={index} className="flex items-center justify-center shrink-0">
+            <div key={index} className="flex items-center justify-center shrink-0 min-w-[40px]">
               <img
                 src={partner.src}
                 alt={partner.alt}
                 className={`${partner.className} w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300`}
+                style={{ WebkitBackfaceVisibility: "hidden" }}
               />
             </div>
           ))}
