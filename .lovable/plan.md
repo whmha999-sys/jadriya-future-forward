@@ -1,45 +1,42 @@
 
 
-# Remove Tikrit Office, Tikrit Address, and +962 788310769 Phone Number
+# Fix Safari Mobile Issues + Al-Husayniyya Text Overflow + Hero Image Cropping
 
-## Summary
-Remove all references to Tikrit (office, address "Main Street opposite Governorate Building, Salah al-Din"), and the Jordan phone number (+962 788310769) from every page across the site.
+## Three Issues
+
+1. **Partners section not scrolling on mobile Safari** -- missing `-webkit-` animation prefixes and Safari collapsing `w-max` containers
+2. **Case Studies images not loading on mobile Safari** -- `loading="lazy"` on absolute-positioned images with opacity transitions fails on Safari
+3. **"AL-HUSAYNIYYA" text overflow** -- the stat text at 60px is too wide for a mobile card, causing overflow (image 1)
+4. **Hero/sub-page images cut in half on mobile** -- the hero uses `100vh` but Safari's dynamic toolbar eats into viewport height; sub-page heroes at `70vh` also crop poorly on mobile (images 2 and 3)
 
 ## Files to Edit
 
-### 1. `src/contexts/LanguageContext.ts` — Translation strings
-- Remove keys: `menu.tikritOffice`, `mega.tikritOffice`, `contact.tikrit`, `contact.officeTikrit`, `footer.tikrit`, `footer.tikritAddress`, `footer.tikritOffice`
-- Keep all Amman/Baghdad entries intact
+### 1. `src/index.css` -- Safari animation fix
+- Add `-webkit-` prefixed `@keyframes scroll-left` and animation properties
+- Add `will-change: transform` and `backface-visibility: hidden` for GPU compositing
 
-### 2. `src/components/FooterSection.tsx` — Main footer
-- Remove the `+962 788310769` phone number block (lines 33-36)
-- Remove the Tikrit office address block (lines 51-56)
-- Remove the "Tikrit Office" quick link button (lines 143-145)
+### 2. `src/components/PartnersSection.tsx` -- Layout fix for Safari
+- Change container from `flex w-max` to `inline-flex min-w-max`
+- Add `min-w-[40px]` to each logo wrapper to prevent Safari collapse
 
-### 3. `src/components/medical/MedicalFooter.tsx` — Medical footer
-- Remove the `+962 788310769` phone number block (lines 29-32)
-- Remove the Tikrit office address block (lines 96-102)
+### 3. `src/components/CaseStudiesGrid.tsx` -- Image loading fix
+- Change `loading="lazy"` to `loading="eager"` for the currently active image (index 0 initially)
+- Add `-webkit-backface-visibility: hidden` style for Safari compositing
 
-### 4. `src/components/oilgas/OilGasFooter.tsx` — Oil & Gas footer
-- Remove the `+962 788310769` phone number block (lines 29-32)
-- Remove the Tikrit office address block (lines 96-102)
+### 4. `src/pages/CaseStudies.tsx` -- Same image fix + Al-Husayniyya text
+- Fix image slider `loading` attribute same as above
+- Make the achievement stat text responsive: use `text-[28px] sm:text-[40px] md:text-[60px]` instead of fixed `text-[60px]` so "AL-HUSAYNIYYA" fits on mobile
+- Add `break-all` or `overflow-hidden` as safety net
 
-### 5. `src/components/MegaMenu.tsx` — Navigation mega menu
-- Remove the Tikrit Office button (lines 253-255)
-- Remove the Jordan phone number line (lines 261-263)
+### 5. `src/components/HeroSection.tsx` -- Hero image not cut on mobile
+- Change `height: '100vh'` to use `100dvh` (dynamic viewport height) which accounts for Safari's collapsible toolbar
+- Add fallback: `min-height: 100vh` for browsers that don't support `dvh`
 
-### 6. `src/pages/Contact.tsx` — Contact page
-- Remove the `tikritRef` and all `showTikrit` logic
-- Remove the Tikrit office card (lines 144-157)
-- Remove `tikrit` cases from `getInitialOffice` and `getInitialCountry`
-- Simplify `handleOfficeSelect` (no more tikrit ref)
-
-### 7. `src/components/ContactForm.tsx` — Contact form
-- Remove the Tikrit option from the office `<select>` dropdown (line 160)
+### 6. `src/components/medical/MedicalServiceSubPage.tsx` -- Sub-page hero fix
+- Change `h-[70vh]` to use `h-[70dvh]` with a `min-h-[70vh]` fallback
+- This prevents the toolbar from eating into the hero on Safari mobile
 
 ## What stays unchanged
-- All page content, design, and layout
-- Amman office info remains everywhere
-- Iraq phone number (+964 7717323273) remains
-- Baghdad office references remain
+- All content, colors, layout structure, and desktop behavior remain the same
+- Only mobile Safari rendering is affected
 
