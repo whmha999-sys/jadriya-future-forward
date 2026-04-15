@@ -24,7 +24,7 @@ const slides = [
     tabKey: "hero.slide2.tab",
   },
   {
-    image: hero4,
+    image: hero2,
     labelKey: "hero.slide3.label",
     headingKey: "hero.slide3.heading",
     link: "/medical",
