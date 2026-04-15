@@ -24,7 +24,7 @@ import salahuddin1 from "@/assets/case-studies/salahuddin-1.jpg";
 import salahuddin2 from "@/assets/case-studies/salahuddin-2.jpg";
 import salahuddin3 from "@/assets/case-studies/salahuddin-3.jpg";
 
-/* ── Safari-safe image slider — renders only the active image ── */
+/* ── Auto-scrolling image slider ── */
 const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
   const [current, setCurrent] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval>>();
@@ -46,23 +46,18 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
     startTimer();
   };
 
-  // Preload the next image
-  const nextIdx = (current + 1) % images.length;
-
   return (
-    <div className="relative w-full h-[260px] md:h-[320px] rounded-xl overflow-hidden shadow-lg bg-muted">
-      {/* Active image */}
-      <img
-        key={current}
-        src={images[current]}
-        alt={`${alt} ${current + 1}`}
-        className="w-full h-full object-cover"
-        style={{ display: "block" }}
-      />
-      {/* Preload next image (hidden) */}
-      {nextIdx !== current && (
-        <link rel="preload" as="image" href={images[nextIdx]} />
-      )}
+    <div className="relative w-full h-[260px] md:h-[320px] rounded-xl overflow-hidden shadow-lg">
+      {images.map((img, i) => (
+        <img
+          key={i}
+          src={img}
+          alt={`${alt} ${i + 1}`}
+          loading={i === current ? "eager" : "lazy"}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+          style={{ WebkitBackfaceVisibility: "hidden" }}
+        />
+      ))}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {images.map((_, i) => (
           <button
@@ -102,6 +97,7 @@ const cases = [
 interface Props {
   label: string;
   heading: string;
+  /** Show CTA link to /case-studies at bottom */
   showViewAll?: boolean;
   viewAllText?: string;
 }

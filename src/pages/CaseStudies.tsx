@@ -25,7 +25,7 @@ import salahuddin1 from "@/assets/case-studies/salahuddin-1.jpg";
 import salahuddin2 from "@/assets/case-studies/salahuddin-2.jpg";
 import salahuddin3 from "@/assets/case-studies/salahuddin-3.jpg";
 
-/* ── Safari-safe image slider — renders only active image ── */
+/* ── Auto-scrolling image slider ── */
 const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
   const [current, setCurrent] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval>>();
@@ -47,20 +47,19 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
     startTimer();
   };
 
-  const nextIdx = (current + 1) % images.length;
-
   return (
-    <div className="relative w-full h-[320px] md:h-[400px] rounded-xl overflow-hidden shadow-lg group" style={{ backgroundColor: "#1E3459" }}>
-      <img
-        key={current}
-        src={images[current]}
-        alt={`${alt} ${current + 1}`}
-        className="w-full h-full object-cover"
-        style={{ display: "block" }}
-      />
-      {nextIdx !== current && (
-        <link rel="preload" as="image" href={images[nextIdx]} />
-      )}
+    <div className="relative w-full h-[320px] md:h-[400px] rounded-xl overflow-hidden shadow-lg group">
+      {images.map((img, i) => (
+        <img
+          key={i}
+          src={img}
+          alt={`${alt} ${i + 1}`}
+          loading={i === current ? "eager" : "lazy"}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
+          style={{ WebkitBackfaceVisibility: "hidden" }}
+        />
+      ))}
+      {/* Dots */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {images.map((_, i) => (
           <button
@@ -133,7 +132,18 @@ const CaseStudies = () => {
                 className={`max-w-6xl mx-auto px-6 py-20 flex flex-col ${isOdd ? "md:flex-row" : "md:flex-row-reverse"} gap-10 items-center`}
               >
                 <div className="md:w-1/2">
-                  <ImageSlider images={cs.images} alt={t(cs.titleKey)} />
+                  {cs.images.length > 1 ? (
+                    <ImageSlider images={cs.images} alt={t(cs.titleKey)} />
+                  ) : (
+                    <img
+                      src={cs.images[0]}
+                      alt={t(cs.titleKey)}
+                      loading="lazy"
+                      width={1280}
+                      height={864}
+                      className="w-full h-[320px] md:h-[400px] object-cover rounded-xl shadow-lg"
+                    />
+                  )}
                 </div>
                 <div className="md:w-1/2" style={{ padding: "0 24px" }}>
                   <span className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#F5A623" }}>
@@ -168,7 +178,7 @@ const CaseStudies = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {achievementKeys.map((a, i) => (
               <div key={i} className="rounded-xl p-10" style={{ background: "#1E3459" }}>
-                <span className="block text-[28px] sm:text-[32px] md:text-[48px] font-[800] leading-none break-words" style={{ color: "#F5A623" }}>
+                <span className="block text-[28px] sm:text-[40px] md:text-[60px] font-[800] leading-none break-all" style={{ color: "#F5A623" }}>
                   {a.stat}
                 </span>
                 <h3 className="text-white font-bold text-lg mt-4">{t(a.headlineKey)}</h3>
