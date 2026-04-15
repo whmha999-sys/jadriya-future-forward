@@ -49,19 +49,21 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
 
   return (
     <div className="relative w-full rounded-xl overflow-hidden shadow-lg group" style={{ height: 320, minHeight: 320 }}>
-      {images.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          alt={`${alt} ${i + 1}`}
-          loading="eager"
-          decoding="async"
-          width={800}
-          height={400}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
-          style={{ WebkitBackfaceVisibility: "hidden", backfaceVisibility: "hidden", display: "block" }}
-        />
-      ))}
+      <img
+        key={current}
+        src={images[current]}
+        alt={`${alt} ${current + 1}`}
+        loading="eager"
+        decoding="async"
+        width={800}
+        height={400}
+        className="w-full h-full object-cover"
+        style={{ display: "block" }}
+      />
+      {/* Preload next image */}
+      {images.length > 1 && (
+        <link rel="prefetch" href={images[(current + 1) % images.length]} />
+      )}
       {/* Dots */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {images.map((_, i) => (
