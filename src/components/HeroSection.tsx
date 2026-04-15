@@ -5,6 +5,7 @@ import hero1 from "@/assets/hero-1.jpg";
 import eduHero from "@/assets/edu-tech-hero.jpg";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.jpg";
 import { useLanguage } from "@/contexts/useLanguage";
 
 const slides = [
@@ -23,7 +24,7 @@ const slides = [
     tabKey: "hero.slide2.tab",
   },
   {
-    image: hero2,
+    image: hero4,
     labelKey: "hero.slide3.label",
     headingKey: "hero.slide3.heading",
     link: "/medical",
