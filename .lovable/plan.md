@@ -1,42 +1,54 @@
 
+# Why the "Lovable-style" icon shows in Google search
 
-# Fix Safari Mobile Issues + Al-Husayniyya Text Overflow + Hero Image Cropping
+## What's actually happening
 
-## Three Issues
+Your site code is correct. `index.html` already references your AL-JADRIYA favicon files (`/favicon.ico`, `/favicon.png`, `/apple-touch-icon.png`), and those files exist in `public/` with your knot logo.
 
-1. **Partners section not scrolling on mobile Safari** -- missing `-webkit-` animation prefixes and Safari collapsing `w-max` containers
-2. **Case Studies images not loading on mobile Safari** -- `loading="lazy"` on absolute-positioned images with opacity transitions fails on Safari
-3. **"AL-HUSAYNIYYA" text overflow** -- the stat text at 60px is too wide for a mobile card, causing overflow (image 1)
-4. **Hero/sub-page images cut in half on mobile** -- the hero uses `100vh` but Safari's dynamic toolbar eats into viewport height; sub-page heroes at `70vh` also crop poorly on mobile (images 2 and 3)
+The icon Google shows next to `aljadriya.com` is **Google's cached favicon snapshot**, taken by Googlebot the last time it crawled your site, likely **before** the favicon was replaced. Google can take days or weeks to refresh favicon caches independently of page content. This is not something your visitors see in their browser tab — only Google search results.
 
-## Files to Edit
+A second contributing factor: the published Lovable preview domain (`*.lovable.app`) and your custom domain may have served different favicons at different times, and Googlebot may have indexed an older snapshot.
 
-### 1. `src/index.css` -- Safari animation fix
-- Add `-webkit-` prefixed `@keyframes scroll-left` and animation properties
-- Add `will-change: transform` and `backface-visibility: hidden` for GPU compositing
+## The fix (two parts)
 
-### 2. `src/components/PartnersSection.tsx` -- Layout fix for Safari
-- Change container from `flex w-max` to `inline-flex min-w-max`
-- Add `min-w-[40px]` to each logo wrapper to prevent Safari collapse
+### 1. Harden the favicon setup so Google can't be confused
 
-### 3. `src/components/CaseStudiesGrid.tsx` -- Image loading fix
-- Change `loading="lazy"` to `loading="eager"` for the currently active image (index 0 initially)
-- Add `-webkit-backface-visibility: hidden` style for Safari compositing
+Edit `index.html` to:
+- Add an explicit `sizes` attribute on the PNG icon (`sizes="32x32"`)
+- Add a larger PNG variant reference (`sizes="192x192"`) which Google specifically prefers for Search results, per Google's own guidance
+- Keep the existing `.ico` and `apple-touch-icon` entries
 
-### 4. `src/pages/CaseStudies.tsx` -- Same image fix + Al-Husayniyya text
-- Fix image slider `loading` attribute same as above
-- Make the achievement stat text responsive: use `text-[28px] sm:text-[40px] md:text-[60px]` instead of fixed `text-[60px]` so "AL-HUSAYNIYYA" fits on mobile
-- Add `break-all` or `overflow-hidden` as safety net
+Result snippet (head):
+```text
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+```
 
-### 5. `src/components/HeroSection.tsx` -- Hero image not cut on mobile
-- Change `height: '100vh'` to use `100dvh` (dynamic viewport height) which accounts for Safari's collapsible toolbar
-- Add fallback: `min-height: 100vh` for browsers that don't support `dvh`
+### 2. Generate a proper 192x192 PNG from the logo
 
-### 6. `src/components/medical/MedicalServiceSubPage.tsx` -- Sub-page hero fix
-- Change `h-[70vh]` to use `h-[70dvh]` with a `min-h-[70vh]` fallback
-- This prevents the toolbar from eating into the hero on Safari mobile
+- Create `public/favicon-192.png` from the existing AL-JADRIYA logo at exactly 192x192 (Google's recommended minimum for Search favicons)
+- Keep all existing favicon files untouched
 
 ## What stays unchanged
-- All content, colors, layout structure, and desktop behavior remain the same
-- Only mobile Safari rendering is affected
 
+- The site code, layout, branding, and all routes
+- Existing favicon.ico, favicon.png, apple-touch-icon.png
+- Meta tags, OG image, titles, descriptions
+
+## What you (the user) need to do after deploy
+
+These steps are outside the codebase, but required for Google to refresh:
+
+1. After the change is published, open Google Search Console for `aljadriya.com`
+2. Use **URL Inspection** on `https://aljadriya.com/` then click **Request Indexing**
+3. Wait 3 to 14 days; Google refreshes favicon caches on its own schedule and will not honor a manual "refresh favicon" request
+4. Hard-refresh your browser tab (Cmd/Ctrl + Shift + R) to confirm your local browser sees the new icon — it already should
+
+Note: there is no API or button that forces Google to update the favicon thumbnail in search results immediately. The hardened markup above maximizes the chance that the next crawl picks up the correct icon.
+
+## Files to edit
+
+- `index.html` — add the two extra `<link rel="icon">` entries
+- `public/favicon-192.png` — new file, 192x192 AL-JADRIYA logo
