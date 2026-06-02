@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-6 md:px-12 py-1.5 h-full">
           {/* Logo */}
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
-            <div className="relative h-40 w-40 shrink-0">
+            <div className="relative h-20 w-20 shrink-0">
               <img
                 src={logoKnot}
                 alt="AL-JADRIYA Engineering"
