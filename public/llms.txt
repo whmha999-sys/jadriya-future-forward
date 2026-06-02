@@ -1,0 +1,37 @@
+# AL-JADRIYA Group
+
+> AL-JADRIYA Group delivers engineering, medical, robotics, and clean-energy solutions across Iraq, Jordan, and the wider region.
+
+AL-JADRIYA Group operates four divisions: Oil & Gas (supply only), Medical, Robotics & Education, and Clean Energy. We supply equipment, manage turnkey projects, and provide training and after-sales support.
+
+## Pages
+
+- [Home](/): Group overview and divisions.
+- [Oil & Gas](/oil-gas): Supply-only services for oil and gas infrastructure.
+- [Oil & Gas — Pipes Supply](/oil-gas/pipes-supply): High-grade steel pipes and fittings.
+- [Oil & Gas — Drilling Equipment](/oil-gas/drilling-equipment): Drilling tools and equipment supply.
+- [Oil & Gas — Exploration Requirements](/oil-gas/exploration-requirements): Tools for geological surveys and field exploration.
+- [Oil & Gas — T.C Equipment & Inspection](/oil-gas/tc-equipment-inspection): Technical control and inspection services.
+- [Oil & Gas — Underground Infrastructure](/oil-gas/underground-infrastructure): Underground pipeline systems.
+- [Oil & Gas — After-Sales Support](/oil-gas/after-sales-support): Ongoing technical support and maintenance.
+- [Medical](/medical): Medical equipment and turnkey hospital solutions.
+- [Medical — Biomedical Engineering](/medical/biomedical-engineering): Biomedical engineering services.
+- [Medical — Hospital Equipment Supply](/medical/hospital-equipment-supply): Equipment supply for hospitals and clinics.
+- [Medical — Capacity Management](/medical/capacity-management): Healthcare capacity management.
+- [Medical — Turnkey Projects](/medical/turnkey-projects): End-to-end medical facility delivery.
+- [Medical — Tender Management](/medical/tender-management): Medical tender management.
+- [Medical — After-Sales Support](/medical/after-sales-support): Ongoing maintenance and support.
+- [Robotics](/robotics): Robotics and AI education and equipment.
+- [Robotics for Schools](/robotics/schools): Robotics programs for schools.
+- [AI & Programming](/robotics/ai-programming): Coding and AI courses.
+- [Robotics Equipment Supply](/robotics/equipment): Educational robotics kits.
+- [Corporate Training](/robotics/corporate-training): Robotics and AI training for professionals.
+- [Energy](/energy): Clean energy solutions.
+- [References](/references): Project portfolio.
+- [Case Studies](/case-studies): Detailed flagship projects.
+- [Contact](/contact): Get in touch.
+
+## Optional
+
+- [Privacy Policy](/privacy-policy)
+- [Terms & Conditions](/terms-conditions)
