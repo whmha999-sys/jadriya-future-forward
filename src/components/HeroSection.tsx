@@ -85,7 +85,7 @@ const HeroSection = () => {
         >
           <img
             src={slide.image}
-            alt="Hero"
+            alt={`AL-JADRIYA ${t(slide.labelKey)} - ${t(slide.headingKey)}`}
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/60" />
