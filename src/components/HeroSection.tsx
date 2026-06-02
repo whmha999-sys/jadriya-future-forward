@@ -85,7 +85,7 @@ const HeroSection = () => {
         >
           <img
             src={slide.image}
-            alt="Hero"
+            alt={`AL-JADRIYA ${t(slide.labelKey)} - ${t(slide.headingKey)}`}
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[hsl(var(--navy-deep))]/60" />
@@ -109,6 +109,7 @@ const HeroSection = () => {
           </h1>
           <button
             className="mt-8 inline-flex items-center gap-2 text-accent font-semibold text-sm uppercase tracking-wider hover:gap-3 transition-all duration-300"
+            aria-label={`${t("hero.learnMore")} about ${t(slide.labelKey)}`}
           >
             {t("hero.learnMore")} <ArrowRight className="h-4 w-4" />
           </button>
@@ -118,6 +119,7 @@ const HeroSection = () => {
       {/* Circle arrow button - right side */}
       <button
         onClick={advance}
+        aria-label="Next hero slide"
         className={`absolute ${isRTL ? 'left-8 md:left-16' : 'right-8 md:right-16'} bottom-32 md:bottom-40 z-10 w-14 h-14 rounded-full border border-primary-foreground/40 flex items-center justify-center hover:border-accent hover:text-accent text-primary-foreground transition-colors duration-300`}
       >
         <ArrowRight className={`h-5 w-5 ${isRTL ? 'rotate-180' : ''}`} />
