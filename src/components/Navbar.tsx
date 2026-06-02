@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoIcon from "@/assets/logo-icon.png";
-import logoDark from "@/assets/logo-dark.png";
+import logoKnot from "@/assets/logo-knot.png";
 import MegaMenu from "./MegaMenu";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -54,16 +53,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-6 md:px-12 py-1.5 h-full">
           {/* Logo */}
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
-            <div className="relative h-14 w-14 shrink-0">
+            <div className="relative h-20 w-20 shrink-0">
               <img
-                src={logoIcon}
+                src={logoKnot}
                 alt="AL-JADRIYA Engineering"
-                className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-0" : "opacity-100"}`}
-              />
-              <img
-                src={logoDark}
-                alt="AL-JADRIYA Engineering"
-                className={`absolute inset-[8%] h-[84%] w-[84%] object-contain transition-opacity duration-500 ${logoSwapped ? "opacity-100" : "opacity-0"}`}
+                className="absolute inset-0 h-full w-full object-contain"
               />
             </div>
             <div className={`hidden md:block ml-2 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
