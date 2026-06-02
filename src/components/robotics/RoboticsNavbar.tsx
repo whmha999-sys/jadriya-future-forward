@@ -56,7 +56,7 @@ const RoboticsNavbar = () => {
 
         <div className="flex items-center justify-between px-6 md:px-12 py-1.5 h-[62px]">
           <button onClick={() => navigateWithTransition("/robotics")} className="flex items-center gap-0">
-            <div className="relative h-64 w-64 shrink-0">
+            <div className="relative h-32 w-32 shrink-0">
               <img
                 src={logoIcon}
                 alt="AL-JADRIYA Robotics"
