@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoIcon from "@/assets/logo-icon.png";
-import logoDark from "@/assets/logo-dark.png";
+import logoKnot from "@/assets/logo-knot.png";
 import MegaMenu from "./MegaMenu";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
