@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Globe, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoAsset from "@/assets/modi-logo.png.asset.json";
-const logoIcon = logoAsset.url;
+import logoIcon from "@/assets/modi-logo.png";
 import MegaMenu from "../MegaMenu";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";

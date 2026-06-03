@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
 import jadriyaMedical from "@/assets/companies/jadriya-medical.png";
 import jadriyaOilGas from "@/assets/companies/jadriya-oilgas.png";
-import jadriyaRoboticsAsset from "@/assets/modi-logo-full.png.asset.json";
-const jadriyaRobotics = jadriyaRoboticsAsset.url;
+import jadriyaRobotics from "@/assets/modi-logo-full.png";
 import jadriyaEnergy from "@/assets/companies/jadriya-energy.png";
 
 const companies = [
