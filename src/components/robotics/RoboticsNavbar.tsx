@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Globe, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoIcon from "@/assets/modi-logo.png";
+import logoIcon from "@/assets/modi-logo-full.png";
 import MegaMenu from "../MegaMenu";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -56,11 +56,11 @@ const RoboticsNavbar = () => {
 
         <div className="flex items-center justify-between px-6 md:px-12 py-1.5 h-[62px]">
           <button onClick={() => navigateWithTransition("/robotics")} className="flex items-center gap-0">
-            <div className="relative h-64 w-64 shrink-0 mt-4">
+            <div className="relative h-20 w-auto shrink-0">
               <img
                 src={logoIcon}
                 alt="AL-JADRIYA Robotics"
-                className="h-full w-full object-contain transition-all duration-500"
+                className="h-full w-auto object-contain transition-all duration-500"
               />
             </div>
           </button>
