@@ -67,7 +67,7 @@ const CompaniesSection = () => {
           {[...companies, ...companies, ...companies].map((company, index) => (
             <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "280px" }}>
               <img
-                src={company.src}
+                src={company.src.url}
                 alt={company.alt}
                 className="h-40 md:h-56 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
               />

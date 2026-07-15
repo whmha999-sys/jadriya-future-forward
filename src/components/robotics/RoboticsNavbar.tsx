@@ -58,7 +58,7 @@ const RoboticsNavbar = () => {
           <button onClick={() => navigateWithTransition("/robotics")} className="flex items-center gap-0">
             <div className="relative h-20 w-auto shrink-0">
               <img
-                src={logoIcon}
+                src={logoIcon.url}
                 alt="AL-JADRIYA Robotics"
                 className="h-full w-auto object-contain transition-all duration-500"
               />
