@@ -54,7 +54,7 @@ const RoboticsNavbar = () => {
           </button>
         </div>
 
-        <div className="flex items-center justify-between px-6 md:px-12 py-1.5 h-[120px]">
+        <div className="flex items-center justify-between px-6 md:px-12 py-1.5 h-[180px]">
           <button onClick={() => navigateWithTransition("/robotics")} className="flex items-center gap-0">
             <div className="relative h-40 w-auto shrink-0">
               <img
