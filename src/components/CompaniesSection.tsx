@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import jadriyaMedical from "@/assets/companies/jadriya-medical.png";
 import jadriyaOilGas from "@/assets/companies/jadriya-oilgas.png";
-import jadriyaRobotics from "@/assets/modi-logo-full.png.asset.json";
+import jadriyaRobotics from "@/assets/modi-logo-full.png";
 import jadriyaEnergy from "@/assets/companies/jadriya-energy.png";
 
 const companies = [
@@ -67,7 +67,7 @@ const CompaniesSection = () => {
           {[...companies, ...companies, ...companies].map((company, index) => (
             <div key={index} className="flex items-center justify-center shrink-0" style={{ width: "280px" }}>
               <img
-                src={typeof company.src === "string" ? company.src : company.src.url}
+                src={company.src}
                 alt={company.alt}
                 className="h-40 md:h-56 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
               />

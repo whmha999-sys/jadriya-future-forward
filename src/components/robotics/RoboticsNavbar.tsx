@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Globe, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoIcon from "@/assets/modi-logo-full.png.asset.json";
+import logoIcon from "@/assets/modi-logo-full.png";
 import MegaMenu from "../MegaMenu";
 import { usePageTransition } from "../PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -58,7 +58,7 @@ const RoboticsNavbar = () => {
           <button onClick={() => navigateWithTransition("/robotics")} className="flex items-center gap-0">
             <div className="relative h-20 w-auto shrink-0">
               <img
-                src={logoIcon.url}
+                src={logoIcon}
                 alt="AL-JADRIYA Robotics"
                 className="h-full w-auto object-contain transition-all duration-500"
               />
