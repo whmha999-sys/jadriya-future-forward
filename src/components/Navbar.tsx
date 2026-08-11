@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoKnot from "@/assets/logo-knot.png";
+import logoKnot from "@/assets/logo-knot.png.asset.json";
 import MegaMenu from "./MegaMenu";
 import { usePageTransition } from "./PageTransition";
 import { useLanguage } from "@/contexts/useLanguage";
@@ -55,7 +55,7 @@ const Navbar = () => {
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
             <div className="relative h-[120px] w-[120px] shrink-0 mt-3">
               <img
-                src={logoKnot}
+                src={logoKnot.url}
                 alt="AL-JADRIYA Engineering"
                 className="absolute inset-0 h-full w-full object-contain"
               />
