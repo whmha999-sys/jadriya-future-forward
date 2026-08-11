@@ -55,7 +55,7 @@ const Navbar = () => {
           <button onClick={() => navigateWithTransition("/")} className="flex items-center gap-0">
             <div className="relative h-[120px] w-[120px] shrink-0 mt-3">
               <img
-                src={logoKnot}
+                src={logoKnot.url}
                 alt="AL-JADRIYA Engineering"
                 className="absolute inset-0 h-full w-full object-contain"
               />
