@@ -60,7 +60,7 @@ const Navbar = () => {
                 className="absolute inset-0 h-full w-full object-contain"
               />
             </div>
-            <div className={`hidden md:block ml-2 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
+            <div className={`block ml-2 transition-colors duration-300 ${bgSolid ? "text-primary" : "text-primary-foreground"}`}>
               <span className="text-xs font-bold tracking-wider uppercase">AL-JADRIYA</span>
               <span className="block text-[9px] font-medium tracking-[0.3em] uppercase opacity-70">Engineering</span>
             </div>
